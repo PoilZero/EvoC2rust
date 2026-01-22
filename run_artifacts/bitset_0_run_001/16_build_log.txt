@@ -1,0 +1,1503 @@
+   Compiling bitset v0.1.0 (/home/poil/桌面/github/EvoC2rust_work/EvoC2rust/final_project/bitset_0_run_001)
+error: can't qualify macro_rules invocation with `pub(crate)`
+  --> src/src/include/cborg/bitset_h.rs:26:1
+   |
+26 | pub(crate) macro_rules! _CBORG_BITSET_H { () => { cstr!("_CBORG_BITSET_H") } }
+   | ^^^^^^^^^^
+   |
+help: try exporting the macro
+   |
+26 - pub(crate) macro_rules! _CBORG_BITSET_H { () => { cstr!("_CBORG_BITSET_H") } }
+26 + #[macro_export] macro_rules! _CBORG_BITSET_H { () => { cstr!("_CBORG_BITSET_H") } }
+   |
+
+error: can't qualify macro_rules invocation with `pub(crate)`
+  --> src/src/include/cborg/bitset_h.rs:32:1
+   |
+32 | pub(crate) macro_rules! __bitset_byte {
+   | ^^^^^^^^^^
+   |
+help: try exporting the macro
+   |
+32 - pub(crate) macro_rules! __bitset_byte {
+32 + #[macro_export] macro_rules! __bitset_byte {
+   |
+
+error: can't qualify macro_rules invocation with `pub(crate)`
+  --> src/src/include/cborg/bitset_h.rs:39:1
+   |
+39 | pub(crate) macro_rules! __bitset_bit_mask { ($idx:expr) => { 1u32 << (($idx & 0x7) as u32) } }
+   | ^^^^^^^^^^
+   |
+help: try exporting the macro
+   |
+39 - pub(crate) macro_rules! __bitset_bit_mask { ($idx:expr) => { 1u32 << (($idx & 0x7) as u32) } }
+39 + #[macro_export] macro_rules! __bitset_bit_mask { ($idx:expr) => { 1u32 << (($idx & 0x7) as u32) } }
+   |
+
+error[E0252]: the name `bitset_t` is defined multiple times
+  --> src/src/bitset_c.rs:20:5
+   |
+3  | use crate::src::include::cborg::bitset_h::bitset_t;
+   |     ---------------------------------------------- previous import of the type `bitset_t` here
+...
+20 | use crate::src::include::cborg::bitset_h::bitset_t;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `bitset_t` reimported here
+   |
+   = note: `bitset_t` must be defined only once in the type namespace of this module
+
+error[E0432]: unresolved import `crate::src::bitset_c::cb_bitset_write`
+  --> src/src/include/cborg/bitset_h.rs:14:9
+   |
+14 | pub use crate::src::bitset_c::cb_bitset_write;
+   |         ^^^^^^^^^^^^^^^^^^^^^^---------------
+   |         |                     |
+   |         |                     help: a similar name exists in the module: `cb_bitset_size`
+   |         no `cb_bitset_write` in `src::bitset_c`
+
+error: cannot find macro `__BITSET_SIZE` in this scope
+  --> src/src/bitset_c.rs:10:22
+   |
+10 |     let array_size = __BITSET_SIZE!(nb_bits);
+   |                      ^^^^^^^^^^^^^
+
+error: cannot find macro `__BITSET_BYTE` in this scope
+  --> src/src/bitset_c.rs:40:26
+   |
+40 |     bs.flip ^ ((bs.array[__BITSET_BYTE!(idx)] & __BITSET_BIT_MASK!(idx)) != 0)
+   |                          ^^^^^^^^^^^^^
+
+error: cannot find macro `__BITSET_BIT_MASK` in this scope
+  --> src/src/bitset_c.rs:40:49
+   |
+40 |     bs.flip ^ ((bs.array[__BITSET_BYTE!(idx)] & __BITSET_BIT_MASK!(idx)) != 0)
+   |                                                 ^^^^^^^^^^^^^^^^^
+
+error: cannot find macro `cb_bitset_new` in this scope
+   --> src/src/bitset_c.rs:122:33
+    |
+122 |     let mut bs: Ptr<bitset_t> = cb_bitset_new!(size);
+    |                                 ^^^^^^^^^^^^^
+    |
+    = note: `cb_bitset_new` is in scope, but it is a function, not a macro
+
+error: cannot find macro `c_exit` in this scope
+   --> src/src/bitset_c.rs:118:9
+    |
+118 |         c_exit!(EXIT_FAILURE);
+    |         ^^^^^^
+
+error: cannot find macro `c_fprintf` in this scope
+   --> src/src/bitset_c.rs:117:9
+    |
+117 |         c_fprintf!(stdout, cstr!("%s\n"), c_strerror!(errno));
+    |         ^^^^^^^^^ help: a macro with a similar name exists: `c_printf`
+    |
+   ::: src/translation_utils/c_alignment/libraries/c_string.rs:107:1
+    |
+107 | macro_rules! c_printf {
+    | --------------------- similarly named macro `c_printf` defined here
+
+error[E0412]: cannot find type `BinomialTree` in this scope
+  --> src/src/bitset_c.rs:94:42
+   |
+94 | pub fn binomial_tree_unref(mut tree: Ptr<BinomialTree>) {
+   |                                          ^^^^^^^^^^^^ not found in this scope
+   |
+help: you might be missing a type parameter
+   |
+94 | pub fn binomial_tree_unref<BinomialTree>(mut tree: Ptr<BinomialTree>) {
+   |                           ++++++++++++++
+
+warning: unused macro definition: `c_sizeofval`
+ --> src/translation_utils/c_alignment/operators/c_sizeof.rs:9:14
+  |
+9 | macro_rules! c_sizeofval {
+  |              ^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_macros)]` on by default
+
+warning: glob import doesn't reexport anything with visibility `pub` because no imported item is public enough
+ --> src/translation_utils/c_alignment/operators/mod.rs:2:9
+  |
+2 | pub use c_sizeof::*;
+  |         ^^^^^^^^^^^
+  |
+note: the most public imported item is `pub(crate)`
+ --> src/translation_utils/c_alignment/operators/mod.rs:2:9
+  |
+2 | pub use c_sizeof::*;
+  |         ^^^^^^^^^^^
+  = help: reduce the glob import's visibility or increase visibility of imported items
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused macro definition: `c_offsetof`
+ --> src/translation_utils/c_alignment/operators/c_offsetof.rs:3:14
+  |
+3 | macro_rules! c_offsetof {
+  |              ^^^^^^^^^^
+
+warning: glob import doesn't reexport anything with visibility `pub` because no imported item is public enough
+ --> src/translation_utils/c_alignment/operators/mod.rs:5:9
+  |
+5 | pub use c_offsetof::*;
+  |         ^^^^^^^^^^^^^
+  |
+note: the most public imported item is `pub(crate)`
+ --> src/translation_utils/c_alignment/operators/mod.rs:5:9
+  |
+5 | pub use c_offsetof::*;
+  |         ^^^^^^^^^^^^^
+  = help: reduce the glob import's visibility or increase visibility of imported items
+
+warning: unused macro definition: `plus_plus`
+   --> src/translation_utils/c_alignment/operators/c_self_incr_decr.rs:101:14
+    |
+101 | macro_rules! plus_plus {
+    |              ^^^^^^^^^
+
+warning: unused macro definition: `minus_minus`
+   --> src/translation_utils/c_alignment/operators/c_self_incr_decr.rs:109:14
+    |
+109 | macro_rules! minus_minus {
+    |              ^^^^^^^^^^^
+
+warning: unused import: `core::ptr::NonNull`
+ --> src/translation_utils/c_alignment/operators/c_ref.rs:3:5
+  |
+3 | use core::ptr::NonNull;
+  |     ^^^^^^^^^^^^^^^^^^
+
+warning: unused macro definition: `c_ref`
+  --> src/translation_utils/c_alignment/operators/c_ref.rs:17:14
+   |
+17 | macro_rules! c_ref {
+   |              ^^^^^
+
+warning: unused macro definition: `c_memcpy`
+  --> src/translation_utils/c_alignment/libraries/c_memcpy.rs:21:14
+   |
+21 | macro_rules! c_memcpy {
+   |              ^^^^^^^^
+
+warning: unused macro definition: `c_memmove`
+  --> src/translation_utils/c_alignment/libraries/c_memmove.rs:33:14
+   |
+33 | macro_rules! c_memmove {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `c_realloc`
+  --> src/translation_utils/c_alignment/libraries/c_realloc.rs:27:14
+   |
+27 | macro_rules! c_realloc {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `c_tolower`
+  --> src/translation_utils/c_alignment/libraries/c_type.rs:19:14
+   |
+19 | macro_rules! c_tolower {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `c_toupper`
+  --> src/translation_utils/c_alignment/libraries/c_type.rs:27:14
+   |
+27 | macro_rules! c_toupper {
+   |              ^^^^^^^^^
+
+warning: unused import: `core::cmp::Ordering`
+ --> src/translation_utils/c_alignment/libraries/c_string.rs:3:5
+  |
+3 | use core::cmp::Ordering;
+  |     ^^^^^^^^^^^^^^^^^^^
+
+warning: unused macro definition: `c_strncmp`
+  --> src/translation_utils/c_alignment/libraries/c_string.rs:76:14
+   |
+76 | macro_rules! c_strncmp {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `c_strdup`
+  --> src/translation_utils/c_alignment/libraries/c_string.rs:92:14
+   |
+92 | macro_rules! c_strdup {
+   |              ^^^^^^^^
+
+warning: unused macro definition: `c_printf`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:107:14
+    |
+107 | macro_rules! c_printf {
+    |              ^^^^^^^^
+
+warning: unused macro definition: `c_sprintf`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:129:14
+    |
+129 | macro_rules! c_sprintf {
+    |              ^^^^^^^^^
+
+warning: unused macro definition: `c_sprintf_s`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:154:14
+    |
+154 | macro_rules! c_sprintf_s {
+    |              ^^^^^^^^^^^
+
+warning: unused macro definition: `c_snprintf`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:179:14
+    |
+179 | macro_rules! c_snprintf {
+    |              ^^^^^^^^^^
+
+warning: unused macro definition: `c_snprintf_s`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:216:14
+    |
+216 | macro_rules! c_snprintf_s {
+    |              ^^^^^^^^^^^^
+
+warning: unused macro definition: `c_vsnprintf_s`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:227:14
+    |
+227 | macro_rules! c_vsnprintf_s {
+    |              ^^^^^^^^^^^^^
+
+warning: unused macro definition: `c_strrchr`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:247:14
+    |
+247 | macro_rules! c_strrchr {
+    |              ^^^^^^^^^
+
+warning: unused macro definition: `c_strcpy`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:264:14
+    |
+264 | macro_rules! c_strcpy {
+    |              ^^^^^^^^
+
+warning: unused macro definition: `c_strcpy_s`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:291:14
+    |
+291 | macro_rules! c_strcpy_s {
+    |              ^^^^^^^^^^
+
+warning: unused import: `core::cmp::Ordering`
+ --> src/translation_utils/c_alignment/libraries/c_memcmp.rs:3:5
+  |
+3 | use core::cmp::Ordering;
+  |     ^^^^^^^^^^^^^^^^^^^
+
+warning: unused macro definition: `c_memcmp`
+  --> src/translation_utils/c_alignment/libraries/c_memcmp.rs:29:14
+   |
+29 | macro_rules! c_memcmp {
+   |              ^^^^^^^^
+
+warning: unused macro definition: `c_memset`
+  --> src/translation_utils/c_alignment/libraries/c_memset.rs:22:14
+   |
+22 | macro_rules! c_memset {
+   |              ^^^^^^^^
+
+warning: unused macro definition: `c_atoi`
+  --> src/translation_utils/c_alignment/libraries/c_stdlib.rs:26:14
+   |
+26 | macro_rules! c_atoi {
+   |              ^^^^^^
+
+warning: unused import: `std::path::Path`
+ --> src/translation_utils/c_alignment/libraries/misc.rs:3:5
+  |
+3 | use std::path::Path;
+  |     ^^^^^^^^^^^^^^^
+
+warning: unused macro definition: `c_basename`
+  --> src/translation_utils/c_alignment/libraries/misc.rs:17:14
+   |
+17 | macro_rules! c_basename {
+   |              ^^^^^^^^^^
+
+warning: unused macro definition: `c__line__`
+  --> src/translation_utils/c_alignment/libraries/misc.rs:25:14
+   |
+25 | macro_rules! c__line__ {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `c__file__`
+  --> src/translation_utils/c_alignment/libraries/misc.rs:39:14
+   |
+39 | macro_rules! c__file__ {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `c__function__`
+  --> src/translation_utils/c_alignment/libraries/misc.rs:53:14
+   |
+53 | macro_rules! c__function__ {
+   |              ^^^^^^^^^^^^^
+
+warning: type `errno_t` should have an upper camel case name
+ --> src/translation_utils/c_alignment/libraries/safelib/error_no.rs:3:10
+  |
+3 | pub type errno_t = i32;
+  |          ^^^^^^^ help: convert the identifier to upper camel case: `ErrnoT`
+  |
+  = note: `#[warn(non_camel_case_types)]` on by default
+
+warning: unused macro definition: `EOK`
+  --> src/translation_utils/c_alignment/libraries/safelib/error_no.rs:27:14
+   |
+27 | macro_rules! EOK {
+   |              ^^^
+
+warning: unused macro definition: `EINVAL`
+  --> src/translation_utils/c_alignment/libraries/safelib/error_no.rs:32:14
+   |
+32 | macro_rules! EINVAL {
+   |              ^^^^^^
+
+warning: unused macro definition: `ERANGE`
+  --> src/translation_utils/c_alignment/libraries/safelib/error_no.rs:37:14
+   |
+37 | macro_rules! ERANGE {
+   |              ^^^^^^
+
+warning: unused macro definition: `c_memcpy_s`
+  --> src/translation_utils/c_alignment/libraries/safelib/c_memcpy_s.rs:34:14
+   |
+34 | macro_rules! c_memcpy_s {
+   |              ^^^^^^^^^^
+
+warning: unused macro definition: `c_memmove_s`
+  --> src/translation_utils/c_alignment/libraries/safelib/c_memmove_s.rs:45:14
+   |
+45 | macro_rules! c_memmove_s {
+   |              ^^^^^^^^^^^
+
+warning: glob import doesn't reexport anything with visibility `pub` because no imported item is public enough
+ --> src/translation_utils/c_alignment/mod.rs:8:9
+  |
+8 | pub use c_for::*;
+  |         ^^^^^^^^
+  |
+note: the most public imported item is `pub(crate)`
+ --> src/translation_utils/c_alignment/mod.rs:8:9
+  |
+8 | pub use c_for::*;
+  |         ^^^^^^^^
+  = help: reduce the glob import's visibility or increase visibility of imported items
+
+warning: unused macro definition: `c_do`
+ --> src/translation_utils/c_alignment/c_do_while.rs:3:14
+  |
+3 | macro_rules! c_do {
+  |              ^^^^
+
+warning: unused macro definition: `c_while`
+  --> src/translation_utils/c_alignment/c_do_while.rs:15:14
+   |
+15 | macro_rules! c_while {
+   |              ^^^^^^^
+
+warning: glob import doesn't reexport anything with visibility `pub` because no imported item is public enough
+  --> src/translation_utils/c_alignment/mod.rs:11:9
+   |
+11 | pub use c_do_while::*;
+   |         ^^^^^^^^^^^^^
+   |
+note: the most public imported item is `pub(crate)`
+  --> src/translation_utils/c_alignment/mod.rs:11:9
+   |
+11 | pub use c_do_while::*;
+   |         ^^^^^^^^^^^^^
+   = help: reduce the glob import's visibility or increase visibility of imported items
+
+warning: unused macro definition: `c_switch`
+ --> src/translation_utils/c_alignment/c_switch.rs:3:14
+  |
+3 | macro_rules! c_switch {
+  |              ^^^^^^^^
+
+warning: glob import doesn't reexport anything with visibility `pub` because no imported item is public enough
+  --> src/translation_utils/c_alignment/mod.rs:14:9
+   |
+14 | pub use c_switch::*;
+   |         ^^^^^^^^^^^
+   |
+note: the most public imported item is `pub(crate)`
+  --> src/translation_utils/c_alignment/mod.rs:14:9
+   |
+14 | pub use c_switch::*;
+   |         ^^^^^^^^^^^
+   = help: reduce the glob import's visibility or increase visibility of imported items
+
+warning: unused macro definition: `SCHAR_MIN`
+ --> src/translation_utils/c_alignment/c_limits.rs:3:14
+  |
+3 | macro_rules! SCHAR_MIN {
+  |              ^^^^^^^^^
+
+warning: unused macro definition: `SCHAR_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:10:14
+   |
+10 | macro_rules! SCHAR_MAX {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `UCHAR_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:17:14
+   |
+17 | macro_rules! UCHAR_MAX {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `SHRT_MIN`
+  --> src/translation_utils/c_alignment/c_limits.rs:24:14
+   |
+24 | macro_rules! SHRT_MIN {
+   |              ^^^^^^^^
+
+warning: unused macro definition: `SHRT_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:31:14
+   |
+31 | macro_rules! SHRT_MAX {
+   |              ^^^^^^^^
+
+warning: unused macro definition: `USHRT_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:38:14
+   |
+38 | macro_rules! USHRT_MAX {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `INT_MIN`
+  --> src/translation_utils/c_alignment/c_limits.rs:45:14
+   |
+45 | macro_rules! INT_MIN {
+   |              ^^^^^^^
+
+warning: unused macro definition: `INT_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:52:14
+   |
+52 | macro_rules! INT_MAX {
+   |              ^^^^^^^
+
+warning: unused macro definition: `UINT_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:59:14
+   |
+59 | macro_rules! UINT_MAX {
+   |              ^^^^^^^^
+
+warning: unused macro definition: `LLONG_MIN`
+  --> src/translation_utils/c_alignment/c_limits.rs:66:14
+   |
+66 | macro_rules! LLONG_MIN {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `LLONG_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:73:14
+   |
+73 | macro_rules! LLONG_MAX {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `ULLONG_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:80:14
+   |
+80 | macro_rules! ULLONG_MAX {
+   |              ^^^^^^^^^^
+
+warning: glob import doesn't reexport anything with visibility `pub` because no imported item is public enough
+  --> src/translation_utils/c_alignment/mod.rs:17:9
+   |
+17 | pub use c_limits::*;
+   |         ^^^^^^^^^^^
+   |
+note: the most public imported item is `pub(crate)`
+  --> src/translation_utils/c_alignment/mod.rs:17:9
+   |
+17 | pub use c_limits::*;
+   |         ^^^^^^^^^^^
+   = help: reduce the glob import's visibility or increase visibility of imported items
+
+warning: unused import: `core::ops::*`
+ --> src/translation_utils/memory/file_ptr.rs:3:5
+  |
+3 | use core::ops::*;
+  |     ^^^^^^^^^^^^
+
+warning: unused macro definition: `EOF`
+  --> src/translation_utils/memory/file_ptr.rs:73:14
+   |
+73 | macro_rules! EOF {
+   |              ^^^
+
+warning: unused macro definition: `SEEK_SET`
+   --> src/translation_utils/memory/file_ptr.rs:280:14
+    |
+280 | macro_rules! SEEK_SET {
+    |              ^^^^^^^^
+
+warning: unused macro definition: `SEEK_CUR`
+   --> src/translation_utils/memory/file_ptr.rs:287:14
+    |
+287 | macro_rules! SEEK_CUR {
+    |              ^^^^^^^^
+
+warning: unused macro definition: `SEEK_END`
+   --> src/translation_utils/memory/file_ptr.rs:294:14
+    |
+294 | macro_rules! SEEK_END {
+    |              ^^^^^^^^
+
+warning: unused macro definition: `c_fseek`
+   --> src/translation_utils/memory/file_ptr.rs:322:14
+    |
+322 | macro_rules! c_fseek {
+    |              ^^^^^^^
+
+warning: unused macro definition: `c_ftell`
+   --> src/translation_utils/memory/file_ptr.rs:330:14
+    |
+330 | macro_rules! c_ftell {
+    |              ^^^^^^^
+
+warning: unused macro definition: `c_fgetc`
+   --> src/translation_utils/memory/file_ptr.rs:352:14
+    |
+352 | macro_rules! c_fgetc {
+    |              ^^^^^^^
+
+warning: unused macro definition: `c_ungetc`
+   --> src/translation_utils/memory/file_ptr.rs:359:14
+    |
+359 | macro_rules! c_ungetc {
+    |              ^^^^^^^^
+
+warning: unused macro definition: `c_fwrite`
+   --> src/translation_utils/memory/file_ptr.rs:373:14
+    |
+373 | macro_rules! c_fwrite {
+    |              ^^^^^^^^
+
+warning: unused macro definition: `c_fgets`
+   --> src/translation_utils/memory/file_ptr.rs:380:14
+    |
+380 | macro_rules! c_fgets {
+    |              ^^^^^^^
+
+warning: unused macro definition: `c_remove`
+   --> src/translation_utils/memory/file_ptr.rs:387:14
+    |
+387 | macro_rules! c_remove {
+    |              ^^^^^^^^
+
+warning: unused import: `core::cell::UnsafeCell`
+ --> src/translation_utils/memory/ptr.rs:5:5
+  |
+5 | use core::cell::UnsafeCell;
+  |     ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `core::any::Any`
+ --> src/translation_utils/memory/resource_heap.rs:3:5
+  |
+3 | use core::any::Any;
+  |     ^^^^^^^^^^^^^^
+
+warning: unused import: `core::ops::*`
+ --> src/translation_utils/memory/resource_heap.rs:4:5
+  |
+4 | use core::ops::*;
+  |     ^^^^^^^^^^^^
+
+warning: unused macro definition: `test_no_memory_leak`
+  --> src/translation_utils/memory/resource_heap.rs:86:14
+   |
+86 | macro_rules! test_no_memory_leak {
+   |              ^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `core::ptr::NonNull`
+ --> src/translation_utils/types/array.rs:7:5
+  |
+7 | use core::ptr::NonNull;
+  |     ^^^^^^^^^^^^^^^^^^
+
+warning: unused macro definition: `arr`
+   --> src/translation_utils/types/array.rs:131:14
+    |
+131 | macro_rules! arr {
+    |              ^^^
+
+warning: unused macro definition: `index`
+   --> src/translation_utils/types/array.rs:148:14
+    |
+148 | macro_rules! index {
+    |              ^^^^^
+
+warning: unused import: `core::ops::*`
+ --> src/translation_utils/types/c_str.rs:3:5
+  |
+3 | use core::ops::*;
+  |     ^^^^^^^^^^^^
+
+warning: unused macro definition: `bstr`
+  --> src/translation_utils/types/c_str.rs:42:14
+   |
+42 | macro_rules! bstr {
+   |              ^^^^
+
+warning: unused import: `crate::translation_utils::*`
+ --> src/translation_utils/types/cast_trait.rs:1:5
+  |
+1 | use crate::translation_utils::*;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused macro definition: `func`
+  --> src/translation_utils/types/func_ptr.rs:61:14
+   |
+61 | macro_rules! func {
+   |              ^^^^
+
+warning: unused import: `core::ops::*`
+ --> src/translation_utils/types/null.rs:3:5
+  |
+3 | use core::ops::*;
+  |     ^^^^^^^^^^^^
+
+warning: unused macro definition: `c_va_start`
+   --> src/translation_utils/types/va_args.rs:131:14
+    |
+131 | macro_rules! c_va_start {
+    |              ^^^^^^^^^^
+
+warning: unused macro definition: `c_va_end`
+   --> src/translation_utils/types/va_args.rs:137:14
+    |
+137 | macro_rules! c_va_end {
+    |              ^^^^^^^^
+
+warning: unnecessary parentheses around `if` condition
+ --> src/src/bitset_c.rs:7:8
+  |
+7 |     if (bs == NULL!()) {
+  |        ^             ^
+  |
+  = note: `#[warn(unused_parens)]` on by default
+help: remove these parentheses
+  |
+7 -     if (bs == NULL!()) {
+7 +     if bs == NULL!() {
+  |
+
+warning: unnecessary parentheses around `if` condition
+  --> src/src/bitset_c.rs:12:8
+   |
+12 |     if (array == NULL!()) {
+   |        ^                ^
+   |
+help: remove these parentheses
+   |
+12 -     if (array == NULL!()) {
+12 +     if array == NULL!() {
+   |
+
+warning: unused import: `crate::src::include::cborg::bitset_h::bitset_t`
+  --> src/src/bitset_c.rs:20:5
+   |
+20 | use crate::src::include::cborg::bitset_h::bitset_t;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unnecessary parentheses around `if` condition
+  --> src/src/bitset_c.rs:44:8
+   |
+44 |     if (bs.flip) {
+   |        ^       ^
+   |
+help: remove these parentheses
+   |
+44 -     if (bs.flip) {
+44 +     if bs.flip {
+   |
+
+warning: unnecessary parentheses around `if` condition
+  --> src/src/bitset_c.rs:56:15
+   |
+56 |     return if (bs.flip) { bs.count == 0 } else { bs.count == bs.size };
+   |               ^       ^
+   |
+help: remove these parentheses
+   |
+56 -     return if (bs.flip) { bs.count == 0 } else { bs.count == bs.size };
+56 +     return if bs.flip { bs.count == 0 } else { bs.count == bs.size };
+   |
+
+warning: unnecessary parentheses around `if` condition
+  --> src/src/bitset_c.rs:97:8
+   |
+97 |     if (tree == NULL!()) {
+   |        ^               ^
+   |
+help: remove these parentheses
+   |
+97 -     if (tree == NULL!()) {
+97 +     if tree == NULL!() {
+   |
+
+warning: unnecessary parentheses around `if` condition
+   --> src/src/bitset_c.rs:103:8
+    |
+103 |     if (tree.refcount == 0) {
+    |        ^                  ^
+    |
+help: remove these parentheses
+    |
+103 -     if (tree.refcount == 0) {
+103 +     if tree.refcount == 0 {
+    |
+
+warning: unnecessary parentheses around `if` condition
+   --> src/src/bitset_c.rs:116:8
+    |
+116 |     if (file == NULL!()) {
+    |        ^               ^
+    |
+help: remove these parentheses
+    |
+116 -     if (file == NULL!()) {
+116 +     if file == NULL!() {
+    |
+
+warning: unused import: `crate::src::bitset_c::cb_bitset_test`
+ --> src/src/include/cborg/bitset_h.rs:2:9
+  |
+2 | pub use crate::src::bitset_c::cb_bitset_test;
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::src::bitset_c::cb_bitset_new`
+ --> src/src/include/cborg/bitset_h.rs:3:9
+  |
+3 | pub use crate::src::bitset_c::cb_bitset_new;
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::src::bitset_c::cb_bitset_flip`
+ --> src/src/include/cborg/bitset_h.rs:4:9
+  |
+4 | pub use crate::src::bitset_c::cb_bitset_flip;
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::src::bitset_c::cb_bitset_delete`
+ --> src/src/include/cborg/bitset_h.rs:5:9
+  |
+5 | pub use crate::src::bitset_c::cb_bitset_delete;
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::src::bitset_c::cb_bitset_count`
+ --> src/src/include/cborg/bitset_h.rs:6:9
+  |
+6 | pub use crate::src::bitset_c::cb_bitset_count;
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::src::bitset_c::cb_bitset_none`
+ --> src/src/include/cborg/bitset_h.rs:7:9
+  |
+7 | pub use crate::src::bitset_c::cb_bitset_none;
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::src::bitset_c::cb_bitset_reset`
+ --> src/src/include/cborg/bitset_h.rs:8:9
+  |
+8 | pub use crate::src::bitset_c::cb_bitset_reset;
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::src::bitset_c::cb_bitset_to_string`
+ --> src/src/include/cborg/bitset_h.rs:9:9
+  |
+9 | pub use crate::src::bitset_c::cb_bitset_to_string;
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::src::bitset_c::cb_bitset_all`
+  --> src/src/include/cborg/bitset_h.rs:10:9
+   |
+10 | pub use crate::src::bitset_c::cb_bitset_all;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::src::bitset_c::cb_bitset_read`
+  --> src/src/include/cborg/bitset_h.rs:11:9
+   |
+11 | pub use crate::src::bitset_c::cb_bitset_read;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::src::bitset_c::cb_bitset_any`
+  --> src/src/include/cborg/bitset_h.rs:12:9
+   |
+12 | pub use crate::src::bitset_c::cb_bitset_any;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::src::bitset_c::cb_bitset_size`
+  --> src/src/include/cborg/bitset_h.rs:13:9
+   |
+13 | pub use crate::src::bitset_c::cb_bitset_size;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::src::bitset_c::cb_bitset_set`
+  --> src/src/include/cborg/bitset_h.rs:15:9
+   |
+15 | pub use crate::src::bitset_c::cb_bitset_set;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `_CBORG_BITSET_H`
+  --> src/src/include/cborg/bitset_h.rs:27:16
+   |
+27 | pub(crate) use _CBORG_BITSET_H;
+   |                ^^^^^^^^^^^^^^^
+
+warning: unused import: `__bitset_size`
+  --> src/src/include/cborg/bitset_h.rs:30:16
+   |
+30 | pub(crate) use __bitset_size;
+   |                ^^^^^^^^^^^^^
+
+warning: unused import: `__bitset_byte`
+  --> src/src/include/cborg/bitset_h.rs:37:16
+   |
+37 | pub(crate) use __bitset_byte;
+   |                ^^^^^^^^^^^^^
+
+warning: unused import: `__bitset_bit_mask`
+  --> src/src/include/cborg/bitset_h.rs:40:16
+   |
+40 | pub(crate) use __bitset_bit_mask;
+   |                ^^^^^^^^^^^^^^^^^
+
+warning: unused import: `std::fs::File`
+ --> src/interfaces/bitset.rs:1:5
+  |
+1 | use std::fs::File;
+  |     ^^^^^^^^^^^^^
+
+warning: unused imports: `Read` and `Write`
+ --> src/interfaces/bitset.rs:2:21
+  |
+2 | use std::io::{self, Read, Write};
+  |                     ^^^^  ^^^^^
+
+warning: unused import: `std::path::Path`
+ --> src/interfaces/bitset.rs:3:5
+  |
+3 | use std::path::Path;
+  |     ^^^^^^^^^^^^^^^
+
+warning: variable does not need to be mutable
+ --> src/translation_utils/types/global.rs:9:13
+  |
+9 |         let mut result: LazyLock<Mutex<T>> = LazyLock::new(value_function);
+  |             ----^^^^^^
+  |             |
+  |             help: remove this `mut`
+  |
+  = note: `#[warn(unused_mut)]` on by default
+
+error[E0061]: this function takes 2 arguments but 0 arguments were supplied
+  --> src/src/bitset_c.rs:87:21
+   |
+87 |         res[i] = if cb_bitset_test() { b'1' } else { b'0' };
+   |                     ^^^^^^^^^^^^^^-- two arguments of type `memory::ptr::Ptr<bitset_t>` and `usize` are missing
+   |
+note: function defined here
+  --> src/src/bitset_c.rs:39:8
+   |
+39 | pub fn cb_bitset_test(mut bs: Ptr<bitset_t>, mut idx: usize) -> bool {
+   |        ^^^^^^^^^^^^^^ ---------------------  --------------
+help: provide the arguments
+   |
+87 |         res[i] = if cb_bitset_test(/* memory::ptr::Ptr<bitset_t> */, /* usize */) { b'1' } else { b'0' };
+   |                                    +++++++++++++++++++++++++++++++++++++++++++++
+
+error[E0277]: the trait bound `types::null::Null: cast_trait::CastInto<{type error}>` is not satisfied
+   --> src/translation_utils/types/null.rs:15:16
+    |
+15  |         Null().cast()
+    |                ^^^^ the trait `integer::Integer` is not implemented for `types::null::Null`
+    |
+   ::: src/src/bitset_c.rs:97:17
+    |
+97  |     if (tree == NULL!()) {
+    |                 ------- in this macro invocation
+    |
+    = help: the following other types implement trait `integer::Integer`:
+              bool
+              i128
+              i16
+              i32
+              i64
+              i8
+              isize
+              types::num::Num
+            and 6 others
+note: required for `{type error}` to implement `cast_trait::CastFrom<types::null::Null>`
+   --> src/translation_utils/types/integer.rs:195:32
+    |
+195 | impl<I1: Integer, I2: Integer> CastFrom<I1> for I2 {
+    |          -------               ^^^^^^^^^^^^     ^^
+    |          |
+    |          unsatisfied trait bound introduced here
+note: required for `types::null::Null` to implement `cast_trait::CastInto<{type error}>`
+   --> src/translation_utils/types/cast_trait.rs:11:14
+    |
+11  | impl<T1, T2> CastInto<T2> for T1
+    |              ^^^^^^^^^^^^     ^^
+12  | where
+13  |     T2: CastFrom<T1>,
+    |         ------------ unsatisfied trait bound introduced here
+note: required by a bound in `cast_trait::CastIntoTyped::cast`
+   --> src/translation_utils/types/cast_trait.rs:23:15
+    |
+21  |     fn cast<T>(&mut self) -> T
+    |        ---- required by a bound in this associated function
+22  |     where
+23  |         Self: CastInto<T>,
+    |               ^^^^^^^^^^^ required by this bound in `CastIntoTyped::cast`
+    = note: this error originates in the macro `NULL` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: variable does not need to be mutable
+ --> src/translation_utils/c_alignment/libraries/c_realloc.rs:7:34
+  |
+7 | pub fn realloc(mut ptr: Ptr<u8>, mut size: usize) -> Ptr<u8> {
+  |                                  ----^^^^
+  |                                  |
+  |                                  help: remove this `mut`
+
+warning: variable does not need to be mutable
+ --> src/translation_utils/c_alignment/libraries/c_string.rs:5:15
+  |
+5 | pub fn strcmp(mut str1: Ptr<Char>, mut str2: Ptr<Char>) -> i32 {
+  |               ----^^^^
+  |               |
+  |               help: remove this `mut`
+
+warning: variable does not need to be mutable
+ --> src/translation_utils/c_alignment/libraries/c_string.rs:5:36
+  |
+5 | pub fn strcmp(mut str1: Ptr<Char>, mut str2: Ptr<Char>) -> i32 {
+  |                                    ----^^^^
+  |                                    |
+  |                                    help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/c_string.rs:26:16
+   |
+26 | pub fn strncmp(mut str1: Ptr<Char>, mut str2: Ptr<Char>, n: usize) -> i32 {
+   |                ----^^^^
+   |                |
+   |                help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/c_string.rs:26:37
+   |
+26 | pub fn strncmp(mut str1: Ptr<Char>, mut str2: Ptr<Char>, n: usize) -> i32 {
+   |                                     ----^^^^
+   |                                     |
+   |                                     help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/c_string.rs:51:15
+   |
+51 | pub fn strlen(mut str1: Ptr<Char>) -> usize {
+   |               ----^^^^
+   |               |
+   |               help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/c_string.rs:59:15
+   |
+59 | pub fn strdup(mut str1: Ptr<Char>) -> Ptr<Char> {
+   |               ----^^^^
+   |               |
+   |               help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:101:9
+    |
+101 |     let mut fmt = format.to_string();
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:102:9
+    |
+102 |     let mut tmp = va_format!(fmt, va);
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:118:34
+    |
+118 | pub fn sprintf(mut buf: Ptr<u8>, mut format: Ptr<u8>, va: VaList) -> i32 {
+    |                                  ----^^^^^^
+    |                                  |
+    |                                  help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:119:9
+    |
+119 |     let mut fmt = format.to_string();
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:120:9
+    |
+120 |     let mut tmp = va_format!(fmt, va);
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:121:9
+    |
+121 |     let mut length = tmp.as_bytes().len() as i32;
+    |         ----^^^^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:140:49
+    |
+140 | pub fn sprintf_s(mut buf: Ptr<u8>, size: usize, mut format: Ptr<u8>, va: VaList) -> i32 {
+    |                                                 ----^^^^^^
+    |                                                 |
+    |                                                 help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:144:9
+    |
+144 |     let mut fmt = format.to_string();
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:145:9
+    |
+145 |     let mut tmp = va_format!(fmt, va);
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:146:9
+    |
+146 |     let mut length = tmp.as_bytes().len() as i32;
+    |         ----^^^^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:166:9
+    |
+166 |     let mut fmt = format.to_string();
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:167:9
+    |
+167 |     let mut tmp = va_format!(fmt, va);
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:200:9
+    |
+200 |     let mut fmt = format.to_string();
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:201:9
+    |
+201 |     let mut tmp = va_format!(fmt, va);
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:235:16
+    |
+235 | pub fn strrchr(mut str1: Ptr<u8>, mut ch: u8) -> Ptr<u8> {
+    |                ----^^^^
+    |                |
+    |                help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:235:35
+    |
+235 | pub fn strrchr(mut str1: Ptr<u8>, mut ch: u8) -> Ptr<u8> {
+    |                                   ----^^
+    |                                   |
+    |                                   help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:236:9
+    |
+236 |     let mut length = strlen(str1);
+    |         ----^^^^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:255:34
+    |
+255 | pub fn strcpy(mut dest: Ptr<u8>, mut src: Ptr<u8>) -> Ptr<u8> {
+    |                                  ----^^^
+    |                                  |
+    |                                  help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:256:9
+    |
+256 |     let mut length = strlen(src);
+    |         ----^^^^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:274:5
+    |
+274 |     mut size: usize,
+    |     ----^^^^
+    |     |
+    |     help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:275:5
+    |
+275 |     mut src: Ptr<u8>,
+    |     ----^^^
+    |     |
+    |     help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/c_memcmp.rs:14:17
+   |
+14 |     fn c_memcmp(mut dst: &Ptr<T>, mut src: &Ptr<T>, count: usize) -> i32 {
+   |                 ----^^^
+   |                 |
+   |                 help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/c_memcmp.rs:14:35
+   |
+14 |     fn c_memcmp(mut dst: &Ptr<T>, mut src: &Ptr<T>, count: usize) -> i32 {
+   |                                   ----^^^
+   |                                   |
+   |                                   help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/safelib/c_memcpy_s.rs:17:19
+   |
+17 |     fn c_memcpy_s(mut dst: &mut Ptr<T>, dst_size: usize, src: &Ptr<T>, count: usize) -> ErrnoT {
+   |                   ----^^^
+   |                   |
+   |                   help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/safelib/c_memmove_s.rs:17:20
+   |
+17 |     fn c_memmove_s(mut dst: &mut Ptr<T>, dst_size: usize, src: &Ptr<T>, count: usize) -> ErrnoT {
+   |                    ----^^^
+   |                    |
+   |                    help: remove this `mut`
+
+warning: unnecessary `unsafe` block
+  --> src/translation_utils/memory/file_ptr.rs:86:35
+   |
+86 |                 let leaked_file = unsafe { NonNull::new(Box::into_raw(boxed_file)).unwrap() };
+   |                                   ^^^^^^ unnecessary `unsafe` block
+   |
+   = note: `#[warn(unused_unsafe)]` on by default
+
+warning: unnecessary `unsafe` block
+  --> src/translation_utils/memory/file_ptr.rs:91:35
+   |
+91 |                 let leaked_info = unsafe { NonNull::new(Box::into_raw(boxed_info)).unwrap() };
+   |                                   ^^^^^^ unnecessary `unsafe` block
+
+warning: unnecessary `unsafe` block
+   --> src/translation_utils/memory/file_ptr.rs:104:35
+    |
+104 |                 let leaked_file = unsafe { NonNull::new(Box::into_raw(boxed_file)).unwrap() };
+    |                                   ^^^^^^ unnecessary `unsafe` block
+
+warning: unnecessary `unsafe` block
+   --> src/translation_utils/memory/file_ptr.rs:109:35
+    |
+109 |                 let leaked_info = unsafe { NonNull::new(Box::into_raw(boxed_info)).unwrap() };
+    |                                   ^^^^^^ unnecessary `unsafe` block
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/memory/file_ptr.rs:80:14
+   |
+80 | pub fn fopen(mut filename: CStr, mut mode: CStr) -> FilePtr {
+   |              ----^^^^^^^^
+   |              |
+   |              help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:122:15
+    |
+122 | pub fn fclose(mut file: &mut FilePtr) -> i32 {
+    |               ----^^^^
+    |               |
+    |               help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:134:14
+    |
+134 | pub fn fgetc(mut file: &mut FilePtr) -> i32 {
+    |              ----^^^^
+    |              |
+    |              help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:152:15
+    |
+152 | pub fn ungetc(mut c: i32, mut file: &mut FilePtr) -> i32 {
+    |               ----^
+    |               |
+    |               help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:152:27
+    |
+152 | pub fn ungetc(mut c: i32, mut file: &mut FilePtr) -> i32 {
+    |                           ----^^^^
+    |                           |
+    |                           help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:163:32
+    |
+163 | pub fn fread(mut ptr: Ptr<u8>, mut size: usize, mut count: usize, mut file: &mut FilePtr) -> usize {
+    |                                ----^^^^
+    |                                |
+    |                                help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:163:49
+    |
+163 | pub fn fread(mut ptr: Ptr<u8>, mut size: usize, mut count: usize, mut file: &mut FilePtr) -> usize {
+    |                                                 ----^^^^^
+    |                                                 |
+    |                                                 help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:163:67
+    |
+163 | pub fn fread(mut ptr: Ptr<u8>, mut size: usize, mut count: usize, mut file: &mut FilePtr) -> usize {
+    |                                                                   ----^^^^
+    |                                                                   |
+    |                                                                   help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:193:5
+    |
+193 |     mut ptr: Ptr<u8>,
+    |     ----^^^
+    |     |
+    |     help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:194:5
+    |
+194 |     mut size: usize,
+    |     ----^^^^
+    |     |
+    |     help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:195:5
+    |
+195 |     mut count: usize,
+    |     ----^^^^^
+    |     |
+    |     help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:196:5
+    |
+196 |     mut file: &mut FilePtr,
+    |     ----^^^^
+    |     |
+    |     help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:201:9
+    |
+201 |     let mut write_size = size * count;
+    |         ----^^^^^^^^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:212:30
+    |
+212 | pub fn fgets(mut s: Ptr<u8>, mut n: i32, mut file: &mut FilePtr) -> Ptr<u8> {
+    |                              ----^
+    |                              |
+    |                              help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:212:42
+    |
+212 | pub fn fgets(mut s: Ptr<u8>, mut n: i32, mut file: &mut FilePtr) -> Ptr<u8> {
+    |                                          ----^^^^
+    |                                          |
+    |                                          help: remove this `mut`
+
+warning: unused variable: `pos`
+   --> src/translation_utils/memory/file_ptr.rs:252:12
+    |
+252 |         Ok(pos) => 0,
+    |            ^^^ help: if this is intentional, prefix it with an underscore: `_pos`
+    |
+    = note: `#[warn(unused_variables)]` on by default
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:240:14
+    |
+240 | pub fn fseek(mut file: &mut FilePtr, mut offset: i64, mut whence: i32) -> i32 {
+    |              ----^^^^
+    |              |
+    |              help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:240:38
+    |
+240 | pub fn fseek(mut file: &mut FilePtr, mut offset: i64, mut whence: i32) -> i32 {
+    |                                      ----^^^^^^
+    |                                      |
+    |                                      help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:240:55
+    |
+240 | pub fn fseek(mut file: &mut FilePtr, mut offset: i64, mut whence: i32) -> i32 {
+    |                                                       ----^^^^^^
+    |                                                       |
+    |                                                       help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:257:14
+    |
+257 | pub fn ftell(mut file: &mut FilePtr) -> i64 {
+    |              ----^^^^
+    |              |
+    |              help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:273:15
+    |
+273 | pub fn remove(mut filename: CStr) -> i32 {
+    |               ----^^^^^^^^
+    |               |
+    |               help: remove this `mut`
+
+warning: unused variable: `key`
+  --> src/translation_utils/memory/resource_heap.rs:48:21
+   |
+48 |                 let key = nonnull.as_ptr() as usize;
+   |                     ^^^ help: if this is intentional, prefix it with an underscore: `_key`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/memory/resource_heap.rs:49:21
+   |
+49 |                 let mut remove_value = self.heap.remove(&(nonnull.as_ptr() as usize));
+   |                     ----^^^^^^^^^^^^
+   |                     |
+   |                     help: remove this `mut`
+
+warning: unused variable: `length`
+  --> src/translation_utils/types/c_str.rs:11:13
+   |
+11 |         let length = data.len();
+   |             ^^^^^^ help: if this is intentional, prefix it with an underscore: `_length`
+
+warning: variable does not need to be mutable
+  --> src/src/bitset_c.rs:43:22
+   |
+43 | pub fn cb_bitset_any(mut bs: Ptr<bitset_t>) -> bool {
+   |                      ----^^
+   |                      |
+   |                      help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/src/bitset_c.rs:51:23
+   |
+51 | pub fn cb_bitset_none(mut bs: Ptr<bitset_t>) -> bool {
+   |                       ----^^
+   |                       |
+   |                       help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/src/bitset_c.rs:55:22
+   |
+55 | pub fn cb_bitset_all(mut bs: Ptr<bitset_t>) -> bool {
+   |                      ----^^
+   |                      |
+   |                      help: remove this `mut`
+
+warning: unused variable: `bs`
+  --> src/src/bitset_c.rs:61:26
+   |
+61 | pub fn cb_bitset_set(mut bs: Ptr<bitset_t_import>, mut idx: usize, mut value: bool) {
+   |                          ^^ help: if this is intentional, prefix it with an underscore: `_bs`
+
+warning: unused variable: `idx`
+  --> src/src/bitset_c.rs:61:56
+   |
+61 | pub fn cb_bitset_set(mut bs: Ptr<bitset_t_import>, mut idx: usize, mut value: bool) {
+   |                                                        ^^^ help: if this is intentional, prefix it with an underscore: `_idx`
+
+warning: unused variable: `value`
+  --> src/src/bitset_c.rs:61:72
+   |
+61 | pub fn cb_bitset_set(mut bs: Ptr<bitset_t_import>, mut idx: usize, mut value: bool) {
+   |                                                                        ^^^^^ help: if this is intentional, prefix it with an underscore: `_value`
+
+warning: variable does not need to be mutable
+  --> src/src/bitset_c.rs:61:22
+   |
+61 | pub fn cb_bitset_set(mut bs: Ptr<bitset_t_import>, mut idx: usize, mut value: bool) {
+   |                      ----^^
+   |                      |
+   |                      help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/src/bitset_c.rs:61:52
+   |
+61 | pub fn cb_bitset_set(mut bs: Ptr<bitset_t_import>, mut idx: usize, mut value: bool) {
+   |                                                    ----^^^
+   |                                                    |
+   |                                                    help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/src/bitset_c.rs:61:68
+   |
+61 | pub fn cb_bitset_set(mut bs: Ptr<bitset_t_import>, mut idx: usize, mut value: bool) {
+   |                                                                    ----^^^^^
+   |                                                                    |
+   |                                                                    help: remove this `mut`
+
+warning: unused variable: `nb_bits`
+  --> src/interfaces/bitset.rs:12:16
+   |
+12 |     pub fn new(nb_bits: usize) -> Self {
+   |                ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_nb_bits`
+
+warning: unused variable: `path`
+  --> src/interfaces/bitset.rs:15:17
+   |
+15 |     pub fn read(path: &str) -> io::Result<Self> {
+   |                 ^^^^ help: if this is intentional, prefix it with an underscore: `_path`
+
+Some errors have detailed explanations: E0061, E0252, E0277, E0412, E0432.
+For more information about an error, try `rustc --explain E0061`.
+warning: `bitset` (lib) generated 185 warnings
+error: could not compile `bitset` (lib) due to 14 previous errors; 185 warnings emitted

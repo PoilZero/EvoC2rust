@@ -82,3 +82,16 @@
 
 ## Report
 - Full report: run_artifacts/vec_run_003/15_REPORT.md
+
+# EvoC2rust Translation Report (bitset_0_run_001)
+
+## Run Summary
+- Project name: bitset_0_run_001
+- C source: data/CBench_raw_divided_train_filter4096/bitset_0
+- Rust signatures/tests: data/RBench_raw_divided_train_filter4096/bitset_0
+- Artifacts folder: run_artifacts/bitset_0_run_001
+- LLM: Local Qwen3-4B-Thinking (vLLM, OpenAI-compatible)
+- Result: cargo build + cargo test failed (no manual patch)
+
+## Report
+- Full report: run_artifacts/bitset_0_run_001/18_REPORT.md

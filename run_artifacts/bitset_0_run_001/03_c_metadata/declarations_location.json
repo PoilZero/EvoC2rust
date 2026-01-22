@@ -1,0 +1,47 @@
+{
+    "cb_bitset_new": [
+        "src/bitset.c"
+    ],
+    "cb_bitset_delete": [
+        "src/bitset.c"
+    ],
+    "cb_bitset_count": [
+        "src/bitset.c"
+    ],
+    "cb_bitset_size": [
+        "src/bitset.c"
+    ],
+    "cb_bitset_test": [
+        "src/bitset.c"
+    ],
+    "cb_bitset_any": [
+        "src/bitset.c"
+    ],
+    "cb_bitset_none": [
+        "src/bitset.c"
+    ],
+    "cb_bitset_all": [
+        "src/bitset.c"
+    ],
+    "cb_bitset_set": [
+        "src/bitset.c"
+    ],
+    "cb_bitset_reset": [
+        "src/bitset.c"
+    ],
+    "cb_bitset_flip": [
+        "src/bitset.c"
+    ],
+    "cb_bitset_to_string": [
+        "src/bitset.c"
+    ],
+    "cb_bitset_write": [
+        "src/bitset.c"
+    ],
+    "cb_bitset_read": [
+        "src/bitset.c"
+    ],
+    "bitset_t": [
+        "src/include/cborg/bitset.h"
+    ]
+}

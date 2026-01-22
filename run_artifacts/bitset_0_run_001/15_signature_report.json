@@ -1,0 +1,9 @@
+{
+  "crate_name": "bitset",
+  "expected_functions": ["new", "read"],
+  "expected_structs": ["Bitset"],
+  "found_functions": ["alloc", "as_bool", "as_rust_slice", "as_rust_slice_mut", "atoi", "basename", "binomial_tree_unref", "calloc", "cb_bitset_all", "cb_bitset_any", "cb_bitset_count", "cb_bitset_delete", "cb_bitset_flip", "cb_bitset_new", "cb_bitset_none", "cb_bitset_read", "cb_bitset_reset", "cb_bitset_set", "cb_bitset_size", "cb_bitset_test", "cb_bitset_to_string", "dealloc", "fclose", "fgetc", "fgets", "fopen", "fread", "fseek", "ftell", "fwrite", "len", "lock", "malloc", "memcpy", "memmove", "memset", "new", "printf", "realloc", "remove", "snprintf", "snprintf_s", "sprintf", "sprintf_s", "strcmp", "strcpy", "strcpy_s", "strdup", "strlen", "strncmp", "strrchr", "to_string", "ungetc"],
+  "found_structs": ["Arguments", "Array", "FileInfo", "FilePtr", "FuncPtr", "Global", "Null", "Num", "Ptr", "ResourceHeap", "bitset_t"],
+  "missing_functions": ["read"],
+  "missing_structs": ["Bitset"]
+}

@@ -1,0 +1,1 @@
+{"typedef struct bitset_t\n{\n    bool flip;\n    size_t size;\n    size_t count;\n    uint8_t *array;\n} bitset_t;": "0"}

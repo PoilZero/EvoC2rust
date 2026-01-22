@@ -1,0 +1,1 @@
+{"#define __bitset_size(nbits) ((nbits + 7) >> 3)": "0", "#define __bitset_byte(idx) ((idx) >> 3)": "1", "#define __bitset_bit_mask(idx) (1 << ((idx)&0x7))": "2"}

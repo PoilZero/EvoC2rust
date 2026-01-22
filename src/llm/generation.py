@@ -1,3 +1,4 @@
+import os
 from tqdm import tqdm
 from entity.metadata import RustCode
 from entity.exceptions import CallLLMTimeoutError
@@ -72,11 +73,12 @@ multi_process=False, threads_num=10):
         return
     else:
         from pebble import ProcessPool
+        timeout = int(os.getenv("EVO_C2RUST_LLM_TIMEOUT", "300"))
         with ProcessPool(max_workers=threads_num) as pool:
             futures = []
             for c in codes:
                 future = pool.schedule(
-                    get_llm_gen_result_with_cache, args=[client, c.c_code, prompt, cache, typ], timeout=300
+                    get_llm_gen_result_with_cache, args=[client, c.c_code, prompt, cache, typ], timeout=timeout
                 )
                 futures.append((c, future))
             for c, future in tqdm(futures):
