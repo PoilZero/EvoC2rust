@@ -6,7 +6,7 @@ You need to translate `void*` type to VoidPtr in Rust, and all char type to u8.
 Array in C like int[10] should be translated to `Array` type in Rust: Array<i32, 10>, and you should use arr! macro to initialize the array, for example, `int a[5] = {1, 2, 3, 4, 5};` should be translated to `a: Array<i32, 5> = arr![1, 2, 3, 4, 5];`.
 Enum Type in C should be translated to i32 and the enum values should be translated to macro_rules, and all translated macros in Rust should be uppercased.
 Pointers in C should be translated to Ptr<T> in Rust.
-Remember when translating macros, add `pub(crate)` to the macro definition to make it visible.
+When translating macros, use `macro_rules! NAME { ... }` and re-export with `pub(crate) use NAME;` (or `#[macro_export]` if needed). Do NOT write `pub(crate) macro_rules!`.
 You should translate the global variables start with g_ with Global<T> type and global!() macro, for example, `static int g_a = 0;` should be translated to `pub static g_a: Global<i32> = global!(0);`. However, if it not not start with g_, just translate it to a constant.
 
 Here are some examples:

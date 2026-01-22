@@ -1,0 +1,28 @@
+I need you to transpile the provided code files from C to Rust.
+Please follow the instructions provided below:
+  - You MUST use the same name as the Rust interface file name, when generating the transpiled Rust Codes
+  - You MUST NOT change the function signatures of the Rust code.
+  - You MUST keep module paths and public APIs exactly as in the provided interface files.
+  - Each transpiled Rust file MUST compile and the provided tests MUST pass.
+  - The transpiled Rust code MUST be observationally equivalent to the C code.
+  - The transpiled Rust code MUST NOT contain Foreign Function Interface calls, such as the libc library.
+  - You must ensure that you import the required files that are referenced in each Rust file.
+  - You may derive traits for the data types that are defined, to elicit required behavior during implementation. For instance you can add #[derive(Clone)] for structs when the Clone trait is required for implementation.
+  - If you define macros, use `macro_rules!` and re-export via `pub(crate) use` or `#[macro_export]` when needed. Do NOT write `pub(crate) macro_rules!`.
+  - All imports in the rust file must be in the following format
+  - ```rust
+      use crate::file_name::module;
+    ```
+
+Return your final solution for each transpiled file in the following format, ensuring that all files include complete, runnable code rather than code fragments.
+
+<final_solution>
+{{file_name1.rs}} 
+```rust
+// Generated Rust Code
+```
+{{file_name2.rs}} 
+```rust
+// Generated Rust Code
+```
+</final_solution>
