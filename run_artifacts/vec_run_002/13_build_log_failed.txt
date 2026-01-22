@@ -1,0 +1,2721 @@
+   Compiling my_proj v0.1.0 (/home/poil/桌面/github/EvoC2rust_work/EvoC2rust/final_project/vec_run_002)
+error: unknown start of token: `
+  --> src/src/vec_c.rs:21:1
+   |
+21 | ```c
+   | ^^^
+   |
+   = note: character appears 2 more times
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+21 - ```c
+21 + '''c
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_c.rs:39:1
+   |
+39 | ```c
+   | ^^^
+   |
+   = note: character appears 2 more times
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+39 - ```c
+39 + '''c
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_c.rs:71:1
+   |
+71 | ```c
+   | ^^^
+   |
+   = note: character appears 2 more times
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+71 - ```c
+71 + '''c
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_c.rs:84:1
+   |
+84 | ```c
+   | ^^^
+   |
+   = note: character appears 2 more times
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+84 - ```c
+84 + '''c
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_c.rs:94:1
+   |
+94 | ```c
+   | ^^^
+   |
+   = note: character appears 2 more times
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+94 - ```c
+94 + '''c
+   |
+
+error: unknown start of token: `
+   --> src/src/vec_c.rs:104:1
+    |
+104 | ```c
+    | ^^^
+    |
+    = note: character appears 2 more times
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+    |
+104 - ```c
+104 + '''c
+    |
+
+error: expected one of `!` or `::`, found `need`
+  --> src/src/vec_c.rs:18:3
+   |
+18 | I need to translate the given C code to Rust following the rules specified. Let me analyze the C code and translate it step by step.
+   |   ^^^^ expected one of `!` or `::`
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:14:1
+   |
+14 | ```c
+   | ^^^
+   |
+   = note: character appears 2 more times
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+14 - ```c
+14 + '''c
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:20:1
+   |
+20 | ```c
+   | ^^^
+   |
+   = note: character appears 2 more times
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+20 - ```c
+20 + '''c
+   |
+
+error: prefix `let` is unknown
+  --> src/src/vec_h.rs:23:7
+   |
+23 | Okay, let's tackle this translation problem. The user wants me to translate a C code definition to Rust following specific rules. First, ...
+   |       ^^^ unknown prefix
+   |
+   = note: prefixed identifiers and literals are reserved since Rust 2021
+help: consider inserting whitespace here
+   |
+23 | Okay, let 's tackle this translation problem. The user wants me to translate a C code definition to Rust following specific rules. First, I need to understand all the requirements clearly.
+   |          +
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:26:3
+   |
+26 | - `void*` becomes `VoidPtr` in Rust
+   |   ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+26 - - `void*` becomes `VoidPtr` in Rust
+26 + - 'void*` becomes `VoidPtr` in Rust
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:26:9
+   |
+26 | - `void*` becomes `VoidPtr` in Rust
+   |         ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+26 - - `void*` becomes `VoidPtr` in Rust
+26 + - `void*' becomes `VoidPtr` in Rust
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:26:19
+   |
+26 | - `void*` becomes `VoidPtr` in Rust
+   |                   ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+26 - - `void*` becomes `VoidPtr` in Rust
+26 + - `void*` becomes 'VoidPtr` in Rust
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:26:27
+   |
+26 | - `void*` becomes `VoidPtr` in Rust
+   |                           ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+26 - - `void*` becomes `VoidPtr` in Rust
+26 + - `void*` becomes `VoidPtr' in Rust
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:27:7
+   |
+27 | - All `char` types become `u8`
+   |       ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+27 - - All `char` types become `u8`
+27 + - All 'char` types become `u8`
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:27:12
+   |
+27 | - All `char` types become `u8`
+   |            ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+27 - - All `char` types become `u8`
+27 + - All `char' types become `u8`
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:27:27
+   |
+27 | - All `char` types become `u8`
+   |                           ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+27 - - All `char` types become `u8`
+27 + - All `char` types become 'u8`
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:27:30
+   |
+27 | - All `char` types become `u8`
+   |                              ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+27 - - All `char` types become `u8`
+27 + - All `char` types become `u8'
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:28:15
+   |
+28 | - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+   |               ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+28 - - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+28 + - Arrays like 'int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:28:23
+   |
+28 | - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+   |                       ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+28 - - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+28 + - Arrays like `int[10]' become `Array<i32, 10>` and use `arr!` macro for initialization
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:28:32
+   |
+28 | - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+   |                                ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+28 - - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+28 + - Arrays like `int[10]` become 'Array<i32, 10>` and use `arr!` macro for initialization
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:28:47
+   |
+28 | - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+   |                                               ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+28 - - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+28 + - Arrays like `int[10]` become `Array<i32, 10>' and use `arr!` macro for initialization
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:28:57
+   |
+28 | - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+   |                                                         ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+28 - - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+28 + - Arrays like `int[10]` become `Array<i32, 10>` and use 'arr!` macro for initialization
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:28:62
+   |
+28 | - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+   |                                                              ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+28 - - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+28 + - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!' macro for initialization
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:29:16
+   |
+29 | - Enums become `i32` with macro_rules for each enum value (all macros uppercased)
+   |                ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+29 - - Enums become `i32` with macro_rules for each enum value (all macros uppercased)
+29 + - Enums become 'i32` with macro_rules for each enum value (all macros uppercased)
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:29:20
+   |
+29 | - Enums become `i32` with macro_rules for each enum value (all macros uppercased)
+   |                    ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+29 - - Enums become `i32` with macro_rules for each enum value (all macros uppercased)
+29 + - Enums become `i32' with macro_rules for each enum value (all macros uppercased)
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:30:19
+   |
+30 | - Pointers become `Ptr<T>`
+   |                   ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+30 - - Pointers become `Ptr<T>`
+30 + - Pointers become 'Ptr<T>`
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:30:26
+   |
+30 | - Pointers become `Ptr<T>`
+   |                          ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+30 - - Pointers become `Ptr<T>`
+30 + - Pointers become `Ptr<T>'
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:31:34
+   |
+31 | - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+   |                                  ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+31 - - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+31 + - Global variables starting with 'g_` use `Global<T>` and `global!()` macro
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:31:37
+   |
+31 | - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+   |                                     ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+31 - - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+31 + - Global variables starting with `g_' use `Global<T>` and `global!()` macro
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:31:43
+   |
+31 | - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+   |                                           ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+31 - - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+31 + - Global variables starting with `g_` use 'Global<T>` and `global!()` macro
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:31:53
+   |
+31 | - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+   |                                                     ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+31 - - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+31 + - Global variables starting with `g_` use `Global<T>' and `global!()` macro
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:31:59
+   |
+31 | - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+   |                                                           ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+31 - - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+31 + - Global variables starting with `g_` use `Global<T>` and 'global!()` macro
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:31:69
+   |
+31 | - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+   |                                                                     ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+31 - - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+31 + - Global variables starting with `g_` use `Global<T>` and `global!()' macro
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:33:23
+   |
+33 | - String literals use `cstr!` macro
+   |                       ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+33 - - String literals use `cstr!` macro
+33 + - String literals use 'cstr!` macro
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:33:29
+   |
+33 | - String literals use `cstr!` macro
+   |                             ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+33 - - String literals use `cstr!` macro
+33 + - String literals use `cstr!' macro
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:34:16
+   |
+34 | - Structs with `typedef struct` need proper Rust struct definitions with `#[repr(C)]` and derive attributes
+   |                ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+34 - - Structs with `typedef struct` need proper Rust struct definitions with `#[repr(C)]` and derive attributes
+34 + - Structs with 'typedef struct` need proper Rust struct definitions with `#[repr(C)]` and derive attributes
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:34:31
+   |
+34 | - Structs with `typedef struct` need proper Rust struct definitions with `#[repr(C)]` and derive attributes
+   |                               ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+34 - - Structs with `typedef struct` need proper Rust struct definitions with `#[repr(C)]` and derive attributes
+34 + - Structs with `typedef struct' need proper Rust struct definitions with `#[repr(C)]` and derive attributes
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:34:74
+   |
+34 | - Structs with `typedef struct` need proper Rust struct definitions with `#[repr(C)]` and derive attributes
+   |                                                                          ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+34 - - Structs with `typedef struct` need proper Rust struct definitions with `#[repr(C)]` and derive attributes
+34 + - Structs with `typedef struct` need proper Rust struct definitions with '#[repr(C)]` and derive attributes
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:34:85
+   |
+34 | - Structs with `typedef struct` need proper Rust struct definitions with `#[repr(C)]` and derive attributes
+   |                                                                                     ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+34 - - Structs with `typedef struct` need proper Rust struct definitions with `#[repr(C)]` and derive attributes
+34 + - Structs with `typedef struct` need proper Rust struct definitions with `#[repr(C)]' and derive attributes
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:35:7
+   |
+35 | - For `typedef struct PreviousName { ... } PostName;`, add a type alias for `PreviousName` first
+   |       ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+35 - - For `typedef struct PreviousName { ... } PostName;`, add a type alias for `PreviousName` first
+35 + - For 'typedef struct PreviousName { ... } PostName;`, add a type alias for `PreviousName` first
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:35:53
+   |
+35 | - For `typedef struct PreviousName { ... } PostName;`, add a type alias for `PreviousName` first
+   |                                                     ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+35 - - For `typedef struct PreviousName { ... } PostName;`, add a type alias for `PreviousName` first
+35 + - For `typedef struct PreviousName { ... } PostName;', add a type alias for `PreviousName` first
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:35:77
+   |
+35 | - For `typedef struct PreviousName { ... } PostName;`, add a type alias for `PreviousName` first
+   |                                                                             ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+35 - - For `typedef struct PreviousName { ... } PostName;`, add a type alias for `PreviousName` first
+35 + - For `typedef struct PreviousName { ... } PostName;`, add a type alias for 'PreviousName` first
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:35:90
+   |
+35 | - For `typedef struct PreviousName { ... } PostName;`, add a type alias for `PreviousName` first
+   |                                                                                          ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+35 - - For `typedef struct PreviousName { ... } PostName;`, add a type alias for `PreviousName` first
+35 + - For `typedef struct PreviousName { ... } PostName;`, add a type alias for `PreviousName' first
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:38:1
+   |
+38 | ```c
+   | ^^^
+   |
+   = note: character appears 2 more times
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+38 - ```c
+38 + '''c
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:44:1
+   |
+44 | ```c
+   | ^^^
+   |
+   = note: character appears 2 more times
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+44 - ```c
+44 + '''c
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:50:1
+   |
+50 | ```c
+   | ^^^
+   |
+   = note: character appears 2 more times
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+50 - ```c
+50 + '''c
+   |
+
+error: prefix `let` is unknown
+  --> src/src/vec_h.rs:53:7
+   |
+53 | Okay, let's tackle this translation problem. The user wants me to translate a C code definition to Rust following specific rules. First, ...
+   |       ^^^ unknown prefix
+   |
+   = note: prefixed identifiers and literals are reserved since Rust 2021
+help: consider inserting whitespace here
+   |
+53 | Okay, let 's tackle this translation problem. The user wants me to translate a C code definition to Rust following specific rules. First, I need to understand all the requirements clearly.
+   |          +
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:56:3
+   |
+56 | - `void*` becomes `VoidPtr` in Rust
+   |   ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+56 - - `void*` becomes `VoidPtr` in Rust
+56 + - 'void*` becomes `VoidPtr` in Rust
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:56:9
+   |
+56 | - `void*` becomes `VoidPtr` in Rust
+   |         ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+56 - - `void*` becomes `VoidPtr` in Rust
+56 + - `void*' becomes `VoidPtr` in Rust
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:56:19
+   |
+56 | - `void*` becomes `VoidPtr` in Rust
+   |                   ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+56 - - `void*` becomes `VoidPtr` in Rust
+56 + - `void*` becomes 'VoidPtr` in Rust
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:56:27
+   |
+56 | - `void*` becomes `VoidPtr` in Rust
+   |                           ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+56 - - `void*` becomes `VoidPtr` in Rust
+56 + - `void*` becomes `VoidPtr' in Rust
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:57:7
+   |
+57 | - All `char` types become `u8`
+   |       ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+57 - - All `char` types become `u8`
+57 + - All 'char` types become `u8`
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:57:12
+   |
+57 | - All `char` types become `u8`
+   |            ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+57 - - All `char` types become `u8`
+57 + - All `char' types become `u8`
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:57:27
+   |
+57 | - All `char` types become `u8`
+   |                           ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+57 - - All `char` types become `u8`
+57 + - All `char` types become 'u8`
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:57:30
+   |
+57 | - All `char` types become `u8`
+   |                              ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+57 - - All `char` types become `u8`
+57 + - All `char` types become `u8'
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:58:15
+   |
+58 | - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+   |               ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+58 - - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+58 + - Arrays like 'int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:58:23
+   |
+58 | - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+   |                       ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+58 - - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+58 + - Arrays like `int[10]' become `Array<i32, 10>` and use `arr!` macro for initialization
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:58:32
+   |
+58 | - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+   |                                ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+58 - - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+58 + - Arrays like `int[10]` become 'Array<i32, 10>` and use `arr!` macro for initialization
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:58:47
+   |
+58 | - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+   |                                               ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+58 - - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+58 + - Arrays like `int[10]` become `Array<i32, 10>' and use `arr!` macro for initialization
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:58:57
+   |
+58 | - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+   |                                                         ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+58 - - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+58 + - Arrays like `int[10]` become `Array<i32, 10>` and use 'arr!` macro for initialization
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:58:62
+   |
+58 | - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+   |                                                              ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+58 - - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!` macro for initialization
+58 + - Arrays like `int[10]` become `Array<i32, 10>` and use `arr!' macro for initialization
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:59:16
+   |
+59 | - Enums become `i32` with macro_rules for each enum value (all macros uppercased)
+   |                ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+59 - - Enums become `i32` with macro_rules for each enum value (all macros uppercased)
+59 + - Enums become 'i32` with macro_rules for each enum value (all macros uppercased)
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:59:20
+   |
+59 | - Enums become `i32` with macro_rules for each enum value (all macros uppercased)
+   |                    ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+59 - - Enums become `i32` with macro_rules for each enum value (all macros uppercased)
+59 + - Enums become `i32' with macro_rules for each enum value (all macros uppercased)
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:60:19
+   |
+60 | - Pointers become `Ptr<T>`
+   |                   ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+60 - - Pointers become `Ptr<T>`
+60 + - Pointers become 'Ptr<T>`
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:60:26
+   |
+60 | - Pointers become `Ptr<T>`
+   |                          ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+60 - - Pointers become `Ptr<T>`
+60 + - Pointers become `Ptr<T>'
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:61:34
+   |
+61 | - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+   |                                  ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+61 - - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+61 + - Global variables starting with 'g_` use `Global<T>` and `global!()` macro
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:61:37
+   |
+61 | - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+   |                                     ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+61 - - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+61 + - Global variables starting with `g_' use `Global<T>` and `global!()` macro
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:61:43
+   |
+61 | - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+   |                                           ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+61 - - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+61 + - Global variables starting with `g_` use 'Global<T>` and `global!()` macro
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:61:53
+   |
+61 | - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+   |                                                     ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+61 - - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+61 + - Global variables starting with `g_` use `Global<T>' and `global!()` macro
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:61:59
+   |
+61 | - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+   |                                                           ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+61 - - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+61 + - Global variables starting with `g_` use `Global<T>` and 'global!()` macro
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:61:69
+   |
+61 | - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+   |                                                                     ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+61 - - Global variables starting with `g_` use `Global<T>` and `global!()` macro
+61 + - Global variables starting with `g_` use `Global<T>` and `global!()' macro
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:63:23
+   |
+63 | - String literals use `cstr!` macro
+   |                       ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+63 - - String literals use `cstr!` macro
+63 + - String literals use 'cstr!` macro
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:63:29
+   |
+63 | - String literals use `cstr!` macro
+   |                             ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+63 - - String literals use `cstr!` macro
+63 + - String literals use `cstr!' macro
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:64:16
+   |
+64 | - Structs with `typedef struct` need proper Rust struct definitions with `#[repr(C)]` and derive attributes
+   |                ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+64 - - Structs with `typedef struct` need proper Rust struct definitions with `#[repr(C)]` and derive attributes
+64 + - Structs with 'typedef struct` need proper Rust struct definitions with `#[repr(C)]` and derive attributes
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:64:31
+   |
+64 | - Structs with `typedef struct` need proper Rust struct definitions with `#[repr(C)]` and derive attributes
+   |                               ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+64 - - Structs with `typedef struct` need proper Rust struct definitions with `#[repr(C)]` and derive attributes
+64 + - Structs with `typedef struct' need proper Rust struct definitions with `#[repr(C)]` and derive attributes
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:64:74
+   |
+64 | - Structs with `typedef struct` need proper Rust struct definitions with `#[repr(C)]` and derive attributes
+   |                                                                          ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+64 - - Structs with `typedef struct` need proper Rust struct definitions with `#[repr(C)]` and derive attributes
+64 + - Structs with `typedef struct` need proper Rust struct definitions with '#[repr(C)]` and derive attributes
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:64:85
+   |
+64 | - Structs with `typedef struct` need proper Rust struct definitions with `#[repr(C)]` and derive attributes
+   |                                                                                     ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+64 - - Structs with `typedef struct` need proper Rust struct definitions with `#[repr(C)]` and derive attributes
+64 + - Structs with `typedef struct` need proper Rust struct definitions with `#[repr(C)]' and derive attributes
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:65:7
+   |
+65 | - For `typedef struct PreviousName { ... } PostName;`, add a type alias for `PreviousName` first
+   |       ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+65 - - For `typedef struct PreviousName { ... } PostName;`, add a type alias for `PreviousName` first
+65 + - For 'typedef struct PreviousName { ... } PostName;`, add a type alias for `PreviousName` first
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:65:53
+   |
+65 | - For `typedef struct PreviousName { ... } PostName;`, add a type alias for `PreviousName` first
+   |                                                     ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+65 - - For `typedef struct PreviousName { ... } PostName;`, add a type alias for `PreviousName` first
+65 + - For `typedef struct PreviousName { ... } PostName;', add a type alias for `PreviousName` first
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:65:77
+   |
+65 | - For `typedef struct PreviousName { ... } PostName;`, add a type alias for `PreviousName` first
+   |                                                                             ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+65 - - For `typedef struct PreviousName { ... } PostName;`, add a type alias for `PreviousName` first
+65 + - For `typedef struct PreviousName { ... } PostName;`, add a type alias for 'PreviousName` first
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:65:90
+   |
+65 | - For `typedef struct PreviousName { ... } PostName;`, add a type alias for `PreviousName` first
+   |                                                                                          ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+65 - - For `typedef struct PreviousName { ... } PostName;`, add a type alias for `PreviousName` first
+65 + - For `typedef struct PreviousName { ... } PostName;`, add a type alias for `PreviousName' first
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:67:27
+   |
+67 | The source code given is: `typedef vec_t(double) vec_double_t;`
+   |                           ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+67 - The source code given is: `typedef vec_t(double) vec_double_t;`
+67 + The source code given is: 'typedef vec_t(double) vec_double_t;`
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:67:63
+   |
+67 | The source code given is: `typedef vec_t(double) vec_double_t;`
+   |                                                               ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+67 - The source code given is: `typedef vec_t(double) vec_double_t;`
+67 + The source code given is: `typedef vec_t(double) vec_double_t;'
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:69:32
+   |
+69 | Hmm, I need to figure out what `vec_t` is. From the examples, `vec_t` might be a type that's used in C for vectors. But in the context of...
+   |                                ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+69 - Hmm, I need to figure out what `vec_t` is. From the examples, `vec_t` might be a type that's used in C for vectors. But in the context of the problem, the user hasn't provided the definition of `vec_t` here. Wait, looking back at the examples, there's a source code example that uses `vec_t`:
+69 + Hmm, I need to figure out what 'vec_t` is. From the examples, `vec_t` might be a type that's used in C for vectors. But in the context of the problem, the user hasn't provided the definition of `vec_t` here. Wait, looking back at the examples, there's a source code example that uses `vec_t`:
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:69:38
+   |
+69 | Hmm, I need to figure out what `vec_t` is. From the examples, `vec_t` might be a type that's used in C for vectors. But in the context of...
+   |                                      ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+69 - Hmm, I need to figure out what `vec_t` is. From the examples, `vec_t` might be a type that's used in C for vectors. But in the context of the problem, the user hasn't provided the definition of `vec_t` here. Wait, looking back at the examples, there's a source code example that uses `vec_t`:
+69 + Hmm, I need to figure out what `vec_t' is. From the examples, `vec_t` might be a type that's used in C for vectors. But in the context of the problem, the user hasn't provided the definition of `vec_t` here. Wait, looking back at the examples, there's a source code example that uses `vec_t`:
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:69:63
+   |
+69 | Hmm, I need to figure out what `vec_t` is. From the examples, `vec_t` might be a type that's used in C for vectors. But in the context of...
+   |                                                               ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+69 - Hmm, I need to figure out what `vec_t` is. From the examples, `vec_t` might be a type that's used in C for vectors. But in the context of the problem, the user hasn't provided the definition of `vec_t` here. Wait, looking back at the examples, there's a source code example that uses `vec_t`:
+69 + Hmm, I need to figure out what `vec_t` is. From the examples, 'vec_t` might be a type that's used in C for vectors. But in the context of the problem, the user hasn't provided the definition of `vec_t` here. Wait, looking back at the examples, there's a source code example that uses `vec_t`:
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:69:69
+   |
+69 | Hmm, I need to figure out what `vec_t` is. From the examples, `vec_t` might be a type that's used in C for vectors. But in the context of...
+   |                                                                     ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+69 - Hmm, I need to figure out what `vec_t` is. From the examples, `vec_t` might be a type that's used in C for vectors. But in the context of the problem, the user hasn't provided the definition of `vec_t` here. Wait, looking back at the examples, there's a source code example that uses `vec_t`:
+69 + Hmm, I need to figure out what `vec_t` is. From the examples, `vec_t' might be a type that's used in C for vectors. But in the context of the problem, the user hasn't provided the definition of `vec_t` here. Wait, looking back at the examples, there's a source code example that uses `vec_t`:
+   |
+
+error: prefix `that` is unknown
+  --> src/src/vec_h.rs:69:87
+   |
+69 | Hmm, I need to figure out what `vec_t` is. From the examples, `vec_t` might be a type that's used in C for vectors. But in the context of...
+   |                                                                                       ^^^^ unknown prefix
+   |
+   = note: prefixed identifiers and literals are reserved since Rust 2021
+help: consider inserting whitespace here
+   |
+69 | Hmm, I need to figure out what `vec_t` is. From the examples, `vec_t` might be a type that 's used in C for vectors. But in the context of the problem, the user hasn't provided the definition of `vec_t` here. Wait, looking back at the examples, there's a source code example that uses `vec_t`:
+   |                                                                                           +
+
+error: prefix `hasn` is unknown
+  --> src/src/vec_h.rs:69:161
+   |
+69 | ...for vectors. But in the context of the problem, the user hasn't provided the definition of `vec_t` here. Wait, looking back at the exa...
+   |                                                             ^^^^ unknown prefix
+   |
+   = note: prefixed identifiers and literals are reserved since Rust 2021
+help: if you meant to write a string literal, use double quotes
+   |
+69 - Hmm, I need to figure out what `vec_t` is. From the examples, `vec_t` might be a type that's used in C for vectors. But in the context of the problem, the user hasn't provided the definition of `vec_t` here. Wait, looking back at the examples, there's a source code example that uses `vec_t`:
+69 + Hmm, I need to figure out what `vec_t` is. From the examples, `vec_t` might be a type that"s used in C for vectors. But in the context of the problem, the user hasn"t provided the definition of `vec_t` here. Wait, looking back at the examples, there's a source code example that uses `vec_t`:
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:69:195
+   |
+69 | ...ontext of the problem, the user hasn't provided the definition of `vec_t` here. Wait, looking back at the examples, there's a source c...
+   |                                                                      ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+69 - Hmm, I need to figure out what `vec_t` is. From the examples, `vec_t` might be a type that's used in C for vectors. But in the context of the problem, the user hasn't provided the definition of `vec_t` here. Wait, looking back at the examples, there's a source code example that uses `vec_t`:
+69 + Hmm, I need to figure out what `vec_t` is. From the examples, `vec_t` might be a type that's used in C for vectors. But in the context of the problem, the user hasn't provided the definition of 'vec_t` here. Wait, looking back at the examples, there's a source code example that uses `vec_t`:
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:69:201
+   |
+69 | ... of the problem, the user hasn't provided the definition of `vec_t` here. Wait, looking back at the examples, there's a source code ex...
+   |                                                                      ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+69 - Hmm, I need to figure out what `vec_t` is. From the examples, `vec_t` might be a type that's used in C for vectors. But in the context of the problem, the user hasn't provided the definition of `vec_t` here. Wait, looking back at the examples, there's a source code example that uses `vec_t`:
+69 + Hmm, I need to figure out what `vec_t` is. From the examples, `vec_t` might be a type that's used in C for vectors. But in the context of the problem, the user hasn't provided the definition of `vec_t' here. Wait, looking back at the examples, there's a source code example that uses `vec_t`:
+   |
+
+error: prefix `there` is unknown
+  --> src/src/vec_h.rs:69:245
+   |
+69 | ...ion of `vec_t` here. Wait, looking back at the examples, there's a source code example that uses `vec_t`:
+   |                                                             ^^^^^ unknown prefix
+   |
+   = note: prefixed identifiers and literals are reserved since Rust 2021
+help: if you meant to write a string literal, use double quotes
+   |
+69 - Hmm, I need to figure out what `vec_t` is. From the examples, `vec_t` might be a type that's used in C for vectors. But in the context of the problem, the user hasn't provided the definition of `vec_t` here. Wait, looking back at the examples, there's a source code example that uses `vec_t`:
+69 + Hmm, I need to figure out what `vec_t` is. From the examples, `vec_t` might be a type that's used in C for vectors. But in the context of the problem, the user hasn"t provided the definition of `vec_t` here. Wait, looking back at the examples, there"s a source code example that uses `vec_t`:
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:69:285
+   |
+69 | ...ing back at the examples, there's a source code example that uses `vec_t`:
+   |                                                                      ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+69 - Hmm, I need to figure out what `vec_t` is. From the examples, `vec_t` might be a type that's used in C for vectors. But in the context of the problem, the user hasn't provided the definition of `vec_t` here. Wait, looking back at the examples, there's a source code example that uses `vec_t`:
+69 + Hmm, I need to figure out what `vec_t` is. From the examples, `vec_t` might be a type that's used in C for vectors. But in the context of the problem, the user hasn't provided the definition of `vec_t` here. Wait, looking back at the examples, there's a source code example that uses 'vec_t`:
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:69:291
+   |
+69 | ...ck at the examples, there's a source code example that uses `vec_t`:
+   |                                                                      ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+69 - Hmm, I need to figure out what `vec_t` is. From the examples, `vec_t` might be a type that's used in C for vectors. But in the context of the problem, the user hasn't provided the definition of `vec_t` here. Wait, looking back at the examples, there's a source code example that uses `vec_t`:
+69 + Hmm, I need to figure out what `vec_t` is. From the examples, `vec_t` might be a type that's used in C for vectors. But in the context of the problem, the user hasn't provided the definition of `vec_t` here. Wait, looking back at the examples, there's a source code example that uses `vec_t':
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:71:34
+   |
+71 | In the last example source code: `typedef vec_t(double) vec_double_t;`
+   |                                  ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+71 - In the last example source code: `typedef vec_t(double) vec_double_t;`
+71 + In the last example source code: 'typedef vec_t(double) vec_double_t;`
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:71:70
+   |
+71 | In the last example source code: `typedef vec_t(double) vec_double_t;`
+   |                                                                      ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+71 - In the last example source code: `typedef vec_t(double) vec_double_t;`
+71 + In the last example source code: `typedef vec_t(double) vec_double_t;'
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:75:130
+   |
+75 | Wait, the user provided this as the source to translate. Let me check the examples again. In the examples, they have a line like `typedef...
+   |                                                                                                                                  ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+75 - Wait, the user provided this as the source to translate. Let me check the examples again. In the examples, they have a line like `typedef vec_t(double) vec_double_t;` and the translation is expected.
+75 + Wait, the user provided this as the source to translate. Let me check the examples again. In the examples, they have a line like 'typedef vec_t(double) vec_double_t;` and the translation is expected.
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:75:166
+   |
+75 | ...amples, they have a line like `typedef vec_t(double) vec_double_t;` and the translation is expected.
+   |                                                                      ^
+   |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+75 - Wait, the user provided this as the source to translate. Let me check the examples again. In the examples, they have a line like `typedef vec_t(double) vec_double_t;` and the translation is expected.
+75 + Wait, the user provided this as the source to translate. Let me check the examples again. In the examples, they have a line like `typedef vec_t(double) vec_double_t;' and the translation is expected.
+   |
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:80:1
+   |
+80 | ```c
+   | ^^^
+   |
+   = note: character appears 2 more times
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+80 - ```c
+80 + '''c
+   |
+
+error: prefix `let` is unknown
+  --> src/src/vec_h.rs:89:7
+   |
+89 | Okay, let's tackle this translation problem. The user wants me to translate a specific C macro into Rust following the guidelines they pr...
+   |       ^^^ unknown prefix
+   |
+   = note: prefixed identifiers and literals are reserved since Rust 2021
+help: consider inserting whitespace here
+   |
+89 | Okay, let 's tackle this translation problem. The user wants me to translate a specific C macro into Rust following the guidelines they provided. 
+   |          +
+
+error: unknown start of token: `
+  --> src/src/vec_h.rs:93:1
+   |
+93 | ```c
+   | ^^^
+   |
+   = note: character appears 2 more times
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+   |
+93 - ```c
+93 + '''c
+   |
+
+error: prefix `let` is unknown
+   --> src/src/vec_h.rs:115:7
+    |
+115 | Okay, let's tackle this Rust translation for the given C macro. The user provided several examples of how to translate C macros to Rust, ...
+    |       ^^^ unknown prefix
+    |
+    = note: prefixed identifiers and literals are reserved since Rust 2021
+help: consider inserting whitespace here
+    |
+115 | Okay, let 's tackle this Rust translation for the given C macro. The user provided several examples of how to translate C macros to Rust, so I need to follow those patterns carefully.
+    |          +
+
+error: prefix `let` is unknown
+   --> src/src/vec_h.rs:117:8
+    |
+117 | First, let's look at the source macro:
+    |        ^^^ unknown prefix
+    |
+    = note: prefixed identifiers and literals are reserved since Rust 2021
+help: consider inserting whitespace here
+    |
+117 | First, let 's look at the source macro:
+    |           +
+
+error: unknown start of token: `
+   --> src/src/vec_h.rs:119:1
+    |
+119 | ```c
+    | ^^^
+    |
+    = note: character appears 2 more times
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+    |
+119 - ```c
+119 + '''c
+    |
+
+error: prefix `let` is unknown
+   --> src/src/vec_h.rs:122:7
+    |
+122 | Okay, let's tackle this translation problem. The user wants me to translate a specific C macro to Rust following all the given rules. 
+    |       ^^^ unknown prefix
+    |
+    = note: prefixed identifiers and literals are reserved since Rust 2021
+help: consider inserting whitespace here
+    |
+122 | Okay, let 's tackle this translation problem. The user wants me to translate a specific C macro to Rust following all the given rules. 
+    |          +
+
+error: unknown start of token: `
+   --> src/src/vec_h.rs:126:1
+    |
+126 | ```c
+    | ^^^
+    |
+    = note: character appears 2 more times
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+    |
+126 - ```c
+126 + '''c
+    |
+
+error: prefix `let` is unknown
+   --> src/src/vec_h.rs:138:7
+    |
+138 | Okay, let's tackle this Rust translation for the given C macro. The user provided several examples of how to translate C macros to Rust, ...
+    |       ^^^ unknown prefix
+    |
+    = note: prefixed identifiers and literals are reserved since Rust 2021
+help: consider inserting whitespace here
+    |
+138 | Okay, let 's tackle this Rust translation for the given C macro. The user provided several examples of how to translate C macros to Rust, so I need to follow those patterns carefully.
+    |          +
+
+error: prefix `I` is unknown
+   --> src/src/vec_h.rs:140:8
+    |
+140 | First, I'll look at the source macro:
+    |        ^ unknown prefix
+    |
+    = note: prefixed identifiers and literals are reserved since Rust 2021
+help: consider inserting whitespace here
+    |
+140 | First, I 'll look at the source macro:
+    |         +
+
+error: unknown start of token: `
+   --> src/src/vec_h.rs:142:1
+    |
+142 | ```c
+    | ^^^
+    |
+    = note: character appears 2 more times
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+    |
+142 - ```c
+142 + '''c
+    |
+
+error: prefix `let` is unknown
+   --> src/src/vec_h.rs:145:7
+    |
+145 | Okay, let's tackle this Rust translation for the given C macro. The user provided several examples of how to translate C macros to Rust, ...
+    |       ^^^ unknown prefix
+    |
+    = note: prefixed identifiers and literals are reserved since Rust 2021
+help: consider inserting whitespace here
+    |
+145 | Okay, let 's tackle this Rust translation for the given C macro. The user provided several examples of how to translate C macros to Rust, so I need to follow those patterns carefully.
+    |          +
+
+error: prefix `let` is unknown
+   --> src/src/vec_h.rs:147:8
+    |
+147 | First, let's look at the source macro:
+    |        ^^^ unknown prefix
+    |
+    = note: prefixed identifiers and literals are reserved since Rust 2021
+help: consider inserting whitespace here
+    |
+147 | First, let 's look at the source macro:
+    |           +
+
+error: unknown start of token: `
+   --> src/src/vec_h.rs:149:1
+    |
+149 | ```c
+    | ^^^
+    |
+    = note: character appears 2 more times
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+    |
+149 - ```c
+149 + '''c
+    |
+
+error: prefix `let` is unknown
+   --> src/src/vec_h.rs:183:7
+    |
+183 | Okay, let's tackle this translation problem. The user wants me to translate a specific C macro to Rust following the guidelines they prov...
+    |       ^^^ unknown prefix
+    |
+    = note: prefixed identifiers and literals are reserved since Rust 2021
+help: consider inserting whitespace here
+    |
+183 | Okay, let 's tackle this translation problem. The user wants me to translate a specific C macro to Rust following the guidelines they provided. 
+    |          +
+
+error: unknown start of token: `
+   --> src/src/vec_h.rs:187:1
+    |
+187 | ```c
+    | ^^^
+    |
+    = note: character appears 2 more times
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+    |
+187 - ```c
+187 + '''c
+    |
+
+error: unknown start of token: `
+   --> src/src/vec_h.rs:203:1
+    |
+203 | ```c
+    | ^^^
+    |
+    = note: character appears 2 more times
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+    |
+203 - ```c
+203 + '''c
+    |
+
+error: prefix `let` is unknown
+   --> src/src/vec_h.rs:261:7
+    |
+261 | Okay, let's tackle this Rust translation for the given C macro. The user provided several examples of how to translate C macros to Rust, ...
+    |       ^^^ unknown prefix
+    |
+    = note: prefixed identifiers and literals are reserved since Rust 2021
+help: consider inserting whitespace here
+    |
+261 | Okay, let 's tackle this Rust translation for the given C macro. The user provided several examples of how to translate C macros to Rust, so I need to follow those patterns carefully.
+    |          +
+
+error: unknown start of token: `
+   --> src/src/vec_h.rs:263:41
+    |
+263 | First, looking at the source C code for `vec_reverse`:
+    |                                         ^
+    |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+    |
+263 - First, looking at the source C code for `vec_reverse`:
+263 + First, looking at the source C code for 'vec_reverse`:
+    |
+
+error: unknown start of token: `
+   --> src/src/vec_h.rs:263:53
+    |
+263 | First, looking at the source C code for `vec_reverse`:
+    |                                                     ^
+    |
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+    |
+263 - First, looking at the source C code for `vec_reverse`:
+263 + First, looking at the source C code for `vec_reverse':
+    |
+
+error: unknown start of token: `
+   --> src/src/vec_h.rs:265:1
+    |
+265 | ```c
+    | ^^^
+    |
+    = note: character appears 2 more times
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+    |
+265 - ```c
+265 + '''c
+    |
+
+error: unknown start of token: \
+   --> src/src/vec_h.rs:266:120
+    |
+266 | #define vec_reverse(v)                                                                                                 \
+    |                                                                                                                        ^
+
+error: unknown start of token: \
+   --> src/src/vec_h.rs:267:120
+    |
+267 |     do                                                                                                                 \
+    |                                                                                                                        ^
+
+error: unknown start of token: \
+   --> src/src/vec_h.rs:268:120
+    |
+268 |     {                                                                                                                  \
+    |                                                                                                                        ^
+
+error: unknown start of token: \
+   --> src/src/vec_h.rs:269:120
+    |
+269 |         int i__ = (v)->length / 2;                                                                                     \
+    |                                                                                                                        ^
+
+error: unknown start of token: \
+   --> src/src/vec_h.rs:270:120
+    |
+270 |         while (i__--)                                                                                                  \
+    |                                                                                                                        ^
+
+error: unknown start of token: \
+   --> src/src/vec_h.rs:271:120
+    |
+271 |         {                                                                                                              \
+    |                                                                                                                        ^
+
+error: unknown start of token: \
+   --> src/src/vec_h.rs:272:120
+    |
+272 |             vec_swap((v), i__, (v)->length - (i__ + 1));                                                               \
+    |                                                                                                                        ^
+
+error: unknown start of token: \
+   --> src/src/vec_h.rs:273:120
+    |
+273 |         }                                                                                                              \
+    |                                                                                                                        ^
+
+error: prefix `let` is unknown
+   --> src/src/vec_h.rs:276:7
+    |
+276 | Okay, let's tackle this Rust translation for the given C macro. The user provided several examples of how to translate C macros to Rust, ...
+    |       ^^^ unknown prefix
+    |
+    = note: prefixed identifiers and literals are reserved since Rust 2021
+help: consider inserting whitespace here
+    |
+276 | Okay, let 's tackle this Rust translation for the given C macro. The user provided several examples of how to translate C macros to Rust, so I need to follow those patterns carefully.
+    |          +
+
+error: unknown start of token: `
+   --> src/src/vec_h.rs:280:1
+    |
+280 | ```c
+    | ^^^
+    |
+    = note: character appears 2 more times
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+    |
+280 - ```c
+280 + '''c
+    |
+
+error: unknown start of token: \
+   --> src/src/vec_h.rs:281:120
+    |
+281 | #define vec_foreach(v, var, iter)                                                                                      \
+    |                                                                                                                        ^
+
+error: unknown start of token: \
+   --> src/src/vec_h.rs:282:120
+    |
+282 |     if ((v)->length > 0)                                                                                               \
+    |                                                                                                                        ^
+
+error: prefix `let` is unknown
+   --> src/src/vec_h.rs:285:7
+    |
+285 | Okay, let's tackle this Rust translation for the given C macro. The user provided several examples of how to translate C macros to Rust, ...
+    |       ^^^ unknown prefix
+    |
+    = note: prefixed identifiers and literals are reserved since Rust 2021
+help: consider inserting whitespace here
+    |
+285 | Okay, let 's tackle this Rust translation for the given C macro. The user provided several examples of how to translate C macros to Rust, so I need to follow those patterns carefully.
+    |          +
+
+error: unknown start of token: `
+   --> src/src/vec_h.rs:289:1
+    |
+289 | ```c
+    | ^^^
+    |
+    = note: character appears 2 more times
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+    |
+289 - ```c
+289 + '''c
+    |
+
+error: unknown start of token: \
+   --> src/src/vec_h.rs:290:120
+    |
+290 | #define vec_foreach_rev(v, var, iter)                                                                                  \
+    |                                                                                                                        ^
+
+error: unknown start of token: \
+   --> src/src/vec_h.rs:291:120
+    |
+291 |     if ((v)->length > 0)                                                                                               \
+    |                                                                                                                        ^
+
+error: prefix `let` is unknown
+   --> src/src/vec_h.rs:307:7
+    |
+307 | Okay, let's tackle this Rust translation for the given C macro. The user provided several examples of how to translate C macros to Rust, ...
+    |       ^^^ unknown prefix
+    |
+    = note: prefixed identifiers and literals are reserved since Rust 2021
+help: consider inserting whitespace here
+    |
+307 | Okay, let 's tackle this Rust translation for the given C macro. The user provided several examples of how to translate C macros to Rust, so I need to follow those patterns carefully.
+    |          +
+
+error: prefix `I` is unknown
+   --> src/src/vec_h.rs:309:8
+    |
+309 | First, I'll look at the source macro:
+    |        ^ unknown prefix
+    |
+    = note: prefixed identifiers and literals are reserved since Rust 2021
+help: consider inserting whitespace here
+    |
+309 | First, I 'll look at the source macro:
+    |         +
+
+error: unknown start of token: `
+   --> src/src/vec_h.rs:311:1
+    |
+311 | ```c
+    | ^^^
+    |
+    = note: character appears 2 more times
+help: Unicode character '`' (Grave Accent) looks like ''' (Single Quote), but it is not
+    |
+311 - ```c
+311 + '''c
+    |
+
+error: unknown start of token: \
+   --> src/src/vec_h.rs:312:120
+    |
+312 | #define vec_foreach_ptr_rev(v, var, iter)                                                                              \
+    |                                                                                                                        ^
+
+error: unknown start of token: \
+   --> src/src/vec_h.rs:313:120
+    |
+313 |     if ((v)->length > 0)                                                                                               \
+    |                                                                                                                        ^
+
+error: expected one of `!` or `::`, found `are`
+  --> src/src/vec_h.rs:11:4
+   |
+11 | We are given a C code snippet to translate to Rust. The task is to translate the definition only (not the entire program).
+   |    ^^^ expected one of `!` or `::`
+
+warning: unused macro definition: `c_sizeof`
+ --> src/translation_utils/c_alignment/operators/c_sizeof.rs:3:14
+  |
+3 | macro_rules! c_sizeof {
+  |              ^^^^^^^^
+  |
+  = note: `#[warn(unused_macros)]` on by default
+
+warning: unused macro definition: `c_sizeofval`
+ --> src/translation_utils/c_alignment/operators/c_sizeof.rs:9:14
+  |
+9 | macro_rules! c_sizeofval {
+  |              ^^^^^^^^^^^
+
+warning: glob import doesn't reexport anything with visibility `pub` because no imported item is public enough
+ --> src/translation_utils/c_alignment/operators/mod.rs:2:9
+  |
+2 | pub use c_sizeof::*;
+  |         ^^^^^^^^^^^
+  |
+note: the most public imported item is `pub(crate)`
+ --> src/translation_utils/c_alignment/operators/mod.rs:2:9
+  |
+2 | pub use c_sizeof::*;
+  |         ^^^^^^^^^^^
+  = help: reduce the glob import's visibility or increase visibility of imported items
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused macro definition: `c_offsetof`
+ --> src/translation_utils/c_alignment/operators/c_offsetof.rs:3:14
+  |
+3 | macro_rules! c_offsetof {
+  |              ^^^^^^^^^^
+
+warning: glob import doesn't reexport anything with visibility `pub` because no imported item is public enough
+ --> src/translation_utils/c_alignment/operators/mod.rs:5:9
+  |
+5 | pub use c_offsetof::*;
+  |         ^^^^^^^^^^^^^
+  |
+note: the most public imported item is `pub(crate)`
+ --> src/translation_utils/c_alignment/operators/mod.rs:5:9
+  |
+5 | pub use c_offsetof::*;
+  |         ^^^^^^^^^^^^^
+  = help: reduce the glob import's visibility or increase visibility of imported items
+
+warning: unused macro definition: `plus_plus`
+   --> src/translation_utils/c_alignment/operators/c_self_incr_decr.rs:101:14
+    |
+101 | macro_rules! plus_plus {
+    |              ^^^^^^^^^
+
+warning: unused macro definition: `minus_minus`
+   --> src/translation_utils/c_alignment/operators/c_self_incr_decr.rs:109:14
+    |
+109 | macro_rules! minus_minus {
+    |              ^^^^^^^^^^^
+
+warning: unused import: `core::ptr::NonNull`
+ --> src/translation_utils/c_alignment/operators/c_ref.rs:3:5
+  |
+3 | use core::ptr::NonNull;
+  |     ^^^^^^^^^^^^^^^^^^
+
+warning: unused macro definition: `c_ref`
+  --> src/translation_utils/c_alignment/operators/c_ref.rs:17:14
+   |
+17 | macro_rules! c_ref {
+   |              ^^^^^
+
+warning: unused macro definition: `c_calloc`
+ --> src/translation_utils/c_alignment/libraries/c_calloc.rs:6:14
+  |
+6 | macro_rules! c_calloc {
+  |              ^^^^^^^^
+
+warning: unused macro definition: `c_memcpy`
+  --> src/translation_utils/c_alignment/libraries/c_memcpy.rs:21:14
+   |
+21 | macro_rules! c_memcpy {
+   |              ^^^^^^^^
+
+warning: unused macro definition: `c_memmove`
+  --> src/translation_utils/c_alignment/libraries/c_memmove.rs:33:14
+   |
+33 | macro_rules! c_memmove {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `c_realloc`
+  --> src/translation_utils/c_alignment/libraries/c_realloc.rs:27:14
+   |
+27 | macro_rules! c_realloc {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `c_tolower`
+  --> src/translation_utils/c_alignment/libraries/c_type.rs:19:14
+   |
+19 | macro_rules! c_tolower {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `c_toupper`
+  --> src/translation_utils/c_alignment/libraries/c_type.rs:27:14
+   |
+27 | macro_rules! c_toupper {
+   |              ^^^^^^^^^
+
+warning: unused import: `core::cmp::Ordering`
+ --> src/translation_utils/c_alignment/libraries/c_string.rs:3:5
+  |
+3 | use core::cmp::Ordering;
+  |     ^^^^^^^^^^^^^^^^^^^
+
+warning: unused macro definition: `c_strncmp`
+  --> src/translation_utils/c_alignment/libraries/c_string.rs:76:14
+   |
+76 | macro_rules! c_strncmp {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `c_strdup`
+  --> src/translation_utils/c_alignment/libraries/c_string.rs:92:14
+   |
+92 | macro_rules! c_strdup {
+   |              ^^^^^^^^
+
+warning: unused macro definition: `c_printf`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:107:14
+    |
+107 | macro_rules! c_printf {
+    |              ^^^^^^^^
+
+warning: unused macro definition: `c_sprintf`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:129:14
+    |
+129 | macro_rules! c_sprintf {
+    |              ^^^^^^^^^
+
+warning: unused macro definition: `c_sprintf_s`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:154:14
+    |
+154 | macro_rules! c_sprintf_s {
+    |              ^^^^^^^^^^^
+
+warning: unused macro definition: `c_snprintf`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:179:14
+    |
+179 | macro_rules! c_snprintf {
+    |              ^^^^^^^^^^
+
+warning: unused macro definition: `c_snprintf_s`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:216:14
+    |
+216 | macro_rules! c_snprintf_s {
+    |              ^^^^^^^^^^^^
+
+warning: unused macro definition: `c_vsnprintf_s`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:227:14
+    |
+227 | macro_rules! c_vsnprintf_s {
+    |              ^^^^^^^^^^^^^
+
+warning: unused macro definition: `c_strrchr`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:247:14
+    |
+247 | macro_rules! c_strrchr {
+    |              ^^^^^^^^^
+
+warning: unused macro definition: `c_strcpy`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:264:14
+    |
+264 | macro_rules! c_strcpy {
+    |              ^^^^^^^^
+
+warning: unused macro definition: `c_strcpy_s`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:291:14
+    |
+291 | macro_rules! c_strcpy_s {
+    |              ^^^^^^^^^^
+
+warning: unused import: `core::cmp::Ordering`
+ --> src/translation_utils/c_alignment/libraries/c_memcmp.rs:3:5
+  |
+3 | use core::cmp::Ordering;
+  |     ^^^^^^^^^^^^^^^^^^^
+
+warning: unused macro definition: `c_memcmp`
+  --> src/translation_utils/c_alignment/libraries/c_memcmp.rs:29:14
+   |
+29 | macro_rules! c_memcmp {
+   |              ^^^^^^^^
+
+warning: unused macro definition: `c_memset`
+  --> src/translation_utils/c_alignment/libraries/c_memset.rs:22:14
+   |
+22 | macro_rules! c_memset {
+   |              ^^^^^^^^
+
+warning: unused macro definition: `c_atoi`
+  --> src/translation_utils/c_alignment/libraries/c_stdlib.rs:26:14
+   |
+26 | macro_rules! c_atoi {
+   |              ^^^^^^
+
+warning: unused import: `std::path::Path`
+ --> src/translation_utils/c_alignment/libraries/misc.rs:3:5
+  |
+3 | use std::path::Path;
+  |     ^^^^^^^^^^^^^^^
+
+warning: unused macro definition: `c_basename`
+  --> src/translation_utils/c_alignment/libraries/misc.rs:17:14
+   |
+17 | macro_rules! c_basename {
+   |              ^^^^^^^^^^
+
+warning: unused macro definition: `c__line__`
+  --> src/translation_utils/c_alignment/libraries/misc.rs:25:14
+   |
+25 | macro_rules! c__line__ {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `c__file__`
+  --> src/translation_utils/c_alignment/libraries/misc.rs:39:14
+   |
+39 | macro_rules! c__file__ {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `c__function__`
+  --> src/translation_utils/c_alignment/libraries/misc.rs:53:14
+   |
+53 | macro_rules! c__function__ {
+   |              ^^^^^^^^^^^^^
+
+warning: type `errno_t` should have an upper camel case name
+ --> src/translation_utils/c_alignment/libraries/safelib/error_no.rs:3:10
+  |
+3 | pub type errno_t = i32;
+  |          ^^^^^^^ help: convert the identifier to upper camel case: `ErrnoT`
+  |
+  = note: `#[warn(non_camel_case_types)]` on by default
+
+warning: unused macro definition: `EOK`
+  --> src/translation_utils/c_alignment/libraries/safelib/error_no.rs:27:14
+   |
+27 | macro_rules! EOK {
+   |              ^^^
+
+warning: unused macro definition: `EINVAL`
+  --> src/translation_utils/c_alignment/libraries/safelib/error_no.rs:32:14
+   |
+32 | macro_rules! EINVAL {
+   |              ^^^^^^
+
+warning: unused macro definition: `ERANGE`
+  --> src/translation_utils/c_alignment/libraries/safelib/error_no.rs:37:14
+   |
+37 | macro_rules! ERANGE {
+   |              ^^^^^^
+
+warning: unused macro definition: `c_memset_s`
+  --> src/translation_utils/c_alignment/libraries/safelib/c_memset_s.rs:36:14
+   |
+36 | macro_rules! c_memset_s {
+   |              ^^^^^^^^^^
+
+warning: unused macro definition: `c_memcpy_s`
+  --> src/translation_utils/c_alignment/libraries/safelib/c_memcpy_s.rs:34:14
+   |
+34 | macro_rules! c_memcpy_s {
+   |              ^^^^^^^^^^
+
+warning: unused macro definition: `c_memmove_s`
+  --> src/translation_utils/c_alignment/libraries/safelib/c_memmove_s.rs:45:14
+   |
+45 | macro_rules! c_memmove_s {
+   |              ^^^^^^^^^^^
+
+warning: unused macro definition: `c_for`
+ --> src/translation_utils/c_alignment/c_for.rs:3:14
+  |
+3 | macro_rules! c_for {
+  |              ^^^^^
+
+warning: glob import doesn't reexport anything with visibility `pub` because no imported item is public enough
+ --> src/translation_utils/c_alignment/mod.rs:8:9
+  |
+8 | pub use c_for::*;
+  |         ^^^^^^^^
+  |
+note: the most public imported item is `pub(crate)`
+ --> src/translation_utils/c_alignment/mod.rs:8:9
+  |
+8 | pub use c_for::*;
+  |         ^^^^^^^^
+  = help: reduce the glob import's visibility or increase visibility of imported items
+
+warning: unused macro definition: `c_do`
+ --> src/translation_utils/c_alignment/c_do_while.rs:3:14
+  |
+3 | macro_rules! c_do {
+  |              ^^^^
+
+warning: unused macro definition: `c_while`
+  --> src/translation_utils/c_alignment/c_do_while.rs:15:14
+   |
+15 | macro_rules! c_while {
+   |              ^^^^^^^
+
+warning: glob import doesn't reexport anything with visibility `pub` because no imported item is public enough
+  --> src/translation_utils/c_alignment/mod.rs:11:9
+   |
+11 | pub use c_do_while::*;
+   |         ^^^^^^^^^^^^^
+   |
+note: the most public imported item is `pub(crate)`
+  --> src/translation_utils/c_alignment/mod.rs:11:9
+   |
+11 | pub use c_do_while::*;
+   |         ^^^^^^^^^^^^^
+   = help: reduce the glob import's visibility or increase visibility of imported items
+
+warning: unused macro definition: `c_switch`
+ --> src/translation_utils/c_alignment/c_switch.rs:3:14
+  |
+3 | macro_rules! c_switch {
+  |              ^^^^^^^^
+
+warning: glob import doesn't reexport anything with visibility `pub` because no imported item is public enough
+  --> src/translation_utils/c_alignment/mod.rs:14:9
+   |
+14 | pub use c_switch::*;
+   |         ^^^^^^^^^^^
+   |
+note: the most public imported item is `pub(crate)`
+  --> src/translation_utils/c_alignment/mod.rs:14:9
+   |
+14 | pub use c_switch::*;
+   |         ^^^^^^^^^^^
+   = help: reduce the glob import's visibility or increase visibility of imported items
+
+warning: unused macro definition: `SCHAR_MIN`
+ --> src/translation_utils/c_alignment/c_limits.rs:3:14
+  |
+3 | macro_rules! SCHAR_MIN {
+  |              ^^^^^^^^^
+
+warning: unused macro definition: `SCHAR_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:10:14
+   |
+10 | macro_rules! SCHAR_MAX {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `UCHAR_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:17:14
+   |
+17 | macro_rules! UCHAR_MAX {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `SHRT_MIN`
+  --> src/translation_utils/c_alignment/c_limits.rs:24:14
+   |
+24 | macro_rules! SHRT_MIN {
+   |              ^^^^^^^^
+
+warning: unused macro definition: `SHRT_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:31:14
+   |
+31 | macro_rules! SHRT_MAX {
+   |              ^^^^^^^^
+
+warning: unused macro definition: `USHRT_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:38:14
+   |
+38 | macro_rules! USHRT_MAX {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `INT_MIN`
+  --> src/translation_utils/c_alignment/c_limits.rs:45:14
+   |
+45 | macro_rules! INT_MIN {
+   |              ^^^^^^^
+
+warning: unused macro definition: `INT_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:52:14
+   |
+52 | macro_rules! INT_MAX {
+   |              ^^^^^^^
+
+warning: unused macro definition: `UINT_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:59:14
+   |
+59 | macro_rules! UINT_MAX {
+   |              ^^^^^^^^
+
+warning: unused macro definition: `LLONG_MIN`
+  --> src/translation_utils/c_alignment/c_limits.rs:66:14
+   |
+66 | macro_rules! LLONG_MIN {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `LLONG_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:73:14
+   |
+73 | macro_rules! LLONG_MAX {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `ULLONG_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:80:14
+   |
+80 | macro_rules! ULLONG_MAX {
+   |              ^^^^^^^^^^
+
+warning: glob import doesn't reexport anything with visibility `pub` because no imported item is public enough
+  --> src/translation_utils/c_alignment/mod.rs:17:9
+   |
+17 | pub use c_limits::*;
+   |         ^^^^^^^^^^^
+   |
+note: the most public imported item is `pub(crate)`
+  --> src/translation_utils/c_alignment/mod.rs:17:9
+   |
+17 | pub use c_limits::*;
+   |         ^^^^^^^^^^^
+   = help: reduce the glob import's visibility or increase visibility of imported items
+
+warning: unused import: `core::ops::*`
+ --> src/translation_utils/memory/file_ptr.rs:3:5
+  |
+3 | use core::ops::*;
+  |     ^^^^^^^^^^^^
+
+warning: unused macro definition: `EOF`
+  --> src/translation_utils/memory/file_ptr.rs:73:14
+   |
+73 | macro_rules! EOF {
+   |              ^^^
+
+warning: unused macro definition: `SEEK_SET`
+   --> src/translation_utils/memory/file_ptr.rs:280:14
+    |
+280 | macro_rules! SEEK_SET {
+    |              ^^^^^^^^
+
+warning: unused macro definition: `SEEK_CUR`
+   --> src/translation_utils/memory/file_ptr.rs:287:14
+    |
+287 | macro_rules! SEEK_CUR {
+    |              ^^^^^^^^
+
+warning: unused macro definition: `SEEK_END`
+   --> src/translation_utils/memory/file_ptr.rs:294:14
+    |
+294 | macro_rules! SEEK_END {
+    |              ^^^^^^^^
+
+warning: unused macro definition: `c_fseek`
+   --> src/translation_utils/memory/file_ptr.rs:322:14
+    |
+322 | macro_rules! c_fseek {
+    |              ^^^^^^^
+
+warning: unused macro definition: `c_ftell`
+   --> src/translation_utils/memory/file_ptr.rs:330:14
+    |
+330 | macro_rules! c_ftell {
+    |              ^^^^^^^
+
+warning: unused macro definition: `c_fopen`
+   --> src/translation_utils/memory/file_ptr.rs:338:14
+    |
+338 | macro_rules! c_fopen {
+    |              ^^^^^^^
+
+warning: unused macro definition: `c_fclose`
+   --> src/translation_utils/memory/file_ptr.rs:345:14
+    |
+345 | macro_rules! c_fclose {
+    |              ^^^^^^^^
+
+warning: unused macro definition: `c_fgetc`
+   --> src/translation_utils/memory/file_ptr.rs:352:14
+    |
+352 | macro_rules! c_fgetc {
+    |              ^^^^^^^
+
+warning: unused macro definition: `c_ungetc`
+   --> src/translation_utils/memory/file_ptr.rs:359:14
+    |
+359 | macro_rules! c_ungetc {
+    |              ^^^^^^^^
+
+warning: unused macro definition: `c_fread`
+   --> src/translation_utils/memory/file_ptr.rs:366:14
+    |
+366 | macro_rules! c_fread {
+    |              ^^^^^^^
+
+warning: unused macro definition: `c_fwrite`
+   --> src/translation_utils/memory/file_ptr.rs:373:14
+    |
+373 | macro_rules! c_fwrite {
+    |              ^^^^^^^^
+
+warning: unused macro definition: `c_fgets`
+   --> src/translation_utils/memory/file_ptr.rs:380:14
+    |
+380 | macro_rules! c_fgets {
+    |              ^^^^^^^
+
+warning: unused macro definition: `c_remove`
+   --> src/translation_utils/memory/file_ptr.rs:387:14
+    |
+387 | macro_rules! c_remove {
+    |              ^^^^^^^^
+
+warning: unused import: `core::cell::UnsafeCell`
+ --> src/translation_utils/memory/ptr.rs:5:5
+  |
+5 | use core::cell::UnsafeCell;
+  |     ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `core::any::Any`
+ --> src/translation_utils/memory/resource_heap.rs:3:5
+  |
+3 | use core::any::Any;
+  |     ^^^^^^^^^^^^^^
+
+warning: unused import: `core::ops::*`
+ --> src/translation_utils/memory/resource_heap.rs:4:5
+  |
+4 | use core::ops::*;
+  |     ^^^^^^^^^^^^
+
+warning: unused macro definition: `test_no_memory_leak`
+  --> src/translation_utils/memory/resource_heap.rs:86:14
+   |
+86 | macro_rules! test_no_memory_leak {
+   |              ^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `core::ptr::NonNull`
+ --> src/translation_utils/types/array.rs:7:5
+  |
+7 | use core::ptr::NonNull;
+  |     ^^^^^^^^^^^^^^^^^^
+
+warning: unused macro definition: `arr`
+   --> src/translation_utils/types/array.rs:131:14
+    |
+131 | macro_rules! arr {
+    |              ^^^
+
+warning: unused macro definition: `index`
+   --> src/translation_utils/types/array.rs:148:14
+    |
+148 | macro_rules! index {
+    |              ^^^^^
+
+warning: unused import: `num::*`
+ --> src/translation_utils/types/mod.rs:5:9
+  |
+5 | pub use num::*;
+  |         ^^^^^^
+
+warning: unused import: `core::ops::*`
+ --> src/translation_utils/types/c_str.rs:3:5
+  |
+3 | use core::ops::*;
+  |     ^^^^^^^^^^^^
+
+warning: unused macro definition: `bstr`
+  --> src/translation_utils/types/c_str.rs:42:14
+   |
+42 | macro_rules! bstr {
+   |              ^^^^
+
+warning: unused import: `crate::translation_utils::*`
+ --> src/translation_utils/types/cast_trait.rs:1:5
+  |
+1 | use crate::translation_utils::*;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused macro definition: `func`
+  --> src/translation_utils/types/func_ptr.rs:61:14
+   |
+61 | macro_rules! func {
+   |              ^^^^
+
+warning: unused import: `core::ops::*`
+ --> src/translation_utils/types/null.rs:3:5
+  |
+3 | use core::ops::*;
+  |     ^^^^^^^^^^^^
+
+warning: unused macro definition: `c_va_start`
+   --> src/translation_utils/types/va_args.rs:131:14
+    |
+131 | macro_rules! c_va_start {
+    |              ^^^^^^^^^^
+
+warning: unused macro definition: `c_va_end`
+   --> src/translation_utils/types/va_args.rs:137:14
+    |
+137 | macro_rules! c_va_end {
+    |              ^^^^^^^^
+
+warning: variable does not need to be mutable
+ --> src/translation_utils/types/global.rs:9:13
+  |
+9 |         let mut result: LazyLock<Mutex<T>> = LazyLock::new(value_function);
+  |             ----^^^^^^
+  |             |
+  |             help: remove this `mut`
+  |
+  = note: `#[warn(unused_mut)]` on by default
+
+warning: variable does not need to be mutable
+ --> src/translation_utils/c_alignment/libraries/c_realloc.rs:7:34
+  |
+7 | pub fn realloc(mut ptr: Ptr<u8>, mut size: usize) -> Ptr<u8> {
+  |                                  ----^^^^
+  |                                  |
+  |                                  help: remove this `mut`
+
+warning: variable does not need to be mutable
+ --> src/translation_utils/c_alignment/libraries/c_string.rs:5:15
+  |
+5 | pub fn strcmp(mut str1: Ptr<Char>, mut str2: Ptr<Char>) -> i32 {
+  |               ----^^^^
+  |               |
+  |               help: remove this `mut`
+
+warning: variable does not need to be mutable
+ --> src/translation_utils/c_alignment/libraries/c_string.rs:5:36
+  |
+5 | pub fn strcmp(mut str1: Ptr<Char>, mut str2: Ptr<Char>) -> i32 {
+  |                                    ----^^^^
+  |                                    |
+  |                                    help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/c_string.rs:26:16
+   |
+26 | pub fn strncmp(mut str1: Ptr<Char>, mut str2: Ptr<Char>, n: usize) -> i32 {
+   |                ----^^^^
+   |                |
+   |                help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/c_string.rs:26:37
+   |
+26 | pub fn strncmp(mut str1: Ptr<Char>, mut str2: Ptr<Char>, n: usize) -> i32 {
+   |                                     ----^^^^
+   |                                     |
+   |                                     help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/c_string.rs:51:15
+   |
+51 | pub fn strlen(mut str1: Ptr<Char>) -> usize {
+   |               ----^^^^
+   |               |
+   |               help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/c_string.rs:59:15
+   |
+59 | pub fn strdup(mut str1: Ptr<Char>) -> Ptr<Char> {
+   |               ----^^^^
+   |               |
+   |               help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:101:9
+    |
+101 |     let mut fmt = format.to_string();
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:102:9
+    |
+102 |     let mut tmp = va_format!(fmt, va);
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:118:34
+    |
+118 | pub fn sprintf(mut buf: Ptr<u8>, mut format: Ptr<u8>, va: VaList) -> i32 {
+    |                                  ----^^^^^^
+    |                                  |
+    |                                  help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:119:9
+    |
+119 |     let mut fmt = format.to_string();
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:120:9
+    |
+120 |     let mut tmp = va_format!(fmt, va);
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:121:9
+    |
+121 |     let mut length = tmp.as_bytes().len() as i32;
+    |         ----^^^^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:140:49
+    |
+140 | pub fn sprintf_s(mut buf: Ptr<u8>, size: usize, mut format: Ptr<u8>, va: VaList) -> i32 {
+    |                                                 ----^^^^^^
+    |                                                 |
+    |                                                 help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:144:9
+    |
+144 |     let mut fmt = format.to_string();
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:145:9
+    |
+145 |     let mut tmp = va_format!(fmt, va);
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:146:9
+    |
+146 |     let mut length = tmp.as_bytes().len() as i32;
+    |         ----^^^^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:166:9
+    |
+166 |     let mut fmt = format.to_string();
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:167:9
+    |
+167 |     let mut tmp = va_format!(fmt, va);
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:200:9
+    |
+200 |     let mut fmt = format.to_string();
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:201:9
+    |
+201 |     let mut tmp = va_format!(fmt, va);
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:235:16
+    |
+235 | pub fn strrchr(mut str1: Ptr<u8>, mut ch: u8) -> Ptr<u8> {
+    |                ----^^^^
+    |                |
+    |                help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:235:35
+    |
+235 | pub fn strrchr(mut str1: Ptr<u8>, mut ch: u8) -> Ptr<u8> {
+    |                                   ----^^
+    |                                   |
+    |                                   help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:236:9
+    |
+236 |     let mut length = strlen(str1);
+    |         ----^^^^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:255:34
+    |
+255 | pub fn strcpy(mut dest: Ptr<u8>, mut src: Ptr<u8>) -> Ptr<u8> {
+    |                                  ----^^^
+    |                                  |
+    |                                  help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:256:9
+    |
+256 |     let mut length = strlen(src);
+    |         ----^^^^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:274:5
+    |
+274 |     mut size: usize,
+    |     ----^^^^
+    |     |
+    |     help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:275:5
+    |
+275 |     mut src: Ptr<u8>,
+    |     ----^^^
+    |     |
+    |     help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/c_memcmp.rs:14:17
+   |
+14 |     fn c_memcmp(mut dst: &Ptr<T>, mut src: &Ptr<T>, count: usize) -> i32 {
+   |                 ----^^^
+   |                 |
+   |                 help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/c_memcmp.rs:14:35
+   |
+14 |     fn c_memcmp(mut dst: &Ptr<T>, mut src: &Ptr<T>, count: usize) -> i32 {
+   |                                   ----^^^
+   |                                   |
+   |                                   help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/safelib/c_memcpy_s.rs:17:19
+   |
+17 |     fn c_memcpy_s(mut dst: &mut Ptr<T>, dst_size: usize, src: &Ptr<T>, count: usize) -> ErrnoT {
+   |                   ----^^^
+   |                   |
+   |                   help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/safelib/c_memmove_s.rs:17:20
+   |
+17 |     fn c_memmove_s(mut dst: &mut Ptr<T>, dst_size: usize, src: &Ptr<T>, count: usize) -> ErrnoT {
+   |                    ----^^^
+   |                    |
+   |                    help: remove this `mut`
+
+warning: unnecessary `unsafe` block
+  --> src/translation_utils/memory/file_ptr.rs:86:35
+   |
+86 |                 let leaked_file = unsafe { NonNull::new(Box::into_raw(boxed_file)).unwrap() };
+   |                                   ^^^^^^ unnecessary `unsafe` block
+   |
+   = note: `#[warn(unused_unsafe)]` on by default
+
+warning: unnecessary `unsafe` block
+  --> src/translation_utils/memory/file_ptr.rs:91:35
+   |
+91 |                 let leaked_info = unsafe { NonNull::new(Box::into_raw(boxed_info)).unwrap() };
+   |                                   ^^^^^^ unnecessary `unsafe` block
+
+warning: unnecessary `unsafe` block
+   --> src/translation_utils/memory/file_ptr.rs:104:35
+    |
+104 |                 let leaked_file = unsafe { NonNull::new(Box::into_raw(boxed_file)).unwrap() };
+    |                                   ^^^^^^ unnecessary `unsafe` block
+
+warning: unnecessary `unsafe` block
+   --> src/translation_utils/memory/file_ptr.rs:109:35
+    |
+109 |                 let leaked_info = unsafe { NonNull::new(Box::into_raw(boxed_info)).unwrap() };
+    |                                   ^^^^^^ unnecessary `unsafe` block
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/memory/file_ptr.rs:80:14
+   |
+80 | pub fn fopen(mut filename: CStr, mut mode: CStr) -> FilePtr {
+   |              ----^^^^^^^^
+   |              |
+   |              help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:122:15
+    |
+122 | pub fn fclose(mut file: &mut FilePtr) -> i32 {
+    |               ----^^^^
+    |               |
+    |               help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:134:14
+    |
+134 | pub fn fgetc(mut file: &mut FilePtr) -> i32 {
+    |              ----^^^^
+    |              |
+    |              help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:152:15
+    |
+152 | pub fn ungetc(mut c: i32, mut file: &mut FilePtr) -> i32 {
+    |               ----^
+    |               |
+    |               help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:152:27
+    |
+152 | pub fn ungetc(mut c: i32, mut file: &mut FilePtr) -> i32 {
+    |                           ----^^^^
+    |                           |
+    |                           help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:163:32
+    |
+163 | pub fn fread(mut ptr: Ptr<u8>, mut size: usize, mut count: usize, mut file: &mut FilePtr) -> usize {
+    |                                ----^^^^
+    |                                |
+    |                                help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:163:49
+    |
+163 | pub fn fread(mut ptr: Ptr<u8>, mut size: usize, mut count: usize, mut file: &mut FilePtr) -> usize {
+    |                                                 ----^^^^^
+    |                                                 |
+    |                                                 help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:163:67
+    |
+163 | pub fn fread(mut ptr: Ptr<u8>, mut size: usize, mut count: usize, mut file: &mut FilePtr) -> usize {
+    |                                                                   ----^^^^
+    |                                                                   |
+    |                                                                   help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:193:5
+    |
+193 |     mut ptr: Ptr<u8>,
+    |     ----^^^
+    |     |
+    |     help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:194:5
+    |
+194 |     mut size: usize,
+    |     ----^^^^
+    |     |
+    |     help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:195:5
+    |
+195 |     mut count: usize,
+    |     ----^^^^^
+    |     |
+    |     help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:196:5
+    |
+196 |     mut file: &mut FilePtr,
+    |     ----^^^^
+    |     |
+    |     help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:201:9
+    |
+201 |     let mut write_size = size * count;
+    |         ----^^^^^^^^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:212:30
+    |
+212 | pub fn fgets(mut s: Ptr<u8>, mut n: i32, mut file: &mut FilePtr) -> Ptr<u8> {
+    |                              ----^
+    |                              |
+    |                              help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:212:42
+    |
+212 | pub fn fgets(mut s: Ptr<u8>, mut n: i32, mut file: &mut FilePtr) -> Ptr<u8> {
+    |                                          ----^^^^
+    |                                          |
+    |                                          help: remove this `mut`
+
+warning: unused variable: `pos`
+   --> src/translation_utils/memory/file_ptr.rs:252:12
+    |
+252 |         Ok(pos) => 0,
+    |            ^^^ help: if this is intentional, prefix it with an underscore: `_pos`
+    |
+    = note: `#[warn(unused_variables)]` on by default
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:240:14
+    |
+240 | pub fn fseek(mut file: &mut FilePtr, mut offset: i64, mut whence: i32) -> i32 {
+    |              ----^^^^
+    |              |
+    |              help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:240:38
+    |
+240 | pub fn fseek(mut file: &mut FilePtr, mut offset: i64, mut whence: i32) -> i32 {
+    |                                      ----^^^^^^
+    |                                      |
+    |                                      help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:240:55
+    |
+240 | pub fn fseek(mut file: &mut FilePtr, mut offset: i64, mut whence: i32) -> i32 {
+    |                                                       ----^^^^^^
+    |                                                       |
+    |                                                       help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:257:14
+    |
+257 | pub fn ftell(mut file: &mut FilePtr) -> i64 {
+    |              ----^^^^
+    |              |
+    |              help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:273:15
+    |
+273 | pub fn remove(mut filename: CStr) -> i32 {
+    |               ----^^^^^^^^
+    |               |
+    |               help: remove this `mut`
+
+warning: unused variable: `key`
+  --> src/translation_utils/memory/resource_heap.rs:48:21
+   |
+48 |                 let key = nonnull.as_ptr() as usize;
+   |                     ^^^ help: if this is intentional, prefix it with an underscore: `_key`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/memory/resource_heap.rs:49:21
+   |
+49 |                 let mut remove_value = self.heap.remove(&(nonnull.as_ptr() as usize));
+   |                     ----^^^^^^^^^^^^
+   |                     |
+   |                     help: remove this `mut`
+
+warning: unused variable: `length`
+  --> src/translation_utils/types/c_str.rs:11:13
+   |
+11 |         let length = data.len();
+   |             ^^^^^^ help: if this is intentional, prefix it with an underscore: `_length`
+
+warning: `my_proj` (lib) generated 154 warnings
+error: could not compile `my_proj` (lib) due to 142 previous errors; 154 warnings emitted

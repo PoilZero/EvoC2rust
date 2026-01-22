@@ -1,0 +1,1 @@
+{"typedef vec_t(void *) vec_void_t;": "0", "typedef vec_t(char *) vec_str_t;": "1", "typedef vec_t(int) vec_int_t;": "2", "typedef vec_t(char) vec_char_t;": "3", "typedef vec_t(float) vec_float_t;": "4", "typedef vec_t(double) vec_double_t;": "5"}

@@ -1,0 +1,1 @@
+pub type vec_char_t = Vec<u8>;

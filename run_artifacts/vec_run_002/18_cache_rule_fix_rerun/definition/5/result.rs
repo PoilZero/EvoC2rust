@@ -1,0 +1,1 @@
+pub type VecDoubleT = FuncPtr<fn(f64) -> VecT>;

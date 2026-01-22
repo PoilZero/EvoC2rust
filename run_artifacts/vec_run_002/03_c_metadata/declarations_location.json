@@ -1,0 +1,44 @@
+{
+    "vec_expand_": [
+        "src/vec.c"
+    ],
+    "vec_reserve_": [
+        "src/vec.c"
+    ],
+    "vec_reserve_po2_": [
+        "src/vec.c"
+    ],
+    "vec_compact_": [
+        "src/vec.c"
+    ],
+    "vec_insert_": [
+        "src/vec.c"
+    ],
+    "vec_splice_": [
+        "src/vec.c"
+    ],
+    "vec_swapsplice_": [
+        "src/vec.c"
+    ],
+    "vec_swap_": [
+        "src/vec.c"
+    ],
+    "vec_void_t": [
+        "src/vec.h"
+    ],
+    "vec_str_t": [
+        "src/vec.h"
+    ],
+    "vec_int_t": [
+        "src/vec.h"
+    ],
+    "vec_char_t": [
+        "src/vec.h"
+    ],
+    "vec_float_t": [
+        "src/vec.h"
+    ],
+    "vec_double_t": [
+        "src/vec.h"
+    ]
+}
