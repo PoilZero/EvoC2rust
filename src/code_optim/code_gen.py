@@ -1,5 +1,5 @@
 from config.global_config import GlobalConfig
-from llm.client import GenerationClient
+from llm.client_qwen import GenerationClient
 from llm.generation import update_codes
 from cache.cache import ProjectCache
 from entity.metadata import RustProjectMetadata

@@ -1,7 +1,7 @@
 from tqdm import tqdm
 from entity.metadata import RustCode
 from entity.exceptions import CallLLMTimeoutError
-from llm.client import GenerationClient
+from llm.client_qwen import GenerationClient
 from cache.cache import ProjectCache
 
 def merge_prompt(prompt, c_code):

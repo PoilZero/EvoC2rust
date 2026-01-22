@@ -21,12 +21,11 @@ class GenerationClient:
                 response = openai_client.chat.completions.create(
                     model=self.model_name,
                     messages=[
-                        {"role": "user", "content": text+ '/no_think'},
+                        {"role": "user", "content": text},
                     ],
-                    stop=["```\n"],
                     temperature=0,
                     top_p=0.01,
-                    max_tokens=4096,
+                    max_tokens=24576,
                     stream=False,
                 )
                 break
@@ -36,8 +35,18 @@ class GenerationClient:
                     raise CallLLMTimeoutError(f"Failed to call LLM after 10 attempts: {e}")
             
         result = response.choices[0].message.content.strip()
+        if "</think>" in result:
+            result = result.split("</think>")[-1].strip()
         if "```rust" in result:
-            result = result.split("```rust", 1)[-1].strip()
+            result = result.split("```rust", 1)[-1]
+            if "```" in result:
+                result = result.split("```", 1)[0]
+        elif "```" in result:
+            parts = result.split("```")
+            if len(parts) >= 3:
+                result = parts[1]
+            else:
+                result = parts[-1]
         if result.endswith("```"):
-            result = result[:-3].strip()
-        return result
+            result = result[:-3]
+        return result.strip()
