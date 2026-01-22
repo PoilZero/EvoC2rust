@@ -1,0 +1,235 @@
+{
+    "src": {
+        "name": "src",
+        "type": "folder",
+        "children": {
+            "vec_c.rs": {
+                "name": "vec_c.rs",
+                "type": "file",
+                "declarations": [
+                    "use crate::translation_utils::*;",
+                    "pub use crate::src::vec_h::*;"
+                ],
+                "definitions": [],
+                "macros": [],
+                "macro_functions": [],
+                "functions": [
+                    {
+                        "c_code": "int vec_expand_(char **data, int *length, int *capacity, int memsz)\n{\n    if (*length + 1 > *capacity)\n    {\n        void *ptr;\n        int n = (*capacity == 0) ? 1 : *capacity << 1;\n        ptr = realloc(*data, n * memsz);\n        if (ptr == NULL)\n            return -1;\n        *data = ptr;\n        *capacity = n;\n    }\n    return 0;\n}",
+                        "rust_code": "pub fn vec_expand_() { unimplemented!(); }"
+                    },
+                    {
+                        "c_code": "int vec_reserve_(char **data, int *length, int *capacity, int memsz, int n)\n{\n    (void)length;\n    if (n > *capacity)\n    {\n        void *ptr = realloc(*data, n * memsz);\n        if (ptr == NULL)\n            return -1;\n        *data = ptr;\n        *capacity = n;\n    }\n    return 0;\n}",
+                        "rust_code": "pub fn vec_reserve_() { unimplemented!(); }"
+                    },
+                    {
+                        "c_code": "int vec_reserve_po2_(char **data, int *length, int *capacity, int memsz, int n)\n{\n    int n2 = 1;\n    if (n == 0)\n        return 0;\n    while (n2 < n)\n        n2 <<= 1;\n    return vec_reserve_(data, length, capacity, memsz, n2);\n}",
+                        "rust_code": "pub fn vec_reserve_po2_() { unimplemented!(); }"
+                    },
+                    {
+                        "c_code": "int vec_compact_(char **data, int *length, int *capacity, int memsz)\n{\n    if (*length == 0)\n    {\n        free(*data);\n        *data = NULL;\n        *capacity = 0;\n        return 0;\n    }\n    else\n    {\n        void *ptr;\n        int n = *length;\n        ptr = realloc(*data, n * memsz);\n        if (ptr == NULL)\n            return -1;\n        *capacity = n;\n        *data = ptr;\n    }\n    return 0;\n}",
+                        "rust_code": "pub fn vec_compact_() { unimplemented!(); }"
+                    },
+                    {
+                        "c_code": "int vec_insert_(char **data, int *length, int *capacity, int memsz, int idx)\n{\n    int err = vec_expand_(data, length, capacity, memsz);\n    if (err)\n        return err;\n    memmove(*data + (idx + 1) * memsz, *data + idx * memsz, (*length - idx) * memsz);\n    return 0;\n}",
+                        "rust_code": "pub fn vec_insert_() { unimplemented!(); }"
+                    },
+                    {
+                        "c_code": "void vec_splice_(char **data, int *length, int *capacity, int memsz, int start, int count)\n{\n    (void)capacity;\n    memmove(*data + start * memsz, *data + (start + count) * memsz, (*length - start - count) * memsz);\n}",
+                        "rust_code": "pub fn vec_splice_() { unimplemented!(); }"
+                    },
+                    {
+                        "c_code": "void vec_swapsplice_(char **data, int *length, int *capacity, int memsz, int start, int count)\n{\n    (void)capacity;\n    memmove(*data + start * memsz, *data + (*length - count) * memsz, count * memsz);\n}",
+                        "rust_code": "pub fn vec_swapsplice_() { unimplemented!(); }"
+                    },
+                    {
+                        "c_code": "void vec_swap_(char **data, int *length, int *capacity, int memsz, int idx1, int idx2)\n{\n    unsigned char *a, *b, tmp;\n    int count;\n    (void)length;\n    (void)capacity;\n    if (idx1 == idx2)\n        return;\n    a = (unsigned char *)*data + idx1 * memsz;\n    b = (unsigned char *)*data + idx2 * memsz;\n    count = memsz;\n    while (count--)\n    {\n        tmp = *a;\n        *a = *b;\n        *b = tmp;\n        a++, b++;\n    }\n}",
+                        "rust_code": "pub fn vec_swap_() { unimplemented!(); }"
+                    }
+                ]
+            },
+            "vec_h.rs": {
+                "name": "vec_h.rs",
+                "type": "file",
+                "declarations": [
+                    "use crate::translation_utils::*;",
+                    "pub use crate::src::vec_c::vec_reserve_po2_;",
+                    "pub use crate::src::vec_c::vec_insert_;",
+                    "pub use crate::src::vec_c::vec_compact_;",
+                    "pub use crate::src::vec_c::vec_splice_;",
+                    "pub use crate::src::vec_c::vec_expand_;",
+                    "pub use crate::src::vec_c::vec_swapsplice_;",
+                    "pub use crate::src::vec_c::vec_reserve_;",
+                    "pub use crate::src::vec_c::vec_swap_;"
+                ],
+                "definitions": [
+                    {
+                        "c_code": "typedef vec_t(void *) vec_void_t;",
+                        "rust_code": "pub type vec_void_t = i32;"
+                    },
+                    {
+                        "c_code": "typedef vec_t(char *) vec_str_t;",
+                        "rust_code": "pub type vec_str_t = i32;"
+                    },
+                    {
+                        "c_code": "typedef vec_t(int) vec_int_t;",
+                        "rust_code": "pub type vec_int_t = i32;"
+                    },
+                    {
+                        "c_code": "typedef vec_t(char) vec_char_t;",
+                        "rust_code": "pub type vec_char_t = i32;"
+                    },
+                    {
+                        "c_code": "typedef vec_t(float) vec_float_t;",
+                        "rust_code": "pub type vec_float_t = i32;"
+                    },
+                    {
+                        "c_code": "typedef vec_t(double) vec_double_t;",
+                        "rust_code": "pub type vec_double_t = i32;"
+                    }
+                ],
+                "macros": [
+                    {
+                        "c_code": "#define VEC_H",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define VEC_VERSION \"0.2.1\"",
+                        "rust_code": ""
+                    }
+                ],
+                "macro_functions": [
+                    {
+                        "c_code": "#define vec_unpack_(v) (char **)&(v)->data, &(v)->length, &(v)->capacity, sizeof(*(v)->data)",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_t(T)                                                                                                       \\\n    struct                                                                                                             \\\n    {                                                                                                                  \\\n        T *data;                                                                                                       \\\n        int length, capacity;                                                                                          \\\n    }",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_init(v) memset((v), 0, sizeof(*(v)))",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_deinit(v) (free((v)->data), vec_init(v))",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_push(v, val) (vec_expand_(vec_unpack_(v)) ? -1 : ((v)->data[(v)->length++] = (val), 0), 0)",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_pop(v) (v)->data[--(v)->length]",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_splice(v, start, count) (vec_splice_(vec_unpack_(v), start, count), (v)->length -= (count))",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_swapsplice(v, start, count) (vec_swapsplice_(vec_unpack_(v), start, count), (v)->length -= (count))",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_insert(v, idx, val) (vec_insert_(vec_unpack_(v), idx) ? -1 : ((v)->data[idx] = (val), 0), (v)->length++, 0)",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_sort(v, fn) qsort((v)->data, (v)->length, sizeof(*(v)->data), fn)",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_swap(v, idx1, idx2) vec_swap_(vec_unpack_(v), idx1, idx2)",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_truncate(v, len) ((v)->length = (len) < (v)->length ? (len) : (v)->length)",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_clear(v) ((v)->length = 0)",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_first(v) (v)->data[0]",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_last(v) (v)->data[(v)->length - 1]",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_reserve(v, n) vec_reserve_(vec_unpack_(v), n)",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_compact(v) vec_compact_(vec_unpack_(v))",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_pusharr(v, arr, count)                                                                                     \\\n    do                                                                                                                 \\\n    {                                                                                                                  \\\n        int i__, n__ = (count);                                                                                        \\\n        if (vec_reserve_po2_(vec_unpack_(v), (v)->length + n__) != 0)                                                  \\\n            break;                                                                                                     \\\n        for (i__ = 0; i__ < n__; i__++)                                                                                \\\n        {                                                                                                              \\\n            (v)->data[(v)->length++] = (arr)[i__];                                                                     \\\n        }                                                                                                              \\\n    } while (0)",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_extend(v, v2) vec_pusharr((v), (v2)->data, (v2)->length)",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_find(v, val, idx)                                                                                          \\\n    do                                                                                                                 \\\n    {                                                                                                                  \\\n        for ((idx) = 0; (idx) < (v)->length; (idx)++)                                                                  \\\n        {                                                                                                              \\\n            if ((v)->data[(idx)] == (val))                                                                             \\\n                break;                                                                                                 \\\n        }                                                                                                              \\\n        if ((idx) == (v)->length)                                                                                      \\\n            (idx) = -1;                                                                                                \\\n    } while (0)",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_remove(v, val)                                                                                             \\\n    do                                                                                                                 \\\n    {                                                                                                                  \\\n        int idx__;                                                                                                     \\\n        vec_find(v, val, idx__);                                                                                       \\\n        if (idx__ != -1)                                                                                               \\\n            vec_splice(v, idx__, 1);                                                                                   \\\n    } while (0)",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_reverse(v)                                                                                                 \\\n    do                                                                                                                 \\\n    {                                                                                                                  \\\n        int i__ = (v)->length / 2;                                                                                     \\\n        while (i__--)                                                                                                  \\\n        {                                                                                                              \\\n            vec_swap((v), i__, (v)->length - (i__ + 1));                                                               \\\n        }                                                                                                              \\\n    } while (0)",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_foreach(v, var, iter)                                                                                      \\\n    if ((v)->length > 0)                                                                                               \\\n        for ((iter) = 0; (iter) < (v)->length && (((var) = (v)->data[(iter)]), 1); ++(iter))",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_foreach_rev(v, var, iter)                                                                                  \\\n    if ((v)->length > 0)                                                                                               \\\n        for ((iter) = (v)->length - 1; (iter) >= 0 && (((var) = (v)->data[(iter)]), 1); --(iter))",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_foreach_ptr(v, var, iter)                                                                                  \\\n    if ((v)->length > 0)                                                                                               \\\n        for ((iter) = 0; (iter) < (v)->length && (((var) = &(v)->data[(iter)]), 1); ++(iter))",
+                        "rust_code": ""
+                    },
+                    {
+                        "c_code": "#define vec_foreach_ptr_rev(v, var, iter)                                                                              \\\n    if ((v)->length > 0)                                                                                               \\\n        for ((iter) = (v)->length - 1; (iter) >= 0 && (((var) = &(v)->data[(iter)]), 1); --(iter))",
+                        "rust_code": ""
+                    }
+                ],
+                "functions": []
+            },
+            "mod.rs": {
+                "name": "mod.rs",
+                "type": "file",
+                "declarations": [
+                    "pub mod vec_c;",
+                    "pub mod vec_h;"
+                ],
+                "definitions": [],
+                "macros": [],
+                "macro_functions": [],
+                "functions": []
+            }
+        }
+    },
+    "lib.rs": {
+        "name": "lib.rs",
+        "type": "file",
+        "declarations": [
+            "pub(crate) mod translation_utils;",
+            "pub(crate) mod src;"
+        ],
+        "definitions": [],
+        "macros": [],
+        "macro_functions": [],
+        "functions": []
+    }
+}

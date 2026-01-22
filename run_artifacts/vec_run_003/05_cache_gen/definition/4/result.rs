@@ -1,0 +1,1 @@
+pub type VecFloatT = Array<f32, 0>;

@@ -1,0 +1,1905 @@
+   Compiling my_proj v0.1.0 (/home/poil/桌面/github/EvoC2rust_work/EvoC2rust/final_project/vec_run_003)
+error: can't qualify macro_rules invocation with `pub(crate)`
+  --> src/src/vec_h.rs:47:1
+   |
+47 | pub(crate) macro_rules! vec_t {
+   | ^^^^^^^^^^
+   |
+help: try exporting the macro
+   |
+47 - pub(crate) macro_rules! vec_t {
+47 + #[macro_export] macro_rules! vec_t {
+   |
+
+error: can't qualify macro_rules invocation with `pub(crate)`
+  --> src/src/vec_h.rs:65:1
+   |
+65 | pub(crate) macro_rules! vec_deinit {
+   | ^^^^^^^^^^
+   |
+help: try exporting the macro
+   |
+65 - pub(crate) macro_rules! vec_deinit {
+65 + #[macro_export] macro_rules! vec_deinit {
+   |
+
+error: can't qualify macro_rules invocation with `pub(crate)`
+   --> src/src/vec_h.rs:141:1
+    |
+141 | pub(crate) macro_rules! vec_truncate {
+    | ^^^^^^^^^^
+    |
+help: try exporting the macro
+    |
+141 - pub(crate) macro_rules! vec_truncate {
+141 + #[macro_export] macro_rules! vec_truncate {
+    |
+
+error: can't qualify macro_rules invocation with `pub(crate)`
+   --> src/src/vec_h.rs:174:1
+    |
+174 | pub(crate) macro_rules! vec_pusharr {
+    | ^^^^^^^^^^
+    |
+help: try exporting the macro
+    |
+174 - pub(crate) macro_rules! vec_pusharr {
+174 + #[macro_export] macro_rules! vec_pusharr {
+    |
+
+error: can't qualify macro_rules invocation with `pub(crate)`
+   --> src/src/vec_h.rs:213:1
+    |
+213 | pub(crate) macro_rules! vec_remove {
+    | ^^^^^^^^^^
+    |
+help: try exporting the macro
+    |
+213 - pub(crate) macro_rules! vec_remove {
+213 + #[macro_export] macro_rules! vec_remove {
+    |
+
+error: can't qualify macro_rules invocation with `pub(crate)`
+   --> src/src/vec_h.rs:254:1
+    |
+254 | pub(crate) macro_rules! vec_foreach_ptr {
+    | ^^^^^^^^^^
+    |
+help: try exporting the macro
+    |
+254 - pub(crate) macro_rules! vec_foreach_ptr {
+254 + #[macro_export] macro_rules! vec_foreach_ptr {
+    |
+
+error[E0412]: cannot find type `VecT` in this scope
+   --> src/src/vec_h.rs:27:34
+    |
+27  | pub type VecDoubleT = fn(f64) -> VecT;
+    |                                  ^^^^ help: a struct with a similar name exists: `Vec`
+    |
+   ::: /home/poil/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:414:1
+    |
+414 | pub struct Vec<T, #[unstable(feature = "allocator_api", issue = "32838")] A: Allocator = Global> {
+    | ------------------------------------------------------------------------------------------------ similarly named struct `Vec` defined here
+
+warning: unused macro definition: `c_sizeof`
+ --> src/translation_utils/c_alignment/operators/c_sizeof.rs:3:14
+  |
+3 | macro_rules! c_sizeof {
+  |              ^^^^^^^^
+  |
+  = note: `#[warn(unused_macros)]` on by default
+
+warning: unused macro definition: `c_sizeofval`
+ --> src/translation_utils/c_alignment/operators/c_sizeof.rs:9:14
+  |
+9 | macro_rules! c_sizeofval {
+  |              ^^^^^^^^^^^
+
+warning: glob import doesn't reexport anything with visibility `pub` because no imported item is public enough
+ --> src/translation_utils/c_alignment/operators/mod.rs:2:9
+  |
+2 | pub use c_sizeof::*;
+  |         ^^^^^^^^^^^
+  |
+note: the most public imported item is `pub(crate)`
+ --> src/translation_utils/c_alignment/operators/mod.rs:2:9
+  |
+2 | pub use c_sizeof::*;
+  |         ^^^^^^^^^^^
+  = help: reduce the glob import's visibility or increase visibility of imported items
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused macro definition: `c_offsetof`
+ --> src/translation_utils/c_alignment/operators/c_offsetof.rs:3:14
+  |
+3 | macro_rules! c_offsetof {
+  |              ^^^^^^^^^^
+
+warning: glob import doesn't reexport anything with visibility `pub` because no imported item is public enough
+ --> src/translation_utils/c_alignment/operators/mod.rs:5:9
+  |
+5 | pub use c_offsetof::*;
+  |         ^^^^^^^^^^^^^
+  |
+note: the most public imported item is `pub(crate)`
+ --> src/translation_utils/c_alignment/operators/mod.rs:5:9
+  |
+5 | pub use c_offsetof::*;
+  |         ^^^^^^^^^^^^^
+  = help: reduce the glob import's visibility or increase visibility of imported items
+
+warning: unused macro definition: `plus_plus`
+   --> src/translation_utils/c_alignment/operators/c_self_incr_decr.rs:101:14
+    |
+101 | macro_rules! plus_plus {
+    |              ^^^^^^^^^
+
+warning: unused macro definition: `minus_minus`
+   --> src/translation_utils/c_alignment/operators/c_self_incr_decr.rs:109:14
+    |
+109 | macro_rules! minus_minus {
+    |              ^^^^^^^^^^^
+
+warning: unused import: `core::ptr::NonNull`
+ --> src/translation_utils/c_alignment/operators/c_ref.rs:3:5
+  |
+3 | use core::ptr::NonNull;
+  |     ^^^^^^^^^^^^^^^^^^
+
+warning: unused macro definition: `c_calloc`
+ --> src/translation_utils/c_alignment/libraries/c_calloc.rs:6:14
+  |
+6 | macro_rules! c_calloc {
+  |              ^^^^^^^^
+
+warning: unused macro definition: `c_memcpy`
+  --> src/translation_utils/c_alignment/libraries/c_memcpy.rs:21:14
+   |
+21 | macro_rules! c_memcpy {
+   |              ^^^^^^^^
+
+warning: unused macro definition: `c_tolower`
+  --> src/translation_utils/c_alignment/libraries/c_type.rs:19:14
+   |
+19 | macro_rules! c_tolower {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `c_toupper`
+  --> src/translation_utils/c_alignment/libraries/c_type.rs:27:14
+   |
+27 | macro_rules! c_toupper {
+   |              ^^^^^^^^^
+
+warning: unused import: `core::cmp::Ordering`
+ --> src/translation_utils/c_alignment/libraries/c_string.rs:3:5
+  |
+3 | use core::cmp::Ordering;
+  |     ^^^^^^^^^^^^^^^^^^^
+
+warning: unused macro definition: `c_strncmp`
+  --> src/translation_utils/c_alignment/libraries/c_string.rs:76:14
+   |
+76 | macro_rules! c_strncmp {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `c_strdup`
+  --> src/translation_utils/c_alignment/libraries/c_string.rs:92:14
+   |
+92 | macro_rules! c_strdup {
+   |              ^^^^^^^^
+
+warning: unused macro definition: `c_printf`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:107:14
+    |
+107 | macro_rules! c_printf {
+    |              ^^^^^^^^
+
+warning: unused macro definition: `c_sprintf`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:129:14
+    |
+129 | macro_rules! c_sprintf {
+    |              ^^^^^^^^^
+
+warning: unused macro definition: `c_sprintf_s`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:154:14
+    |
+154 | macro_rules! c_sprintf_s {
+    |              ^^^^^^^^^^^
+
+warning: unused macro definition: `c_snprintf`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:179:14
+    |
+179 | macro_rules! c_snprintf {
+    |              ^^^^^^^^^^
+
+warning: unused macro definition: `c_snprintf_s`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:216:14
+    |
+216 | macro_rules! c_snprintf_s {
+    |              ^^^^^^^^^^^^
+
+warning: unused macro definition: `c_vsnprintf_s`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:227:14
+    |
+227 | macro_rules! c_vsnprintf_s {
+    |              ^^^^^^^^^^^^^
+
+warning: unused macro definition: `c_strrchr`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:247:14
+    |
+247 | macro_rules! c_strrchr {
+    |              ^^^^^^^^^
+
+warning: unused macro definition: `c_strcpy`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:264:14
+    |
+264 | macro_rules! c_strcpy {
+    |              ^^^^^^^^
+
+warning: unused macro definition: `c_strcpy_s`
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:291:14
+    |
+291 | macro_rules! c_strcpy_s {
+    |              ^^^^^^^^^^
+
+warning: unused import: `core::cmp::Ordering`
+ --> src/translation_utils/c_alignment/libraries/c_memcmp.rs:3:5
+  |
+3 | use core::cmp::Ordering;
+  |     ^^^^^^^^^^^^^^^^^^^
+
+warning: unused macro definition: `c_memcmp`
+  --> src/translation_utils/c_alignment/libraries/c_memcmp.rs:29:14
+   |
+29 | macro_rules! c_memcmp {
+   |              ^^^^^^^^
+
+warning: unused macro definition: `c_memset`
+  --> src/translation_utils/c_alignment/libraries/c_memset.rs:22:14
+   |
+22 | macro_rules! c_memset {
+   |              ^^^^^^^^
+
+warning: unused macro definition: `c_atoi`
+  --> src/translation_utils/c_alignment/libraries/c_stdlib.rs:26:14
+   |
+26 | macro_rules! c_atoi {
+   |              ^^^^^^
+
+warning: unused import: `std::path::Path`
+ --> src/translation_utils/c_alignment/libraries/misc.rs:3:5
+  |
+3 | use std::path::Path;
+  |     ^^^^^^^^^^^^^^^
+
+warning: unused macro definition: `c_basename`
+  --> src/translation_utils/c_alignment/libraries/misc.rs:17:14
+   |
+17 | macro_rules! c_basename {
+   |              ^^^^^^^^^^
+
+warning: unused macro definition: `c__line__`
+  --> src/translation_utils/c_alignment/libraries/misc.rs:25:14
+   |
+25 | macro_rules! c__line__ {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `c__file__`
+  --> src/translation_utils/c_alignment/libraries/misc.rs:39:14
+   |
+39 | macro_rules! c__file__ {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `c__function__`
+  --> src/translation_utils/c_alignment/libraries/misc.rs:53:14
+   |
+53 | macro_rules! c__function__ {
+   |              ^^^^^^^^^^^^^
+
+warning: type `errno_t` should have an upper camel case name
+ --> src/translation_utils/c_alignment/libraries/safelib/error_no.rs:3:10
+  |
+3 | pub type errno_t = i32;
+  |          ^^^^^^^ help: convert the identifier to upper camel case: `ErrnoT`
+  |
+  = note: `#[warn(non_camel_case_types)]` on by default
+
+warning: unused macro definition: `EOK`
+  --> src/translation_utils/c_alignment/libraries/safelib/error_no.rs:27:14
+   |
+27 | macro_rules! EOK {
+   |              ^^^
+
+warning: unused macro definition: `EINVAL`
+  --> src/translation_utils/c_alignment/libraries/safelib/error_no.rs:32:14
+   |
+32 | macro_rules! EINVAL {
+   |              ^^^^^^
+
+warning: unused macro definition: `ERANGE`
+  --> src/translation_utils/c_alignment/libraries/safelib/error_no.rs:37:14
+   |
+37 | macro_rules! ERANGE {
+   |              ^^^^^^
+
+warning: unused macro definition: `c_memset_s`
+  --> src/translation_utils/c_alignment/libraries/safelib/c_memset_s.rs:36:14
+   |
+36 | macro_rules! c_memset_s {
+   |              ^^^^^^^^^^
+
+warning: unused macro definition: `c_memcpy_s`
+  --> src/translation_utils/c_alignment/libraries/safelib/c_memcpy_s.rs:34:14
+   |
+34 | macro_rules! c_memcpy_s {
+   |              ^^^^^^^^^^
+
+warning: unused macro definition: `c_memmove_s`
+  --> src/translation_utils/c_alignment/libraries/safelib/c_memmove_s.rs:45:14
+   |
+45 | macro_rules! c_memmove_s {
+   |              ^^^^^^^^^^^
+
+warning: unused macro definition: `c_for`
+ --> src/translation_utils/c_alignment/c_for.rs:3:14
+  |
+3 | macro_rules! c_for {
+  |              ^^^^^
+
+warning: glob import doesn't reexport anything with visibility `pub` because no imported item is public enough
+ --> src/translation_utils/c_alignment/mod.rs:8:9
+  |
+8 | pub use c_for::*;
+  |         ^^^^^^^^
+  |
+note: the most public imported item is `pub(crate)`
+ --> src/translation_utils/c_alignment/mod.rs:8:9
+  |
+8 | pub use c_for::*;
+  |         ^^^^^^^^
+  = help: reduce the glob import's visibility or increase visibility of imported items
+
+warning: unused macro definition: `c_do`
+ --> src/translation_utils/c_alignment/c_do_while.rs:3:14
+  |
+3 | macro_rules! c_do {
+  |              ^^^^
+
+warning: unused macro definition: `c_while`
+  --> src/translation_utils/c_alignment/c_do_while.rs:15:14
+   |
+15 | macro_rules! c_while {
+   |              ^^^^^^^
+
+warning: glob import doesn't reexport anything with visibility `pub` because no imported item is public enough
+  --> src/translation_utils/c_alignment/mod.rs:11:9
+   |
+11 | pub use c_do_while::*;
+   |         ^^^^^^^^^^^^^
+   |
+note: the most public imported item is `pub(crate)`
+  --> src/translation_utils/c_alignment/mod.rs:11:9
+   |
+11 | pub use c_do_while::*;
+   |         ^^^^^^^^^^^^^
+   = help: reduce the glob import's visibility or increase visibility of imported items
+
+warning: unused macro definition: `c_switch`
+ --> src/translation_utils/c_alignment/c_switch.rs:3:14
+  |
+3 | macro_rules! c_switch {
+  |              ^^^^^^^^
+
+warning: glob import doesn't reexport anything with visibility `pub` because no imported item is public enough
+  --> src/translation_utils/c_alignment/mod.rs:14:9
+   |
+14 | pub use c_switch::*;
+   |         ^^^^^^^^^^^
+   |
+note: the most public imported item is `pub(crate)`
+  --> src/translation_utils/c_alignment/mod.rs:14:9
+   |
+14 | pub use c_switch::*;
+   |         ^^^^^^^^^^^
+   = help: reduce the glob import's visibility or increase visibility of imported items
+
+warning: unused macro definition: `SCHAR_MIN`
+ --> src/translation_utils/c_alignment/c_limits.rs:3:14
+  |
+3 | macro_rules! SCHAR_MIN {
+  |              ^^^^^^^^^
+
+warning: unused macro definition: `SCHAR_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:10:14
+   |
+10 | macro_rules! SCHAR_MAX {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `UCHAR_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:17:14
+   |
+17 | macro_rules! UCHAR_MAX {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `SHRT_MIN`
+  --> src/translation_utils/c_alignment/c_limits.rs:24:14
+   |
+24 | macro_rules! SHRT_MIN {
+   |              ^^^^^^^^
+
+warning: unused macro definition: `SHRT_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:31:14
+   |
+31 | macro_rules! SHRT_MAX {
+   |              ^^^^^^^^
+
+warning: unused macro definition: `USHRT_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:38:14
+   |
+38 | macro_rules! USHRT_MAX {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `INT_MIN`
+  --> src/translation_utils/c_alignment/c_limits.rs:45:14
+   |
+45 | macro_rules! INT_MIN {
+   |              ^^^^^^^
+
+warning: unused macro definition: `INT_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:52:14
+   |
+52 | macro_rules! INT_MAX {
+   |              ^^^^^^^
+
+warning: unused macro definition: `UINT_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:59:14
+   |
+59 | macro_rules! UINT_MAX {
+   |              ^^^^^^^^
+
+warning: unused macro definition: `LLONG_MIN`
+  --> src/translation_utils/c_alignment/c_limits.rs:66:14
+   |
+66 | macro_rules! LLONG_MIN {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `LLONG_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:73:14
+   |
+73 | macro_rules! LLONG_MAX {
+   |              ^^^^^^^^^
+
+warning: unused macro definition: `ULLONG_MAX`
+  --> src/translation_utils/c_alignment/c_limits.rs:80:14
+   |
+80 | macro_rules! ULLONG_MAX {
+   |              ^^^^^^^^^^
+
+warning: glob import doesn't reexport anything with visibility `pub` because no imported item is public enough
+  --> src/translation_utils/c_alignment/mod.rs:17:9
+   |
+17 | pub use c_limits::*;
+   |         ^^^^^^^^^^^
+   |
+note: the most public imported item is `pub(crate)`
+  --> src/translation_utils/c_alignment/mod.rs:17:9
+   |
+17 | pub use c_limits::*;
+   |         ^^^^^^^^^^^
+   = help: reduce the glob import's visibility or increase visibility of imported items
+
+warning: unused import: `core::ops::*`
+ --> src/translation_utils/memory/file_ptr.rs:3:5
+  |
+3 | use core::ops::*;
+  |     ^^^^^^^^^^^^
+
+warning: unused macro definition: `EOF`
+  --> src/translation_utils/memory/file_ptr.rs:73:14
+   |
+73 | macro_rules! EOF {
+   |              ^^^
+
+warning: unused macro definition: `SEEK_SET`
+   --> src/translation_utils/memory/file_ptr.rs:280:14
+    |
+280 | macro_rules! SEEK_SET {
+    |              ^^^^^^^^
+
+warning: unused macro definition: `SEEK_CUR`
+   --> src/translation_utils/memory/file_ptr.rs:287:14
+    |
+287 | macro_rules! SEEK_CUR {
+    |              ^^^^^^^^
+
+warning: unused macro definition: `SEEK_END`
+   --> src/translation_utils/memory/file_ptr.rs:294:14
+    |
+294 | macro_rules! SEEK_END {
+    |              ^^^^^^^^
+
+warning: unused macro definition: `c_fseek`
+   --> src/translation_utils/memory/file_ptr.rs:322:14
+    |
+322 | macro_rules! c_fseek {
+    |              ^^^^^^^
+
+warning: unused macro definition: `c_ftell`
+   --> src/translation_utils/memory/file_ptr.rs:330:14
+    |
+330 | macro_rules! c_ftell {
+    |              ^^^^^^^
+
+warning: unused macro definition: `c_fopen`
+   --> src/translation_utils/memory/file_ptr.rs:338:14
+    |
+338 | macro_rules! c_fopen {
+    |              ^^^^^^^
+
+warning: unused macro definition: `c_fclose`
+   --> src/translation_utils/memory/file_ptr.rs:345:14
+    |
+345 | macro_rules! c_fclose {
+    |              ^^^^^^^^
+
+warning: unused macro definition: `c_fgetc`
+   --> src/translation_utils/memory/file_ptr.rs:352:14
+    |
+352 | macro_rules! c_fgetc {
+    |              ^^^^^^^
+
+warning: unused macro definition: `c_ungetc`
+   --> src/translation_utils/memory/file_ptr.rs:359:14
+    |
+359 | macro_rules! c_ungetc {
+    |              ^^^^^^^^
+
+warning: unused macro definition: `c_fread`
+   --> src/translation_utils/memory/file_ptr.rs:366:14
+    |
+366 | macro_rules! c_fread {
+    |              ^^^^^^^
+
+warning: unused macro definition: `c_fwrite`
+   --> src/translation_utils/memory/file_ptr.rs:373:14
+    |
+373 | macro_rules! c_fwrite {
+    |              ^^^^^^^^
+
+warning: unused macro definition: `c_fgets`
+   --> src/translation_utils/memory/file_ptr.rs:380:14
+    |
+380 | macro_rules! c_fgets {
+    |              ^^^^^^^
+
+warning: unused macro definition: `c_remove`
+   --> src/translation_utils/memory/file_ptr.rs:387:14
+    |
+387 | macro_rules! c_remove {
+    |              ^^^^^^^^
+
+warning: unused import: `core::cell::UnsafeCell`
+ --> src/translation_utils/memory/ptr.rs:5:5
+  |
+5 | use core::cell::UnsafeCell;
+  |     ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `core::any::Any`
+ --> src/translation_utils/memory/resource_heap.rs:3:5
+  |
+3 | use core::any::Any;
+  |     ^^^^^^^^^^^^^^
+
+warning: unused import: `core::ops::*`
+ --> src/translation_utils/memory/resource_heap.rs:4:5
+  |
+4 | use core::ops::*;
+  |     ^^^^^^^^^^^^
+
+warning: unused macro definition: `test_no_memory_leak`
+  --> src/translation_utils/memory/resource_heap.rs:86:14
+   |
+86 | macro_rules! test_no_memory_leak {
+   |              ^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `core::ptr::NonNull`
+ --> src/translation_utils/types/array.rs:7:5
+  |
+7 | use core::ptr::NonNull;
+  |     ^^^^^^^^^^^^^^^^^^
+
+warning: unused macro definition: `arr`
+   --> src/translation_utils/types/array.rs:131:14
+    |
+131 | macro_rules! arr {
+    |              ^^^
+
+warning: unused macro definition: `index`
+   --> src/translation_utils/types/array.rs:148:14
+    |
+148 | macro_rules! index {
+    |              ^^^^^
+
+warning: unused import: `num::*`
+ --> src/translation_utils/types/mod.rs:5:9
+  |
+5 | pub use num::*;
+  |         ^^^^^^
+
+warning: unused import: `core::ops::*`
+ --> src/translation_utils/types/c_str.rs:3:5
+  |
+3 | use core::ops::*;
+  |     ^^^^^^^^^^^^
+
+warning: unused macro definition: `bstr`
+  --> src/translation_utils/types/c_str.rs:42:14
+   |
+42 | macro_rules! bstr {
+   |              ^^^^
+
+warning: unused import: `crate::translation_utils::*`
+ --> src/translation_utils/types/cast_trait.rs:1:5
+  |
+1 | use crate::translation_utils::*;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused macro definition: `func`
+  --> src/translation_utils/types/func_ptr.rs:61:14
+   |
+61 | macro_rules! func {
+   |              ^^^^
+
+warning: unused import: `core::ops::*`
+ --> src/translation_utils/types/null.rs:3:5
+  |
+3 | use core::ops::*;
+  |     ^^^^^^^^^^^^
+
+warning: unused macro definition: `c_va_start`
+   --> src/translation_utils/types/va_args.rs:131:14
+    |
+131 | macro_rules! c_va_start {
+    |              ^^^^^^^^^^
+
+warning: unused macro definition: `c_va_end`
+   --> src/translation_utils/types/va_args.rs:137:14
+    |
+137 | macro_rules! c_va_end {
+    |              ^^^^^^^^
+
+warning: unused import: `crate::src::vec_h::*`
+ --> src/src/vec_c.rs:2:9
+  |
+2 | pub use crate::src::vec_h::*;
+  |         ^^^^^^^^^^^^^^^^^^^^
+
+warning: unnecessary parentheses around `if` condition
+ --> src/src/vec_c.rs:5:8
+  |
+5 |     if (c_ref!(length).cast::<i32>() + 1 > c_ref!(capacity).cast::<i32>()) {
+  |        ^                                                                 ^
+  |
+  = note: `#[warn(unused_parens)]` on by default
+help: remove these parentheses
+  |
+5 -     if (c_ref!(length).cast::<i32>() + 1 > c_ref!(capacity).cast::<i32>()) {
+5 +     if c_ref!(length).cast::<i32>() + 1 > c_ref!(capacity).cast::<i32>() {
+  |
+
+warning: unnecessary parentheses around `if` condition
+  --> src/src/vec_c.rs:13:12
+   |
+13 |         if (ptr == NULL!()) {
+   |            ^              ^
+   |
+help: remove these parentheses
+   |
+13 -         if (ptr == NULL!()) {
+13 +         if ptr == NULL!() {
+   |
+
+warning: unnecessary parentheses around `if` condition
+  --> src/src/vec_c.rs:26:8
+   |
+26 |     if (n > capacity.cast()) {
+   |        ^                   ^
+   |
+help: remove these parentheses
+   |
+26 -     if (n > capacity.cast()) {
+26 +     if n > capacity.cast() {
+   |
+
+warning: unnecessary parentheses around `if` condition
+  --> src/src/vec_c.rs:28:12
+   |
+28 |         if (ptr == NULL!()) {
+   |            ^              ^
+   |
+help: remove these parentheses
+   |
+28 -         if (ptr == NULL!()) {
+28 +         if ptr == NULL!() {
+   |
+
+warning: unnecessary parentheses around `if` condition
+  --> src/src/vec_c.rs:49:8
+   |
+49 |     if ((*length) == 0) {
+   |        ^              ^
+   |
+help: remove these parentheses
+   |
+49 -     if ((*length) == 0) {
+49 +     if (*length) == 0 {
+   |
+
+warning: unnecessary parentheses around assigned value
+  --> src/src/vec_c.rs:56:13
+   |
+56 |     let n = (*length);
+   |             ^       ^
+   |
+help: remove these parentheses
+   |
+56 -     let n = (*length);
+56 +     let n = *length;
+   |
+
+warning: unused import: `crate::src::vec_c::vec_reserve_po2_`
+ --> src/src/vec_h.rs:2:9
+  |
+2 | pub use crate::src::vec_c::vec_reserve_po2_;
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::src::vec_c::vec_insert_`
+ --> src/src/vec_h.rs:3:9
+  |
+3 | pub use crate::src::vec_c::vec_insert_;
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::src::vec_c::vec_compact_`
+ --> src/src/vec_h.rs:4:9
+  |
+4 | pub use crate::src::vec_c::vec_compact_;
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::src::vec_c::vec_splice_`
+ --> src/src/vec_h.rs:5:9
+  |
+5 | pub use crate::src::vec_c::vec_splice_;
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::src::vec_c::vec_expand_`
+ --> src/src/vec_h.rs:6:9
+  |
+6 | pub use crate::src::vec_c::vec_expand_;
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::src::vec_c::vec_swapsplice_`
+ --> src/src/vec_h.rs:7:9
+  |
+7 | pub use crate::src::vec_c::vec_swapsplice_;
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::src::vec_c::vec_reserve_`
+ --> src/src/vec_h.rs:8:9
+  |
+8 | pub use crate::src::vec_c::vec_reserve_;
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::src::vec_c::vec_swap_`
+ --> src/src/vec_h.rs:9:9
+  |
+9 | pub use crate::src::vec_c::vec_swap_;
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: type `vec_void_t` should have an upper camel case name
+  --> src/src/vec_h.rs:11:10
+   |
+11 | pub type vec_void_t = Vec<VoidPtr>;
+   |          ^^^^^^^^^^ help: convert the identifier to upper camel case: `VecVoidT`
+
+warning: type `vec_str_t` should have an upper camel case name
+  --> src/src/vec_h.rs:13:10
+   |
+13 | pub type vec_str_t = Vec<Ptr<u8>>;
+   |          ^^^^^^^^^ help: convert the identifier to upper camel case: `VecStrT`
+
+warning: type `vec_char_t` should have an upper camel case name
+  --> src/src/vec_h.rs:23:10
+   |
+23 | pub type vec_char_t = Vec<u8>;
+   |          ^^^^^^^^^^ help: convert the identifier to upper camel case: `VecCharT`
+
+warning: unused macro definition: `VEC_H`
+  --> src/src/vec_h.rs:29:14
+   |
+29 | macro_rules! VEC_H { () => {} }
+   |              ^^^^^
+
+warning: unused import: `VEC_H`
+  --> src/src/vec_h.rs:30:16
+   |
+30 | pub(crate) use VEC_H;
+   |                ^^^^^
+
+warning: unused macro definition: `VEC_VERSION`
+  --> src/src/vec_h.rs:32:14
+   |
+32 | macro_rules! VEC_VERSION { () => { cstr!("0.2.1") } }
+   |              ^^^^^^^^^^^
+
+warning: unused import: `VEC_VERSION`
+  --> src/src/vec_h.rs:33:16
+   |
+33 | pub(crate) use VEC_VERSION;
+   |                ^^^^^^^^^^^
+
+warning: unused macro definition: `vec_unpack_`
+  --> src/src/vec_h.rs:35:14
+   |
+35 | macro_rules! vec_unpack_ {
+   |              ^^^^^^^^^^^
+
+warning: unused import: `vec_unpack_`
+  --> src/src/vec_h.rs:45:16
+   |
+45 | pub(crate) use vec_unpack_;
+   |                ^^^^^^^^^^^
+
+warning: unused macro definition: `vec_t`
+  --> src/src/vec_h.rs:47:25
+   |
+47 | pub(crate) macro_rules! vec_t {
+   |                         ^^^^^
+
+warning: unused import: `vec_t`
+  --> src/src/vec_h.rs:56:16
+   |
+56 | pub(crate) use vec_t;
+   |                ^^^^^
+
+warning: unused macro definition: `vec_init`
+  --> src/src/vec_h.rs:58:14
+   |
+58 | macro_rules! vec_init {
+   |              ^^^^^^^^
+
+warning: unused import: `vec_init`
+  --> src/src/vec_h.rs:63:16
+   |
+63 | pub(crate) use vec_init;
+   |                ^^^^^^^^
+
+warning: unused macro definition: `vec_deinit`
+  --> src/src/vec_h.rs:65:25
+   |
+65 | pub(crate) macro_rules! vec_deinit {
+   |                         ^^^^^^^^^^
+
+warning: unused macro definition: `vec_push`
+  --> src/src/vec_h.rs:74:14
+   |
+74 | macro_rules! vec_push {
+   |              ^^^^^^^^
+
+warning: unused import: `vec_push`
+  --> src/src/vec_h.rs:84:16
+   |
+84 | pub(crate) use vec_push;
+   |                ^^^^^^^^
+
+warning: unused macro definition: `vec_pop`
+  --> src/src/vec_h.rs:86:14
+   |
+86 | macro_rules! vec_pop { ($v:expr) => {
+   |              ^^^^^^^
+
+warning: unused import: `vec_pop`
+  --> src/src/vec_h.rs:90:16
+   |
+90 | pub(crate) use vec_pop;
+   |                ^^^^^^^
+
+warning: unused macro definition: `vec_splice`
+  --> src/src/vec_h.rs:92:14
+   |
+92 | macro_rules! vec_splice { ($v:expr, $start:expr, $count:expr) => {
+   |              ^^^^^^^^^^
+
+warning: unused import: `vec_splice`
+  --> src/src/vec_h.rs:96:16
+   |
+96 | pub(crate) use vec_splice;
+   |                ^^^^^^^^^^
+
+warning: unused macro definition: `vec_swapsplice`
+  --> src/src/vec_h.rs:98:14
+   |
+98 | macro_rules! vec_swapsplice { ($v:expr, $start:expr, $count:expr) => {
+   |              ^^^^^^^^^^^^^^
+
+warning: unused import: `vec_swapsplice`
+   --> src/src/vec_h.rs:102:16
+    |
+102 | pub(crate) use vec_swapsplice;
+    |                ^^^^^^^^^^^^^^
+
+warning: unused macro definition: `vec_insert`
+   --> src/src/vec_h.rs:104:14
+    |
+104 | macro_rules! vec_insert {
+    |              ^^^^^^^^^^
+
+warning: unused import: `vec_insert`
+   --> src/src/vec_h.rs:120:16
+    |
+120 | pub(crate) use vec_insert;
+    |                ^^^^^^^^^^
+
+warning: unused macro definition: `vec_sort`
+   --> src/src/vec_h.rs:122:14
+    |
+122 | macro_rules! vec_sort { ($v:expr, $fn:expr) => {
+    |              ^^^^^^^^
+
+warning: unused import: `vec_sort`
+   --> src/src/vec_h.rs:130:16
+    |
+130 | pub(crate) use vec_sort;
+    |                ^^^^^^^^
+
+warning: unused macro definition: `vec_swap`
+   --> src/src/vec_h.rs:132:14
+    |
+132 | macro_rules! vec_swap { ($v:expr, $idx1:expr, $idx2:expr) => {
+    |              ^^^^^^^^
+
+warning: unused import: `vec_swap`
+   --> src/src/vec_h.rs:139:16
+    |
+139 | pub(crate) use vec_swap;
+    |                ^^^^^^^^
+
+warning: unused macro definition: `vec_truncate`
+   --> src/src/vec_h.rs:141:25
+    |
+141 | pub(crate) macro_rules! vec_truncate {
+    |                         ^^^^^^^^^^^^
+
+warning: unused import: `vec_truncate`
+   --> src/src/vec_h.rs:146:16
+    |
+146 | pub(crate) use vec_truncate;
+    |                ^^^^^^^^^^^^
+
+warning: unused macro definition: `vec_clear`
+   --> src/src/vec_h.rs:148:14
+    |
+148 | macro_rules! vec_clear { ($v:expr) => { $v.cast().length = 0; } }
+    |              ^^^^^^^^^
+
+warning: unused import: `vec_clear`
+   --> src/src/vec_h.rs:149:16
+    |
+149 | pub(crate) use vec_clear;
+    |                ^^^^^^^^^
+
+warning: unused macro definition: `vec_first`
+   --> src/src/vec_h.rs:151:14
+    |
+151 | macro_rules! vec_first { ($v:expr) => { c_ref!($v).data[0] as u8 } }
+    |              ^^^^^^^^^
+
+warning: unused import: `vec_first`
+   --> src/src/vec_h.rs:152:16
+    |
+152 | pub(crate) use vec_first;
+    |                ^^^^^^^^^
+
+warning: unused macro definition: `vec_last`
+   --> src/src/vec_h.rs:154:14
+    |
+154 | macro_rules! vec_last { ($v:expr) => {
+    |              ^^^^^^^^
+
+warning: unused import: `vec_last`
+   --> src/src/vec_h.rs:158:16
+    |
+158 | pub(crate) use vec_last;
+    |                ^^^^^^^^
+
+warning: unused macro definition: `vec_reserve`
+   --> src/src/vec_h.rs:160:14
+    |
+160 | macro_rules! vec_reserve {
+    |              ^^^^^^^^^^^
+
+warning: unused import: `vec_reserve`
+   --> src/src/vec_h.rs:165:16
+    |
+165 | pub(crate) use vec_reserve;
+    |                ^^^^^^^^^^^
+
+warning: unused macro definition: `vec_compact`
+   --> src/src/vec_h.rs:167:14
+    |
+167 | macro_rules! vec_compact {
+    |              ^^^^^^^^^^^
+
+warning: unused import: `vec_compact`
+   --> src/src/vec_h.rs:172:16
+    |
+172 | pub(crate) use vec_compact;
+    |                ^^^^^^^^^^^
+
+warning: unused macro definition: `vec_pusharr`
+   --> src/src/vec_h.rs:174:25
+    |
+174 | pub(crate) macro_rules! vec_pusharr {
+    |                         ^^^^^^^^^^^
+
+warning: unused import: `vec_pusharr`
+   --> src/src/vec_h.rs:190:16
+    |
+190 | pub(crate) use vec_pusharr;
+    |                ^^^^^^^^^^^
+
+warning: unused macro definition: `vec_extend`
+   --> src/src/vec_h.rs:192:14
+    |
+192 | macro_rules! vec_extend {
+    |              ^^^^^^^^^^
+
+warning: unused import: `vec_extend`
+   --> src/src/vec_h.rs:197:16
+    |
+197 | pub(crate) use vec_extend;
+    |                ^^^^^^^^^^
+
+warning: unused macro definition: `vec_find`
+   --> src/src/vec_h.rs:199:14
+    |
+199 | macro_rules! vec_find { ($v:expr, $val:expr, $idx:expr) => {
+    |              ^^^^^^^^
+
+warning: unused import: `vec_find`
+   --> src/src/vec_h.rs:211:16
+    |
+211 | pub(crate) use vec_find;
+    |                ^^^^^^^^
+
+warning: unused macro definition: `vec_remove`
+   --> src/src/vec_h.rs:213:25
+    |
+213 | pub(crate) macro_rules! vec_remove {
+    |                         ^^^^^^^^^^
+
+warning: unused import: `vec_remove`
+   --> src/src/vec_h.rs:222:16
+    |
+222 | pub(crate) use vec_remove;
+    |                ^^^^^^^^^^
+
+warning: unused macro definition: `vec_reverse`
+   --> src/src/vec_h.rs:224:14
+    |
+224 | macro_rules! vec_reverse { ($v:expr) => {
+    |              ^^^^^^^^^^^
+
+warning: unused import: `vec_reverse`
+   --> src/src/vec_h.rs:231:16
+    |
+231 | pub(crate) use vec_reverse;
+    |                ^^^^^^^^^^^
+
+warning: unused macro definition: `vec_foreach`
+   --> src/src/vec_h.rs:233:14
+    |
+233 | macro_rules! vec_foreach { ($v:expr, $var:expr, $iter:expr) => {
+    |              ^^^^^^^^^^^
+
+warning: unused import: `vec_foreach`
+   --> src/src/vec_h.rs:240:16
+    |
+240 | pub(crate) use vec_foreach;
+    |                ^^^^^^^^^^^
+
+warning: unused macro definition: `vec_foreach_rev`
+   --> src/src/vec_h.rs:242:14
+    |
+242 | macro_rules! vec_foreach_rev { ($v:expr, $var:expr, $iter:expr) => {
+    |              ^^^^^^^^^^^^^^^
+
+warning: unused import: `vec_foreach_rev`
+   --> src/src/vec_h.rs:252:16
+    |
+252 | pub(crate) use vec_foreach_rev;
+    |                ^^^^^^^^^^^^^^^
+
+warning: unused macro definition: `vec_foreach_ptr`
+   --> src/src/vec_h.rs:254:25
+    |
+254 | pub(crate) macro_rules! vec_foreach_ptr {
+    |                         ^^^^^^^^^^^^^^^
+
+warning: unused import: `vec_foreach_ptr`
+   --> src/src/vec_h.rs:265:16
+    |
+265 | pub(crate) use vec_foreach_ptr;
+    |                ^^^^^^^^^^^^^^^
+
+warning: unused macro definition: `vec_foreach_ptr_rev`
+   --> src/src/vec_h.rs:267:14
+    |
+267 | macro_rules! vec_foreach_ptr_rev { ($v:expr, $var:expr, $iter:expr) => {
+    |              ^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `vec_foreach_ptr_rev`
+   --> src/src/vec_h.rs:277:16
+    |
+277 | pub(crate) use vec_foreach_ptr_rev;
+    |                ^^^^^^^^^^^^^^^^^^^
+
+warning: unreachable statement
+  --> src/translation_utils/c_alignment/c_switch.rs:69:58
+   |
+69 |           while !__executed || !__breaked { $execute_last; break; }
+   |                                                            ^^^^^^ unreachable statement
+...
+84 | /         c_switch!(input;
+85 | |             MY_1!() => { result = 1; break; },
+86 | |             2 => { result = 2; },
+87 | |             3 => { result = 3; },
+88 | |             _ => { result = 4; break; }
+   | |                                ----- any code following this expression is unreachable
+89 | |         );
+   | |_________- in this macro invocation
+   |
+   = note: `#[warn(unreachable_code)]` on by default
+   = note: this warning originates in the macro `c_switch` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unreachable statement
+   --> src/translation_utils/c_alignment/c_switch.rs:69:58
+    |
+69  |           while !__executed || !__breaked { $execute_last; break; }
+    |                                                            ^^^^^^ unreachable statement
+...
+97  | /         c_switch!(input;
+98  | |             MY_1!() => { result |= 1; break; },
+99  | |             2 => { result |= 2; },
+100 | |             3 => { result |= 4; break; },
+...   |
+103 | |             _ => { result |= 16; break; }
+    | |                                  ----- any code following this expression is unreachable
+104 | |         );
+    | |_________- in this macro invocation
+    |
+    = note: this warning originates in the macro `c_switch` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: variable does not need to be mutable
+ --> src/translation_utils/types/global.rs:9:13
+  |
+9 |         let mut result: LazyLock<Mutex<T>> = LazyLock::new(value_function);
+  |             ----^^^^^^
+  |             |
+  |             help: remove this `mut`
+  |
+  = note: `#[warn(unused_mut)]` on by default
+
+error[E0282]: type annotations needed
+   --> src/src/vec_c.rs:109:27
+    |
+109 |     let a: Ptr<u8> = data.cast().add(idx1 * memsz);
+    |                           ^^^^ cannot infer type of the type parameter `T` declared on the method `cast`
+    |
+help: consider specifying the generic argument
+    |
+109 |     let a: Ptr<u8> = data.cast::<T>().add(idx1 * memsz);
+    |                               +++++
+
+warning: variable does not need to be mutable
+ --> src/translation_utils/c_alignment/libraries/c_realloc.rs:7:34
+  |
+7 | pub fn realloc(mut ptr: Ptr<u8>, mut size: usize) -> Ptr<u8> {
+  |                                  ----^^^^
+  |                                  |
+  |                                  help: remove this `mut`
+
+warning: variable does not need to be mutable
+ --> src/translation_utils/c_alignment/libraries/c_string.rs:5:15
+  |
+5 | pub fn strcmp(mut str1: Ptr<Char>, mut str2: Ptr<Char>) -> i32 {
+  |               ----^^^^
+  |               |
+  |               help: remove this `mut`
+
+warning: variable does not need to be mutable
+ --> src/translation_utils/c_alignment/libraries/c_string.rs:5:36
+  |
+5 | pub fn strcmp(mut str1: Ptr<Char>, mut str2: Ptr<Char>) -> i32 {
+  |                                    ----^^^^
+  |                                    |
+  |                                    help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/c_string.rs:26:16
+   |
+26 | pub fn strncmp(mut str1: Ptr<Char>, mut str2: Ptr<Char>, n: usize) -> i32 {
+   |                ----^^^^
+   |                |
+   |                help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/c_string.rs:26:37
+   |
+26 | pub fn strncmp(mut str1: Ptr<Char>, mut str2: Ptr<Char>, n: usize) -> i32 {
+   |                                     ----^^^^
+   |                                     |
+   |                                     help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/c_string.rs:51:15
+   |
+51 | pub fn strlen(mut str1: Ptr<Char>) -> usize {
+   |               ----^^^^
+   |               |
+   |               help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/c_string.rs:59:15
+   |
+59 | pub fn strdup(mut str1: Ptr<Char>) -> Ptr<Char> {
+   |               ----^^^^
+   |               |
+   |               help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:101:9
+    |
+101 |     let mut fmt = format.to_string();
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:102:9
+    |
+102 |     let mut tmp = va_format!(fmt, va);
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:118:34
+    |
+118 | pub fn sprintf(mut buf: Ptr<u8>, mut format: Ptr<u8>, va: VaList) -> i32 {
+    |                                  ----^^^^^^
+    |                                  |
+    |                                  help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:119:9
+    |
+119 |     let mut fmt = format.to_string();
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:120:9
+    |
+120 |     let mut tmp = va_format!(fmt, va);
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:121:9
+    |
+121 |     let mut length = tmp.as_bytes().len() as i32;
+    |         ----^^^^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:140:49
+    |
+140 | pub fn sprintf_s(mut buf: Ptr<u8>, size: usize, mut format: Ptr<u8>, va: VaList) -> i32 {
+    |                                                 ----^^^^^^
+    |                                                 |
+    |                                                 help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:144:9
+    |
+144 |     let mut fmt = format.to_string();
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:145:9
+    |
+145 |     let mut tmp = va_format!(fmt, va);
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:146:9
+    |
+146 |     let mut length = tmp.as_bytes().len() as i32;
+    |         ----^^^^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:166:9
+    |
+166 |     let mut fmt = format.to_string();
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:167:9
+    |
+167 |     let mut tmp = va_format!(fmt, va);
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:200:9
+    |
+200 |     let mut fmt = format.to_string();
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:201:9
+    |
+201 |     let mut tmp = va_format!(fmt, va);
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:235:16
+    |
+235 | pub fn strrchr(mut str1: Ptr<u8>, mut ch: u8) -> Ptr<u8> {
+    |                ----^^^^
+    |                |
+    |                help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:235:35
+    |
+235 | pub fn strrchr(mut str1: Ptr<u8>, mut ch: u8) -> Ptr<u8> {
+    |                                   ----^^
+    |                                   |
+    |                                   help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:236:9
+    |
+236 |     let mut length = strlen(str1);
+    |         ----^^^^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:255:34
+    |
+255 | pub fn strcpy(mut dest: Ptr<u8>, mut src: Ptr<u8>) -> Ptr<u8> {
+    |                                  ----^^^
+    |                                  |
+    |                                  help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:256:9
+    |
+256 |     let mut length = strlen(src);
+    |         ----^^^^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:274:5
+    |
+274 |     mut size: usize,
+    |     ----^^^^
+    |     |
+    |     help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/c_alignment/libraries/c_string.rs:275:5
+    |
+275 |     mut src: Ptr<u8>,
+    |     ----^^^
+    |     |
+    |     help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/c_memcmp.rs:14:17
+   |
+14 |     fn c_memcmp(mut dst: &Ptr<T>, mut src: &Ptr<T>, count: usize) -> i32 {
+   |                 ----^^^
+   |                 |
+   |                 help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/c_memcmp.rs:14:35
+   |
+14 |     fn c_memcmp(mut dst: &Ptr<T>, mut src: &Ptr<T>, count: usize) -> i32 {
+   |                                   ----^^^
+   |                                   |
+   |                                   help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/safelib/c_memcpy_s.rs:17:19
+   |
+17 |     fn c_memcpy_s(mut dst: &mut Ptr<T>, dst_size: usize, src: &Ptr<T>, count: usize) -> ErrnoT {
+   |                   ----^^^
+   |                   |
+   |                   help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/c_alignment/libraries/safelib/c_memmove_s.rs:17:20
+   |
+17 |     fn c_memmove_s(mut dst: &mut Ptr<T>, dst_size: usize, src: &Ptr<T>, count: usize) -> ErrnoT {
+   |                    ----^^^
+   |                    |
+   |                    help: remove this `mut`
+
+warning: unnecessary `unsafe` block
+  --> src/translation_utils/memory/file_ptr.rs:86:35
+   |
+86 |                 let leaked_file = unsafe { NonNull::new(Box::into_raw(boxed_file)).unwrap() };
+   |                                   ^^^^^^ unnecessary `unsafe` block
+   |
+   = note: `#[warn(unused_unsafe)]` on by default
+
+warning: unnecessary `unsafe` block
+  --> src/translation_utils/memory/file_ptr.rs:91:35
+   |
+91 |                 let leaked_info = unsafe { NonNull::new(Box::into_raw(boxed_info)).unwrap() };
+   |                                   ^^^^^^ unnecessary `unsafe` block
+
+warning: unnecessary `unsafe` block
+   --> src/translation_utils/memory/file_ptr.rs:104:35
+    |
+104 |                 let leaked_file = unsafe { NonNull::new(Box::into_raw(boxed_file)).unwrap() };
+    |                                   ^^^^^^ unnecessary `unsafe` block
+
+warning: unnecessary `unsafe` block
+   --> src/translation_utils/memory/file_ptr.rs:109:35
+    |
+109 |                 let leaked_info = unsafe { NonNull::new(Box::into_raw(boxed_info)).unwrap() };
+    |                                   ^^^^^^ unnecessary `unsafe` block
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/memory/file_ptr.rs:80:14
+   |
+80 | pub fn fopen(mut filename: CStr, mut mode: CStr) -> FilePtr {
+   |              ----^^^^^^^^
+   |              |
+   |              help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:122:15
+    |
+122 | pub fn fclose(mut file: &mut FilePtr) -> i32 {
+    |               ----^^^^
+    |               |
+    |               help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:134:14
+    |
+134 | pub fn fgetc(mut file: &mut FilePtr) -> i32 {
+    |              ----^^^^
+    |              |
+    |              help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:152:15
+    |
+152 | pub fn ungetc(mut c: i32, mut file: &mut FilePtr) -> i32 {
+    |               ----^
+    |               |
+    |               help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:152:27
+    |
+152 | pub fn ungetc(mut c: i32, mut file: &mut FilePtr) -> i32 {
+    |                           ----^^^^
+    |                           |
+    |                           help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:163:32
+    |
+163 | pub fn fread(mut ptr: Ptr<u8>, mut size: usize, mut count: usize, mut file: &mut FilePtr) -> usize {
+    |                                ----^^^^
+    |                                |
+    |                                help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:163:49
+    |
+163 | pub fn fread(mut ptr: Ptr<u8>, mut size: usize, mut count: usize, mut file: &mut FilePtr) -> usize {
+    |                                                 ----^^^^^
+    |                                                 |
+    |                                                 help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:163:67
+    |
+163 | pub fn fread(mut ptr: Ptr<u8>, mut size: usize, mut count: usize, mut file: &mut FilePtr) -> usize {
+    |                                                                   ----^^^^
+    |                                                                   |
+    |                                                                   help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:193:5
+    |
+193 |     mut ptr: Ptr<u8>,
+    |     ----^^^
+    |     |
+    |     help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:194:5
+    |
+194 |     mut size: usize,
+    |     ----^^^^
+    |     |
+    |     help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:195:5
+    |
+195 |     mut count: usize,
+    |     ----^^^^^
+    |     |
+    |     help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:196:5
+    |
+196 |     mut file: &mut FilePtr,
+    |     ----^^^^
+    |     |
+    |     help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:201:9
+    |
+201 |     let mut write_size = size * count;
+    |         ----^^^^^^^^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:212:30
+    |
+212 | pub fn fgets(mut s: Ptr<u8>, mut n: i32, mut file: &mut FilePtr) -> Ptr<u8> {
+    |                              ----^
+    |                              |
+    |                              help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:212:42
+    |
+212 | pub fn fgets(mut s: Ptr<u8>, mut n: i32, mut file: &mut FilePtr) -> Ptr<u8> {
+    |                                          ----^^^^
+    |                                          |
+    |                                          help: remove this `mut`
+
+warning: unused variable: `pos`
+   --> src/translation_utils/memory/file_ptr.rs:252:12
+    |
+252 |         Ok(pos) => 0,
+    |            ^^^ help: if this is intentional, prefix it with an underscore: `_pos`
+    |
+    = note: `#[warn(unused_variables)]` on by default
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:240:14
+    |
+240 | pub fn fseek(mut file: &mut FilePtr, mut offset: i64, mut whence: i32) -> i32 {
+    |              ----^^^^
+    |              |
+    |              help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:240:38
+    |
+240 | pub fn fseek(mut file: &mut FilePtr, mut offset: i64, mut whence: i32) -> i32 {
+    |                                      ----^^^^^^
+    |                                      |
+    |                                      help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:240:55
+    |
+240 | pub fn fseek(mut file: &mut FilePtr, mut offset: i64, mut whence: i32) -> i32 {
+    |                                                       ----^^^^^^
+    |                                                       |
+    |                                                       help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:257:14
+    |
+257 | pub fn ftell(mut file: &mut FilePtr) -> i64 {
+    |              ----^^^^
+    |              |
+    |              help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/translation_utils/memory/file_ptr.rs:273:15
+    |
+273 | pub fn remove(mut filename: CStr) -> i32 {
+    |               ----^^^^^^^^
+    |               |
+    |               help: remove this `mut`
+
+warning: unused variable: `key`
+  --> src/translation_utils/memory/resource_heap.rs:48:21
+   |
+48 |                 let key = nonnull.as_ptr() as usize;
+   |                     ^^^ help: if this is intentional, prefix it with an underscore: `_key`
+
+warning: variable does not need to be mutable
+  --> src/translation_utils/memory/resource_heap.rs:49:21
+   |
+49 |                 let mut remove_value = self.heap.remove(&(nonnull.as_ptr() as usize));
+   |                     ----^^^^^^^^^^^^
+   |                     |
+   |                     help: remove this `mut`
+
+warning: unused variable: `length`
+  --> src/translation_utils/types/c_str.rs:11:13
+   |
+11 |         let length = data.len();
+   |             ^^^^^^ help: if this is intentional, prefix it with an underscore: `_length`
+
+warning: value assigned to `ptr` is never read
+ --> src/src/vec_c.rs:6:17
+  |
+6 |         let mut ptr: Ptr<Void> = Default::default();
+  |                 ^^^
+  |
+  = help: maybe it is overwritten before being read?
+  = note: `#[warn(unused_assignments)]` on by default
+
+warning: variable `data_ptr` is assigned to, but never used
+  --> src/src/vec_c.rs:16:17
+   |
+16 |         let mut data_ptr = c_ref!(data).cast::<Ptr<u8>>();
+   |                 ^^^^^^^^
+   |
+   = note: consider using `_data_ptr` instead
+
+warning: value assigned to `data_ptr` is never read
+  --> src/src/vec_c.rs:17:9
+   |
+17 |         data_ptr = ptr.cast::<Ptr<u8>>();
+   |         ^^^^^^^^
+   |
+   = help: maybe it is overwritten before being read?
+
+warning: variable `capacity_ptr` is assigned to, but never used
+  --> src/src/vec_c.rs:18:17
+   |
+18 |         let mut capacity_ptr = c_ref!(capacity).cast::<i32>();
+   |                 ^^^^^^^^^^^^
+   |
+   = note: consider using `_capacity_ptr` instead
+
+warning: value assigned to `capacity_ptr` is never read
+  --> src/src/vec_c.rs:19:9
+   |
+19 |         capacity_ptr = n;
+   |         ^^^^^^^^^^^^
+   |
+   = help: maybe it is overwritten before being read?
+
+warning: variable does not need to be mutable
+ --> src/src/vec_c.rs:4:90
+  |
+4 | pub fn vec_expand_(mut data: Ptr<Ptr<u8>>, mut length: Ptr<i32>, mut capacity: Ptr<i32>, mut memsz: i32) -> i32 {
+  |                                                                                          ----^^^^^
+  |                                                                                          |
+  |                                                                                          help: remove this `mut`
+
+warning: variable does not need to be mutable
+ --> src/src/vec_c.rs:7:13
+  |
+7 |         let mut n: i32 = if c_ref!(capacity).cast::<i32>() == 0 {
+  |             ----^
+  |             |
+  |             help: remove this `mut`
+
+warning: value assigned to `data` is never read
+  --> src/src/vec_c.rs:31:9
+   |
+31 |         data = ptr.cast();
+   |         ^^^^
+   |
+   = help: maybe it is overwritten before being read?
+
+warning: variable does not need to be mutable
+  --> src/src/vec_c.rs:24:45
+   |
+24 | pub fn vec_reserve_(mut data: Ptr<Ptr<u8>>, mut length: Ptr<i32>, mut capacity: Ptr<i32>, mut memsz: i32, mut n: i32) -> i32 {
+   |                                             ----^^^^^^
+   |                                             |
+   |                                             help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/src/vec_c.rs:24:91
+   |
+24 | pub fn vec_reserve_(mut data: Ptr<Ptr<u8>>, mut length: Ptr<i32>, mut capacity: Ptr<i32>, mut memsz: i32, mut n: i32) -> i32 {
+   |                                                                                           ----^^^^^
+   |                                                                                           |
+   |                                                                                           help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/src/vec_c.rs:24:107
+   |
+24 | pub fn vec_reserve_(mut data: Ptr<Ptr<u8>>, mut length: Ptr<i32>, mut capacity: Ptr<i32>, mut memsz: i32, mut n: i32) -> i32 {
+   |                                                                                                           ----^
+   |                                                                                                           |
+   |                                                                                                           help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/src/vec_c.rs:37:111
+   |
+37 | pub fn vec_reserve_po2_(mut data: Ptr<Ptr<u8>>, mut length: Ptr<i32>, mut capacity: Ptr<i32>, mut memsz: i32, mut n: i32) -> i32 {
+   |                                                                                                               ----^
+   |                                                                                                               |
+   |                                                                                                               help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/src/vec_c.rs:48:45
+   |
+48 | pub fn vec_compact_(mut data: Ptr<Ptr<u8>>, mut length: Ptr<i32>, mut capacity: Ptr<i32>, memsz: i32) -> i32 {
+   |                                             ----^^^^^^
+   |                                             |
+   |                                             help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/src/vec_c.rs:69:20
+   |
+69 | pub fn vec_insert_(mut data: Ptr<Ptr<u8>>, mut length: Ptr<i32>, mut capacity: Ptr<i32>, mut memsz: i32, mut idx: i32) -> i32 {
+   |                    ----^^^^
+   |                    |
+   |                    help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/src/vec_c.rs:69:44
+   |
+69 | pub fn vec_insert_(mut data: Ptr<Ptr<u8>>, mut length: Ptr<i32>, mut capacity: Ptr<i32>, mut memsz: i32, mut idx: i32) -> i32 {
+   |                                            ----^^^^^^
+   |                                            |
+   |                                            help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/src/vec_c.rs:69:66
+   |
+69 | pub fn vec_insert_(mut data: Ptr<Ptr<u8>>, mut length: Ptr<i32>, mut capacity: Ptr<i32>, mut memsz: i32, mut idx: i32) -> i32 {
+   |                                                                  ----^^^^^^^^
+   |                                                                  |
+   |                                                                  help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/src/vec_c.rs:69:90
+   |
+69 | pub fn vec_insert_(mut data: Ptr<Ptr<u8>>, mut length: Ptr<i32>, mut capacity: Ptr<i32>, mut memsz: i32, mut idx: i32) -> i32 {
+   |                                                                                          ----^^^^^
+   |                                                                                          |
+   |                                                                                          help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/src/vec_c.rs:69:106
+   |
+69 | pub fn vec_insert_(mut data: Ptr<Ptr<u8>>, mut length: Ptr<i32>, mut capacity: Ptr<i32>, mut memsz: i32, mut idx: i32) -> i32 {
+   |                                                                                                          ----^^^
+   |                                                                                                          |
+   |                                                                                                          help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/src/vec_c.rs:70:9
+   |
+70 |     let mut err: i32 = vec_expand_(data, length, capacity, memsz);
+   |         ----^^^
+   |         |
+   |         help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/src/vec_c.rs:78:66
+   |
+78 | pub fn vec_splice_(mut data: Ptr<Ptr<u8>>, mut length: Ptr<i32>, mut capacity: Ptr<i32>, mut memsz: i32, mut start: i32, mut count: i32) {
+   |                                                                  ----^^^^^^^^
+   |                                                                  |
+   |                                                                  help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/src/vec_c.rs:78:90
+   |
+78 | pub fn vec_splice_(mut data: Ptr<Ptr<u8>>, mut length: Ptr<i32>, mut capacity: Ptr<i32>, mut memsz: i32, mut start: i32, mut count: i32) {
+   |                                                                                          ----^^^^^
+   |                                                                                          |
+   |                                                                                          help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/src/vec_c.rs:78:106
+   |
+78 | pub fn vec_splice_(mut data: Ptr<Ptr<u8>>, mut length: Ptr<i32>, mut capacity: Ptr<i32>, mut memsz: i32, mut start: i32, mut count: i32) {
+   |                                                                                                          ----^^^^^
+   |                                                                                                          |
+   |                                                                                                          help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/src/vec_c.rs:78:122
+   |
+78 | pub fn vec_splice_(mut data: Ptr<Ptr<u8>>, mut length: Ptr<i32>, mut capacity: Ptr<i32>, mut memsz: i32, mut start: i32, mut count: i32) {
+   |                                                                                                                          ----^^^^^
+   |                                                                                                                          |
+   |                                                                                                                          help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/src/vec_c.rs:89:5
+   |
+89 |     mut length: Ptr<i32>,
+   |     ----^^^^^^
+   |     |
+   |     help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/src/vec_c.rs:90:5
+   |
+90 |     mut capacity: Ptr<i32>,
+   |     ----^^^^^^^^
+   |     |
+   |     help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/src/vec_c.rs:91:5
+   |
+91 |     mut memsz: i32,
+   |     ----^^^^^
+   |     |
+   |     help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/src/vec_c.rs:92:5
+   |
+92 |     mut start: i32,
+   |     ----^^^^^
+   |     |
+   |     help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/src/vec_c.rs:93:5
+   |
+93 |     mut count: i32
+   |     ----^^^^^
+   |     |
+   |     help: remove this `mut`
+
+Some errors have detailed explanations: E0282, E0412.
+For more information about an error, try `rustc --explain E0282`.
+warning: `my_proj` (lib) generated 252 warnings
+error: could not compile `my_proj` (lib) due to 8 previous errors; 252 warnings emitted
+warning: build failed, waiting for other jobs to finish...
+warning: `my_proj` (lib test) generated 253 warnings (251 duplicates)
+error: could not compile `my_proj` (lib test) due to 8 previous errors; 253 warnings emitted

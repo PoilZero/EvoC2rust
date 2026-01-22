@@ -70,3 +70,15 @@
 
 ## Report
 - Full report: run_artifacts/vec_run_002/26_REPORT.md
+
+# EvoC2rust Translation Report (vec_run_003)
+
+## Run Summary
+- Project name: vec_run_003
+- Source repo: https://github.com/rxi/vec
+- Artifacts folder: run_artifacts/vec_run_003
+- LLM: Local Qwen3-4B-Thinking (vLLM, OpenAI-compatible)
+- Result: cargo build + cargo test failed (no manual patch)
+
+## Report
+- Full report: run_artifacts/vec_run_003/15_REPORT.md

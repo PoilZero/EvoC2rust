@@ -1,0 +1,1 @@
+pub type vec_str_t = Vec<Ptr<u8>>;
