@@ -5,43 +5,68 @@ from entity.exceptions import CallLLMTimeoutError
 from llm.client_qwen import GenerationClient
 from cache.cache import ProjectCache
 
-def merge_prompt(prompt, c_code):
-    return prompt + f"""\
-Source:
-```c
-{c_code.strip()}
-```
+def _get_rbench_context(client):
+    config = client.config
+    if getattr(config, "prompt_profile", "") != "interface":
+        return "", ""
+    return (
+        getattr(config, "rbench_interface_context", ""),
+        getattr(config, "rbench_test_context", ""),
+    )
 
-Translation:
-```rust
-"""
 
-def merge_repair_prompt(prompt, c_code, compiler_msg):
-    return prompt + f"""\
-Source:
-```rust
-{c_code.strip()}
-```
+def merge_prompt(prompt, c_code, interface_context="", test_context=""):
+    parts = [
+        prompt,
+        "Source:\n```c\n" + c_code.strip() + "\n```",
+    ]
+    if interface_context:
+        parts.append(interface_context)
+    if test_context:
+        parts.append(test_context)
+    parts.append("Translation:\n```rust\n")
+    return "\n\n".join(parts)
 
-Error Message:{compiler_msg}
-
-Fixed Code:
-```rust
-"""
+def merge_repair_prompt(prompt, c_code, compiler_msg, interface_context="", test_context=""):
+    parts = [
+        prompt,
+        "Source:\n```rust\n" + c_code.strip() + "\n```",
+    ]
+    if interface_context:
+        parts.append(interface_context)
+    if test_context:
+        parts.append(test_context)
+    parts.append(f"Error Message:{compiler_msg}\n\nFixed Code:\n```rust\n")
+    return "\n\n".join(parts)
 
 def get_delim_repair_candidates(client, code, compiler_msg):
-    text = merge_repair_prompt(client.config.delim_repair_prompt, code, compiler_msg)
+    interface_context, test_context = _get_rbench_context(client)
+    text = merge_repair_prompt(
+        client.config.delim_repair_prompt,
+        code,
+        compiler_msg,
+        interface_context,
+        test_context,
+    )
     response = client.get_response(text)
     return [response]
 
 
 def get_repair_candidates(client, code, compiler_msg):
-    text = merge_repair_prompt(client.config.repair_prompt, code, compiler_msg)
+    interface_context, test_context = _get_rbench_context(client)
+    text = merge_repair_prompt(
+        client.config.repair_prompt,
+        code,
+        compiler_msg,
+        interface_context,
+        test_context,
+    )
     response = client.get_response(text)
     return [response]
 
 def get_llm_gen_result(client, code, prompt):
-    text = merge_prompt(prompt, code)
+    interface_context, test_context = _get_rbench_context(client)
+    text = merge_prompt(prompt, code, interface_context, test_context)
     response = client.get_response(text)
     return response
 

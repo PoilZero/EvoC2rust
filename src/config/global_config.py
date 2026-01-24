@@ -1,6 +1,8 @@
 import configparser
 import os
+from pathlib import Path
 
+from config import prompt_config
 from config.prompt_config import *
 
 def read_config():
@@ -69,9 +71,52 @@ class GlobalConfig:
         self.delim_repair_prompt = delim_repair_prompt
         self.repair_prompt = repair_prompt
 
+        self.prompt_profile = os.getenv("EVO_C2RUST_PROMPT_PROFILE", "").strip().lower()
+        self.rbench_path = os.getenv("EVO_C2RUST_RBENCH_PATH", "").strip()
+        if not self.prompt_profile and self.rbench_path and _rbench_has_context(self.rbench_path):
+            self.prompt_profile = "interface"
+        prompt_overrides = prompt_config.load_prompt_overrides(self.prompt_profile)
+        for key, value in prompt_overrides.items():
+            setattr(self, key, value)
+
+        self.rbench_interface_context = ""
+        self.rbench_test_context = ""
+        if self.prompt_profile == "interface" and self.rbench_path:
+            self.rbench_interface_context, self.rbench_test_context = _load_rbench_context(self.rbench_path)
+
         self.api_key = config.get('llm', 'api_key')
         self.base_url = config.get('llm', 'base_url')
         self.model_name = config.get('llm', 'model_name')
 
         self.cache_dir = "./data/default/cache"
         self.final_project_dir = "./final_project"
+
+
+def _collect_rs_files(dir_path: Path) -> list[Path]:
+    if not dir_path.exists():
+        return []
+    return sorted(dir_path.glob("*.rs"))
+
+
+def _format_rs_blocks(paths: list[Path]) -> str:
+    blocks = []
+    for path in paths:
+        text = path.read_text(encoding="utf-8", errors="ignore").strip()
+        if not text:
+            continue
+        blocks.append(f"{{{path.name}}}\n```rust\n{text}\n```")
+    return "\n\n".join(blocks)
+
+
+def _load_rbench_context(rbench_path: str) -> tuple[str, str]:
+    root = Path(rbench_path)
+    interface_files = _collect_rs_files(root / "src" / "interfaces")
+    test_files = _collect_rs_files(root / "src" / "bin")
+    return _format_rs_blocks(interface_files), _format_rs_blocks(test_files)
+
+
+def _rbench_has_context(rbench_path: str) -> bool:
+    root = Path(rbench_path)
+    if not root.exists():
+        return False
+    return bool(_collect_rs_files(root / "src" / "interfaces") or _collect_rs_files(root / "src" / "bin"))

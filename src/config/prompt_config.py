@@ -212,6 +212,57 @@ pub struct _MySimpleStruct {
 ```
 """
 
+from pathlib import Path
+
+_PROMPT_ROOT = Path(__file__).resolve().parents[2] / "prompts"
+
+
+def _read_prompt_file(path: Path) -> str:
+    if not path.exists():
+        return ""
+    return path.read_text(encoding="utf-8", errors="ignore")
+
+
+def _join_prompt(base: str, reminder: str) -> str:
+    base = base.strip()
+    reminder = reminder.strip()
+    if not base:
+        return ""
+    if not reminder:
+        return base
+    return f"{base}\n\n{reminder}"
+
+
+def load_prompt_overrides(profile: str) -> dict[str, str]:
+    profile = (profile or "").strip().lower()
+    if profile != "interface":
+        return {}
+    transpile_base = _read_prompt_file(
+        _PROMPT_ROOT / "transpilation_prompts" / "bullet_point" / "bullet_point_interface.prompt"
+    )
+    transpile_reminder = _read_prompt_file(
+        _PROMPT_ROOT / "transpilation_prompts" / "bullet_point" / "rule_reminder.prompt"
+    )
+    repair_base = _read_prompt_file(
+        _PROMPT_ROOT / "repair_prompts" / "bullet_point" / "bullet_point.prompt"
+    )
+    repair_reminder = _read_prompt_file(
+        _PROMPT_ROOT / "repair_prompts" / "bullet_point" / "rule_reminder.prompt"
+    )
+    transpile_prompt = _join_prompt(transpile_base, transpile_reminder)
+    repair_prompt = _join_prompt(repair_base, repair_reminder)
+    if not transpile_prompt or not repair_prompt:
+        return {}
+    return {
+        "definition_prompt": transpile_prompt,
+        "macro_prompt": transpile_prompt,
+        "macro_function_prompt": transpile_prompt,
+        "dummy_function_prompt": transpile_prompt,
+        "function_prompt": transpile_prompt,
+        "delim_repair_prompt": repair_prompt,
+        "repair_prompt": repair_prompt,
+    }
+
 dummy_function_prompt = """\
 Translate the C Code to Rust. 
 You need to translate the function to a dummy function with unimplemented!() macro only.
